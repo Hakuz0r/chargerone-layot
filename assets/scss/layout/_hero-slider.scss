@@ -1,0 +1,61 @@
+.hero-slider {
+  width: 100%;
+  position: relative;
+  background-color: $background-header; // Фон зальет всю ширину экрана
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10; // Swiper любит перекрывать элементы, 10 обычно хватает
+    margin-top: 0; // Сбрасываем дефолтный отступ свайпера
+  }
+
+  // Растаскиваем кнопки по краям экрана
+  .swiper-button-prev {
+    left: 20px;
+  }
+
+  .swiper-button-next {
+    right: 20px;
+  }
+}
+
+.hero-slide {
+  // Сам слайд теперь ничего не выравнивает, он просто полноэкранный блок
+
+  &__inner {
+    // Вся магия флексов переехала сюда, в класс, который висит на .container
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 0; // Горизонтальные паддинги убрали, их сделает .container
+  }
+
+  &__content {
+    max-width: 50%;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    li {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+  }
+}

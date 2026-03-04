@@ -13,7 +13,7 @@
     "scss",
     "gulp"
   ],
-  "author": "",
+  "author": "Artem Zubov, @Hakuz0r",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^3.0.0",
@@ -26,6 +26,7 @@
     "sass": "^1.85.0"
   },
   "dependencies": {
-    "gulp-autoprefixer": "^8.0.0"
+    "gulp-autoprefixer": "^8.0.0",
+    "swiper": "^12.1.2"
   }
 }

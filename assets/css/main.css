@@ -1053,6 +1053,56 @@ ol {
   height: 1000px;
 }
 
+.hero-slider {
+  width: 100%;
+  position: relative;
+  background-color: #9c9c9c;
+}
+.hero-slider .swiper-button-prev,
+.hero-slider .swiper-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  margin-top: 0;
+}
+.hero-slider .swiper-button-prev {
+  left: 20px;
+}
+.hero-slider .swiper-button-next {
+  right: 20px;
+}
+
+.hero-slide__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 0;
+}
+.hero-slide__content {
+  max-width: 50%;
+}
+.hero-slide__list {
+  list-style: none;
+  padding: 0;
+}
+.hero-slide__list li {
+  margin-bottom: 10px;
+}
+.hero-slide__buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
 .btn {
   display: inline-block;
   font-weight: 400;
