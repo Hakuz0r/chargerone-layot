@@ -1,0 +1,54 @@
+@mixin small-desktop {
+  @media (width <= 1440px) {
+    @content;
+  }
+}
+
+@mixin small-desk-more {
+  @media (width > 1440px) {
+    @content;
+  }
+}
+
+@mixin custom-tablet {
+  @media (width <= 1024px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (width <= 992px) {
+    @content;
+  }
+}
+
+@mixin small-tablet {
+  @media (width <= 768px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (width <= 576px) {
+    @content;
+  }
+}
+
+@mixin small-mobile {
+  @media (width <= 420px) {
+    @content;
+  }
+}
+
+// Compatibility mixins for Bootstrap grid system
+@mixin media-breakpoint-up($width) {
+  @media (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin media-breakpoint-down($width) {
+  @media (max-width: $width) {
+    @content;
+  }
+}

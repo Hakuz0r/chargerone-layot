@@ -1,0 +1,94 @@
+.footer {
+  background-color: $background-footer;
+  color: $text-color;
+
+  @include small-desk-more {
+    padding: 40px 0;
+  }
+
+  @include small-desktop {
+    padding: 40px 0;
+  }
+
+  &__top {
+    @include flex(space-between, start);
+
+    @include mobile {
+        @include flex(start, center, column);
+        gap: 20px;
+    }
+  }
+
+  &__info {
+    &-logo {
+      display: block;
+      height: 100%;
+      @include small-desk-more {
+        margin-bottom: 40px;
+      }
+      @include small-desktop {
+        margin-bottom: 35px;
+      }
+    }
+    &-logo svg {
+      @include small-desk-more {
+        max-width: 265px;
+        width: 100%;
+      }
+    }
+  }
+
+  &__nav {
+    @include flex(space-between, start, column);
+    gap: 23px;
+
+    @include small-tablet {
+        display: none;
+    }
+  }
+
+  &__button {
+    @include tablet {
+        display: none;
+    }
+  }
+
+  &__bottom {
+    @include flex(space-between, start);
+
+    @include small-desk-more {
+      margin-top: 60px;
+    }
+
+    @include small-desktop {
+      margin-top: 40px;
+    }
+  }
+
+  &__legal {
+    &-list {
+      @include flex(start, start, row);
+      gap: 30px;
+
+      @include mobile {
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+    }
+
+    &-link {
+      @include small-desk-more {
+        font-size: 14px;
+      }
+      @include small-desktop {
+        font-size: 12px;
+      }
+    }
+  }
+
+  &__social {
+    @include small-tablet {
+        display: none;
+    }
+  }
+}

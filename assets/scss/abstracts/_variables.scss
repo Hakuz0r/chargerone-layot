@@ -1,0 +1,37 @@
+// rough colors
+$black: #000;
+$white: #fff;
+$bg-header-rough: #9c9c9c;
+$bg-main-rough: #f1f2f2;
+$bg-footer-rough: #201f1f;
+$bg-button-rough: #252525;
+$text-color-rough: #fdffff;
+$text-color-rough-secondary: #bfbfbf;
+
+// Colors
+$background-header: $bg-header-rough;
+$background-main: $bg-main-rough;
+$background-footer: $bg-footer-rough;
+$background-button: $bg-button-rough;
+$text-color: $text-color-rough;
+
+// Typography
+$font-family-base:
+  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+  Arial, sans-serif;
+$font-size-base: 1rem;
+$line-height-base: 1.5;
+$text-ac: center;
+
+// Spacing
+$spacer: 1rem;
+
+// Grid
+$grid-gutter-width: 30px;
+$container-max-width: 1110px;
+
+// Default colors (used in components if not overridden)
+$primary-color: $bg-button-rough;
+$secondary-color: #6c757d;
+$dark-color: $black;
+$light-color: #f8f9fa;
