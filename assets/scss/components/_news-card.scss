@@ -1,0 +1,57 @@
+.news-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden; // Чтобы углы картинки обрезались по радиусу карточки
+  height: 100%; // Растягиваем на всю высоту ячейки грида
+
+  &__image-wrapper {
+    background-color: #e0e0e0; // Серый цвет заглушки
+    // Задаем пропорции картинки (примерно квадратная на глаз)
+    position: relative;
+    padding-top: 100%;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    flex-grow: 1; // Заставляет этот блок занимать всё оставшееся место
+  }
+
+  &__title {
+    margin: 0 0 8px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+  }
+
+  &__desc {
+    margin: 0 0 24px;
+    font-size: 14px;
+    color: #8c8c8c;
+    flex-grow: 1; // Прижимает кнопку к самому низу
+  }
+
+  &__btn {
+    // Стили конкретной кнопки. Если у вас уже есть .btn,
+    // можно вынести эти стили как модификатор .btn--outline
+    align-self: flex-start; // Чтобы кнопка не растягивалась на всю ширину карточки
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 20px;
+    border: 1px solid #a3a3a3;
+    border-radius: 40px; // Овальная форма
+    color: #666;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+
+    &:hover {
+      border-color: #333;
+      color: #333;
+    }
+  }
+}

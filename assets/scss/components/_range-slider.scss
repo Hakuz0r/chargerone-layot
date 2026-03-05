@@ -1,78 +1,91 @@
-/* Стилизация noUiSlider под макет
-   Мы используем специфичные классы библиотеки для переопределения
-*/
-
 .power__range {
-  padding: 0 10px; // Небольшой отступ, чтобы ручки не выходили за края заголовка
-  margin-top: 30px;
+  &-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: #333;
+  }
 
-  &-slider {
-    // 1. Основная дорожка (фон)
-    &.noUi-target {
-      height: 4px; // Тонкая линия
-      background: #E4E4E4; // Светло-серый из макета
-      border: none;
-      box-shadow: none;
-    }
+  &-bg {
+    background-color: #efefef; 
+    border-radius: 40px; 
+    padding: 24px 30px; 
+    margin-bottom: 30px; 
+  }
 
-    // 2. Активная часть (между ползунками)
+  // Стилизуем библиотечный ползунок
+  &-slider.noUi-target {
+    height: 4px;
+    background: #e4e4e4;
+    border: none;
+    box-shadow: none;
+
     .noUi-connect {
-      background: $black; // Твой синий цвет (убедись, что переменная импортирована)
+      background: $black; // Твой цвет
     }
 
-    // 3. Стилизация ручек (круглых ползунков)
     .noUi-handle {
-      width: 18px;
-      height: 18px;
-      right: -9px; // Центрируем ручку относительно края
-      top: -8px;   // Поднимаем ручку выше линии
+      width: 22px;
+      height: 22px;
+      right: -11px;
+      top: -9px;
       border-radius: 50%;
-      background: #FFFFFF;
-      border: 2px solid $black; // Синяя обводка
-      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); // Легкая тень для объема
+      background: #ffffff;
+      border: 2px solid $black; // Твой цвет
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
       cursor: pointer;
-      transition: transform 0.2s ease;
 
-      // Убираем дефолтные две полоски внутри ручек noUiSlider
       &::before,
       &::after {
-        display: none;
-      }
-
-      &:hover {
-        transform: scale(1.1); // Небольшой эффект при наведении
+        display: none; // Убираем дефолтные палочки
       }
     }
   }
 
-  // Стили для полей ввода (инпутов) под слайдером
+  // Сетка для инпутов
   &-inputs {
     display: flex;
     justify-content: space-between;
-    margin-top: 25px;
-    gap: 15px;
+    gap: 20px;
+  }
+}
+
+// Стили самих полей ввода и подписей
+.power__input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.power__input-label {
+  position: absolute;
+  left: 15px;
+  font-size: 14px;
+  color: #888;
+  pointer-events: none; // Чтобы клик попадал в input, а не в текст "от"
+}
+
+.power__range-input {
+  width: 100%;
+  height: 48px;
+  border: 1px solid #d1d1d1;
+  border-radius: 8px;
+  padding: 0 15px 0 40px; // Отступ слева под слова "от/до"
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  outline: none;
+  transition: border-color 0.2s;
+
+  &:focus {
+    border-color: $black;
   }
 
-  &-input {
-    width: 100%;
-    height: 40px;
-    border: 1px solid #D1D1D1;
-    border-radius: 6px;
-    padding: 0 12px;
-    font-size: 16px;
-    color: #333;
-    text-align: center;
-    outline: none;
-
-    &:focus {
-      border-color: $black;
-    }
-
-    // Убираем стрелочки выбора у числовых инпутов
-    &::-webkit-outer-spin-button,
-    &::-webkit-inner-spin-button {
-      -webkit-appearance: none;
-      margin: 0;
-    }
+  // Убираем стрелочки (spinners)
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
   }
 }

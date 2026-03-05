@@ -23,7 +23,7 @@ const paths = {
     src: "./**/*.php",
   },
   js: {
-    src: "./assets/js/**/*.js",
+    src: ["./assets/js/**/*.js", "!./assets/js/**/*min.js"],
   },
   images: {
     src: "./assets/images/**/*.{jpg,jpeg,png,svg,gif,webp}",

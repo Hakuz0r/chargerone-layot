@@ -5,12 +5,12 @@ export const initRangeSlider = () => {
 
   if (slider) {
     noUiSlider.create(slider, {
-      start: [22, 150], // Начальные значения мощности в кВт
+      start: [30, 240], // Начальные значения мощности в кВт
       connect: true,
       step: 1,
       range: {
         min: 0,
-        max: 500,
+        max: 360,
       },
     });
 

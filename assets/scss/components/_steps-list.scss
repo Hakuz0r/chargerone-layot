@@ -1,0 +1,70 @@
+.steps-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  // Глобальный ::before отсюда мы полностью удалили
+
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    position: relative; // Теперь линия позиционируется относительно самого пункта
+
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+
+    // Рисуем линию для каждого отдельного шага
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: -40px; // Тянем линию вниз ровно до следующего шага
+      left: 24px; // Половина ширины кружка (центр)
+      width: 1px;
+      background-color: #8c8c8c;
+      z-index: 1;
+    }
+
+    // У последнего шага линия не нужна — прячем её!
+    &:last-child::before {
+      display: none;
+    }
+  }
+
+  &__number {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #4a4a4a;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 18px;
+
+    // Поднимаем кружок над линией
+    position: relative;
+    z-index: 2;
+  }
+
+  &__content {
+    padding-top: 10px;
+  }
+
+  &__title {
+    margin: 0 0 8px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+  }
+
+  &__desc {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #666;
+  }
+}

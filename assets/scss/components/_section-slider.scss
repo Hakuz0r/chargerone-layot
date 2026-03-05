@@ -1,0 +1,77 @@
+
+.section-slider {
+  
+  // Кнопка "Посмотреть все" 
+  &__link-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #E6E6E6;
+    padding: 6px 20px 6px 6px; // Слева отступ меньше из-за круглой иконки
+    border-radius: 40px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #D1D1D1;
+    }
+
+    // Временная заглушка под картинку (серый кружок)
+    img {
+      width: 28px;
+      height: 28px;
+      background-color: #999;
+      border-radius: 50%;
+      display: block;
+      object-fit: cover;
+    }
+  }
+
+  &__link {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    text-decoration: none;
+  }
+
+  // Навигация (стрелки)
+  &__nav {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #CCC;
+    background-color: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+
+    // Встроенные SVG-стрелочки, чтобы не возиться с картинками
+    &--prev {
+      background-image: url("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 13L1 7L7 1' stroke='%23333333' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &--next {
+      background-image: url("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 13L7 7L1 1' stroke='%23333333' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &:hover {
+      border-color: #333;
+    }
+  }
+
+  // Контейнер самого слайдера
+  &__swiper {
+    width: 100%;
+    overflow: hidden; // Жизненно важно для Swiper
+  }
+}

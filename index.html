@@ -353,20 +353,1542 @@
         </section>
         <section class="power">
             <div class="container">
-                <div class="power__wrapper">
-                    <h2 class="power__title">Эффективная мощность</h2>
+                <div class="power__inner">
+                    <h2 class="power__title">Подберите станцию <br>по мощности</h2>
                     <div class="power__range">
-                        <div id="power-slider" class="power__range-slider"></div>
-                        <div class="power__range-inputs">
-                            <input type="number" id="power-input-min" class="power__range-input">
-                            <input type="number" id="power-input-max" class="power__range-input"> // спросит у гптшки, почему сделали не формой
+                        <h4 class="power__range-title">Диапазон мощности (кВт)</h4>
+                        <div class="power__range-bg">
+                            <div id="power-slider" class="power__range-slider"></div>
                         </div>
+                        <div class="power__range-inputs">
+                            <div class="power__input-wrapper">
+                                <span class="power__input-label">от</span>
+                                <input type="number" id="power-input-min" class="power__range-input">
+                            </div>
+                            <div class="power__input-wrapper">
+                                <span class="power__input-label">до</span>
+                                <input type="number" id="power-input-max" class="power__range-input">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- section-slider -->
+        <section class="section-slider">
+            <div class="container">
+
+                <div class="section-slider__header">
+                    <h2 class="section-slider__title">Популярные <span>зарядные станции</span></h2>
+
+                    <div class="section-slider__controls">
+                        <div class="section-slider__link-wrapper">
+                            <img src="" alt="">
+                            <a href="#" class="section-slider__link">Посмотреть все</a>
+                        </div>
+                        <div class="section-slider__nav">
+                            <button class="section-slider__btn section-slider__btn--prev"></button>
+                            <button class="section-slider__btn section-slider__btn--next"></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper section-slider__swiper">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <article class="product-card">
+    <div class="product-card__image-wrap">
+
+        <div class="product-card__badges-top">
+            <span class="product-card__badge product-card__badge--dark">DC</span>
+            <span class="product-card__badge product-card__badge--light">0 кВт</span>
+        </div>
+
+        <div class="product-card__badges-bottom">
+            <span class="product-card__badge product-card__badge--outline">МОНЕТИЗАЦИЯ</span>
+        </div>
+    </div>
+
+    <div class="product-card__info">
+        <h3 class="product-card__title">Зарядная станция Name</h3>
+        <p class="product-card__excerpt">цитата</p>
+
+        <div class="product-card__price-box">
+            <span class="product-card__price-current">275 000 ₽</span>
+            <span class="product-card__price-old">179 000 ₽</span>
+        </div>
+
+        <button class="product-card__btn">ПОДРОБНЕЕ</button>
+    </div>
+</article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="product-card">
+    <div class="product-card__image-wrap">
+
+        <div class="product-card__badges-top">
+            <span class="product-card__badge product-card__badge--dark">DC</span>
+            <span class="product-card__badge product-card__badge--light">0 кВт</span>
+        </div>
+
+        <div class="product-card__badges-bottom">
+            <span class="product-card__badge product-card__badge--outline">МОНЕТИЗАЦИЯ</span>
+        </div>
+    </div>
+
+    <div class="product-card__info">
+        <h3 class="product-card__title">Зарядная станция Name</h3>
+        <p class="product-card__excerpt">цитата</p>
+
+        <div class="product-card__price-box">
+            <span class="product-card__price-current">275 000 ₽</span>
+            <span class="product-card__price-old">179 000 ₽</span>
+        </div>
+
+        <button class="product-card__btn">ПОДРОБНЕЕ</button>
+    </div>
+</article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="product-card">
+    <div class="product-card__image-wrap">
+
+        <div class="product-card__badges-top">
+            <span class="product-card__badge product-card__badge--dark">DC</span>
+            <span class="product-card__badge product-card__badge--light">0 кВт</span>
+        </div>
+
+        <div class="product-card__badges-bottom">
+            <span class="product-card__badge product-card__badge--outline">МОНЕТИЗАЦИЯ</span>
+        </div>
+    </div>
+
+    <div class="product-card__info">
+        <h3 class="product-card__title">Зарядная станция Name</h3>
+        <p class="product-card__excerpt">цитата</p>
+
+        <div class="product-card__price-box">
+            <span class="product-card__price-current">275 000 ₽</span>
+            <span class="product-card__price-old">179 000 ₽</span>
+        </div>
+
+        <button class="product-card__btn">ПОДРОБНЕЕ</button>
+    </div>
+</article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="product-card">
+    <div class="product-card__image-wrap">
+
+        <div class="product-card__badges-top">
+            <span class="product-card__badge product-card__badge--dark">DC</span>
+            <span class="product-card__badge product-card__badge--light">0 кВт</span>
+        </div>
+
+        <div class="product-card__badges-bottom">
+            <span class="product-card__badge product-card__badge--outline">МОНЕТИЗАЦИЯ</span>
+        </div>
+    </div>
+
+    <div class="product-card__info">
+        <h3 class="product-card__title">Зарядная станция Name</h3>
+        <p class="product-card__excerpt">цитата</p>
+
+        <div class="product-card__price-box">
+            <span class="product-card__price-current">275 000 ₽</span>
+            <span class="product-card__price-old">179 000 ₽</span>
+        </div>
+
+        <button class="product-card__btn">ПОДРОБНЕЕ</button>
+    </div>
+</article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="product-card">
+    <div class="product-card__image-wrap">
+
+        <div class="product-card__badges-top">
+            <span class="product-card__badge product-card__badge--dark">DC</span>
+            <span class="product-card__badge product-card__badge--light">0 кВт</span>
+        </div>
+
+        <div class="product-card__badges-bottom">
+            <span class="product-card__badge product-card__badge--outline">МОНЕТИЗАЦИЯ</span>
+        </div>
+    </div>
+
+    <div class="product-card__info">
+        <h3 class="product-card__title">Зарядная станция Name</h3>
+        <p class="product-card__excerpt">цитата</p>
+
+        <div class="product-card__price-box">
+            <span class="product-card__price-current">275 000 ₽</span>
+            <span class="product-card__price-old">179 000 ₽</span>
+        </div>
+
+        <button class="product-card__btn">ПОДРОБНЕЕ</button>
+    </div>
+</article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="product-card">
+    <div class="product-card__image-wrap">
+
+        <div class="product-card__badges-top">
+            <span class="product-card__badge product-card__badge--dark">DC</span>
+            <span class="product-card__badge product-card__badge--light">0 кВт</span>
+        </div>
+
+        <div class="product-card__badges-bottom">
+            <span class="product-card__badge product-card__badge--outline">МОНЕТИЗАЦИЯ</span>
+        </div>
+    </div>
+
+    <div class="product-card__info">
+        <h3 class="product-card__title">Зарядная станция Name</h3>
+        <p class="product-card__excerpt">цитата</p>
+
+        <div class="product-card__price-box">
+            <span class="product-card__price-current">275 000 ₽</span>
+            <span class="product-card__price-old">179 000 ₽</span>
+        </div>
+
+        <button class="product-card__btn">ПОДРОБНЕЕ</button>
+    </div>
+</article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="product-card">
+    <div class="product-card__image-wrap">
+
+        <div class="product-card__badges-top">
+            <span class="product-card__badge product-card__badge--dark">DC</span>
+            <span class="product-card__badge product-card__badge--light">0 кВт</span>
+        </div>
+
+        <div class="product-card__badges-bottom">
+            <span class="product-card__badge product-card__badge--outline">МОНЕТИЗАЦИЯ</span>
+        </div>
+    </div>
+
+    <div class="product-card__info">
+        <h3 class="product-card__title">Зарядная станция Name</h3>
+        <p class="product-card__excerpt">цитата</p>
+
+        <div class="product-card__price-box">
+            <span class="product-card__price-current">275 000 ₽</span>
+            <span class="product-card__price-old">179 000 ₽</span>
+        </div>
+
+        <button class="product-card__btn">ПОДРОБНЕЕ</button>
+    </div>
+</article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="product-card">
+    <div class="product-card__image-wrap">
+
+        <div class="product-card__badges-top">
+            <span class="product-card__badge product-card__badge--dark">DC</span>
+            <span class="product-card__badge product-card__badge--light">0 кВт</span>
+        </div>
+
+        <div class="product-card__badges-bottom">
+            <span class="product-card__badge product-card__badge--outline">МОНЕТИЗАЦИЯ</span>
+        </div>
+    </div>
+
+    <div class="product-card__info">
+        <h3 class="product-card__title">Зарядная станция Name</h3>
+        <p class="product-card__excerpt">цитата</p>
+
+        <div class="product-card__price-box">
+            <span class="product-card__price-current">275 000 ₽</span>
+            <span class="product-card__price-old">179 000 ₽</span>
+        </div>
+
+        <button class="product-card__btn">ПОДРОБНЕЕ</button>
+    </div>
+</article>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="section-slider">
+            <div class="container">
+
+                <div class="section-slider__header">
+                    <h2 class="section-slider__title">Быстрые <span>зарядные станции</span></h2>
+
+                    <div class="section-slider__controls">
+                        <div class="section-slider__link-wrapper">
+                            <img src="" alt="">
+                            <a href="#" class="section-slider__link">Посмотреть все</a>
+                        </div>
+                        <div class="section-slider__nav">
+                            <button class="section-slider__btn section-slider__btn--prev"></button>
+                            <button class="section-slider__btn section-slider__btn--next"></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper section-slider__swiper">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <article class="product-card">
+    <div class="product-card__image-wrap">
+
+        <div class="product-card__badges-top">
+            <span class="product-card__badge product-card__badge--dark">DC</span>
+            <span class="product-card__badge product-card__badge--light">0 кВт</span>
+        </div>
+
+        <div class="product-card__badges-bottom">
+            <span class="product-card__badge product-card__badge--outline">МОНЕТИЗАЦИЯ</span>
+        </div>
+    </div>
+
+    <div class="product-card__info">
+        <h3 class="product-card__title">Зарядная станция Name</h3>
+        <p class="product-card__excerpt">цитата</p>
+
+        <div class="product-card__price-box">
+            <span class="product-card__price-current">275 000 ₽</span>
+            <span class="product-card__price-old">179 000 ₽</span>
+        </div>
+
+        <button class="product-card__btn">ПОДРОБНЕЕ</button>
+    </div>
+</article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="product-card">
+    <div class="product-card__image-wrap">
+
+        <div class="product-card__badges-top">
+            <span class="product-card__badge product-card__badge--dark">DC</span>
+            <span class="product-card__badge product-card__badge--light">0 кВт</span>
+        </div>
+
+        <div class="product-card__badges-bottom">
+            <span class="product-card__badge product-card__badge--outline">МОНЕТИЗАЦИЯ</span>
+        </div>
+    </div>
+
+    <div class="product-card__info">
+        <h3 class="product-card__title">Зарядная станция Name</h3>
+        <p class="product-card__excerpt">цитата</p>
+
+        <div class="product-card__price-box">
+            <span class="product-card__price-current">275 000 ₽</span>
+            <span class="product-card__price-old">179 000 ₽</span>
+        </div>
+
+        <button class="product-card__btn">ПОДРОБНЕЕ</button>
+    </div>
+</article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="product-card">
+    <div class="product-card__image-wrap">
+
+        <div class="product-card__badges-top">
+            <span class="product-card__badge product-card__badge--dark">DC</span>
+            <span class="product-card__badge product-card__badge--light">0 кВт</span>
+        </div>
+
+        <div class="product-card__badges-bottom">
+            <span class="product-card__badge product-card__badge--outline">МОНЕТИЗАЦИЯ</span>
+        </div>
+    </div>
+
+    <div class="product-card__info">
+        <h3 class="product-card__title">Зарядная станция Name</h3>
+        <p class="product-card__excerpt">цитата</p>
+
+        <div class="product-card__price-box">
+            <span class="product-card__price-current">275 000 ₽</span>
+            <span class="product-card__price-old">179 000 ₽</span>
+        </div>
+
+        <button class="product-card__btn">ПОДРОБНЕЕ</button>
+    </div>
+</article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="product-card">
+    <div class="product-card__image-wrap">
+
+        <div class="product-card__badges-top">
+            <span class="product-card__badge product-card__badge--dark">DC</span>
+            <span class="product-card__badge product-card__badge--light">0 кВт</span>
+        </div>
+
+        <div class="product-card__badges-bottom">
+            <span class="product-card__badge product-card__badge--outline">МОНЕТИЗАЦИЯ</span>
+        </div>
+    </div>
+
+    <div class="product-card__info">
+        <h3 class="product-card__title">Зарядная станция Name</h3>
+        <p class="product-card__excerpt">цитата</p>
+
+        <div class="product-card__price-box">
+            <span class="product-card__price-current">275 000 ₽</span>
+            <span class="product-card__price-old">179 000 ₽</span>
+        </div>
+
+        <button class="product-card__btn">ПОДРОБНЕЕ</button>
+    </div>
+</article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="product-card">
+    <div class="product-card__image-wrap">
+
+        <div class="product-card__badges-top">
+            <span class="product-card__badge product-card__badge--dark">DC</span>
+            <span class="product-card__badge product-card__badge--light">0 кВт</span>
+        </div>
+
+        <div class="product-card__badges-bottom">
+            <span class="product-card__badge product-card__badge--outline">МОНЕТИЗАЦИЯ</span>
+        </div>
+    </div>
+
+    <div class="product-card__info">
+        <h3 class="product-card__title">Зарядная станция Name</h3>
+        <p class="product-card__excerpt">цитата</p>
+
+        <div class="product-card__price-box">
+            <span class="product-card__price-current">275 000 ₽</span>
+            <span class="product-card__price-old">179 000 ₽</span>
+        </div>
+
+        <button class="product-card__btn">ПОДРОБНЕЕ</button>
+    </div>
+</article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="product-card">
+    <div class="product-card__image-wrap">
+
+        <div class="product-card__badges-top">
+            <span class="product-card__badge product-card__badge--dark">DC</span>
+            <span class="product-card__badge product-card__badge--light">0 кВт</span>
+        </div>
+
+        <div class="product-card__badges-bottom">
+            <span class="product-card__badge product-card__badge--outline">МОНЕТИЗАЦИЯ</span>
+        </div>
+    </div>
+
+    <div class="product-card__info">
+        <h3 class="product-card__title">Зарядная станция Name</h3>
+        <p class="product-card__excerpt">цитата</p>
+
+        <div class="product-card__price-box">
+            <span class="product-card__price-current">275 000 ₽</span>
+            <span class="product-card__price-old">179 000 ₽</span>
+        </div>
+
+        <button class="product-card__btn">ПОДРОБНЕЕ</button>
+    </div>
+</article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="product-card">
+    <div class="product-card__image-wrap">
+
+        <div class="product-card__badges-top">
+            <span class="product-card__badge product-card__badge--dark">DC</span>
+            <span class="product-card__badge product-card__badge--light">0 кВт</span>
+        </div>
+
+        <div class="product-card__badges-bottom">
+            <span class="product-card__badge product-card__badge--outline">МОНЕТИЗАЦИЯ</span>
+        </div>
+    </div>
+
+    <div class="product-card__info">
+        <h3 class="product-card__title">Зарядная станция Name</h3>
+        <p class="product-card__excerpt">цитата</p>
+
+        <div class="product-card__price-box">
+            <span class="product-card__price-current">275 000 ₽</span>
+            <span class="product-card__price-old">179 000 ₽</span>
+        </div>
+
+        <button class="product-card__btn">ПОДРОБНЕЕ</button>
+    </div>
+</article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="product-card">
+    <div class="product-card__image-wrap">
+
+        <div class="product-card__badges-top">
+            <span class="product-card__badge product-card__badge--dark">DC</span>
+            <span class="product-card__badge product-card__badge--light">0 кВт</span>
+        </div>
+
+        <div class="product-card__badges-bottom">
+            <span class="product-card__badge product-card__badge--outline">МОНЕТИЗАЦИЯ</span>
+        </div>
+    </div>
+
+    <div class="product-card__info">
+        <h3 class="product-card__title">Зарядная станция Name</h3>
+        <p class="product-card__excerpt">цитата</p>
+
+        <div class="product-card__price-box">
+            <span class="product-card__price-current">275 000 ₽</span>
+            <span class="product-card__price-old">179 000 ₽</span>
+        </div>
+
+        <button class="product-card__btn">ПОДРОБНЕЕ</button>
+    </div>
+</article>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="section-slider">
+            <div class="container">
+
+                <div class="section-slider__header">
+                    <h2 class="section-slider__title">Медленные <span>зарядные станции</span></h2>
+
+                    <div class="section-slider__controls">
+                        <div class="section-slider__link-wrapper">
+                            <img src="" alt="">
+                            <a href="#" class="section-slider__link">Посмотреть все</a>
+                        </div>
+                        <div class="section-slider__nav">
+                            <button class="section-slider__btn section-slider__btn--prev"></button>
+                            <button class="section-slider__btn section-slider__btn--next"></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper section-slider__swiper">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <article class="product-card">
+    <div class="product-card__image-wrap">
+
+        <div class="product-card__badges-top">
+            <span class="product-card__badge product-card__badge--dark">DC</span>
+            <span class="product-card__badge product-card__badge--light">0 кВт</span>
+        </div>
+
+        <div class="product-card__badges-bottom">
+            <span class="product-card__badge product-card__badge--outline">МОНЕТИЗАЦИЯ</span>
+        </div>
+    </div>
+
+    <div class="product-card__info">
+        <h3 class="product-card__title">Зарядная станция Name</h3>
+        <p class="product-card__excerpt">цитата</p>
+
+        <div class="product-card__price-box">
+            <span class="product-card__price-current">275 000 ₽</span>
+            <span class="product-card__price-old">179 000 ₽</span>
+        </div>
+
+        <button class="product-card__btn">ПОДРОБНЕЕ</button>
+    </div>
+</article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="product-card">
+    <div class="product-card__image-wrap">
+
+        <div class="product-card__badges-top">
+            <span class="product-card__badge product-card__badge--dark">DC</span>
+            <span class="product-card__badge product-card__badge--light">0 кВт</span>
+        </div>
+
+        <div class="product-card__badges-bottom">
+            <span class="product-card__badge product-card__badge--outline">МОНЕТИЗАЦИЯ</span>
+        </div>
+    </div>
+
+    <div class="product-card__info">
+        <h3 class="product-card__title">Зарядная станция Name</h3>
+        <p class="product-card__excerpt">цитата</p>
+
+        <div class="product-card__price-box">
+            <span class="product-card__price-current">275 000 ₽</span>
+            <span class="product-card__price-old">179 000 ₽</span>
+        </div>
+
+        <button class="product-card__btn">ПОДРОБНЕЕ</button>
+    </div>
+</article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="product-card">
+    <div class="product-card__image-wrap">
+
+        <div class="product-card__badges-top">
+            <span class="product-card__badge product-card__badge--dark">DC</span>
+            <span class="product-card__badge product-card__badge--light">0 кВт</span>
+        </div>
+
+        <div class="product-card__badges-bottom">
+            <span class="product-card__badge product-card__badge--outline">МОНЕТИЗАЦИЯ</span>
+        </div>
+    </div>
+
+    <div class="product-card__info">
+        <h3 class="product-card__title">Зарядная станция Name</h3>
+        <p class="product-card__excerpt">цитата</p>
+
+        <div class="product-card__price-box">
+            <span class="product-card__price-current">275 000 ₽</span>
+            <span class="product-card__price-old">179 000 ₽</span>
+        </div>
+
+        <button class="product-card__btn">ПОДРОБНЕЕ</button>
+    </div>
+</article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="product-card">
+    <div class="product-card__image-wrap">
+
+        <div class="product-card__badges-top">
+            <span class="product-card__badge product-card__badge--dark">DC</span>
+            <span class="product-card__badge product-card__badge--light">0 кВт</span>
+        </div>
+
+        <div class="product-card__badges-bottom">
+            <span class="product-card__badge product-card__badge--outline">МОНЕТИЗАЦИЯ</span>
+        </div>
+    </div>
+
+    <div class="product-card__info">
+        <h3 class="product-card__title">Зарядная станция Name</h3>
+        <p class="product-card__excerpt">цитата</p>
+
+        <div class="product-card__price-box">
+            <span class="product-card__price-current">275 000 ₽</span>
+            <span class="product-card__price-old">179 000 ₽</span>
+        </div>
+
+        <button class="product-card__btn">ПОДРОБНЕЕ</button>
+    </div>
+</article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="product-card">
+    <div class="product-card__image-wrap">
+
+        <div class="product-card__badges-top">
+            <span class="product-card__badge product-card__badge--dark">DC</span>
+            <span class="product-card__badge product-card__badge--light">0 кВт</span>
+        </div>
+
+        <div class="product-card__badges-bottom">
+            <span class="product-card__badge product-card__badge--outline">МОНЕТИЗАЦИЯ</span>
+        </div>
+    </div>
+
+    <div class="product-card__info">
+        <h3 class="product-card__title">Зарядная станция Name</h3>
+        <p class="product-card__excerpt">цитата</p>
+
+        <div class="product-card__price-box">
+            <span class="product-card__price-current">275 000 ₽</span>
+            <span class="product-card__price-old">179 000 ₽</span>
+        </div>
+
+        <button class="product-card__btn">ПОДРОБНЕЕ</button>
+    </div>
+</article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="product-card">
+    <div class="product-card__image-wrap">
+
+        <div class="product-card__badges-top">
+            <span class="product-card__badge product-card__badge--dark">DC</span>
+            <span class="product-card__badge product-card__badge--light">0 кВт</span>
+        </div>
+
+        <div class="product-card__badges-bottom">
+            <span class="product-card__badge product-card__badge--outline">МОНЕТИЗАЦИЯ</span>
+        </div>
+    </div>
+
+    <div class="product-card__info">
+        <h3 class="product-card__title">Зарядная станция Name</h3>
+        <p class="product-card__excerpt">цитата</p>
+
+        <div class="product-card__price-box">
+            <span class="product-card__price-current">275 000 ₽</span>
+            <span class="product-card__price-old">179 000 ₽</span>
+        </div>
+
+        <button class="product-card__btn">ПОДРОБНЕЕ</button>
+    </div>
+</article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="product-card">
+    <div class="product-card__image-wrap">
+
+        <div class="product-card__badges-top">
+            <span class="product-card__badge product-card__badge--dark">DC</span>
+            <span class="product-card__badge product-card__badge--light">0 кВт</span>
+        </div>
+
+        <div class="product-card__badges-bottom">
+            <span class="product-card__badge product-card__badge--outline">МОНЕТИЗАЦИЯ</span>
+        </div>
+    </div>
+
+    <div class="product-card__info">
+        <h3 class="product-card__title">Зарядная станция Name</h3>
+        <p class="product-card__excerpt">цитата</p>
+
+        <div class="product-card__price-box">
+            <span class="product-card__price-current">275 000 ₽</span>
+            <span class="product-card__price-old">179 000 ₽</span>
+        </div>
+
+        <button class="product-card__btn">ПОДРОБНЕЕ</button>
+    </div>
+</article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="product-card">
+    <div class="product-card__image-wrap">
+
+        <div class="product-card__badges-top">
+            <span class="product-card__badge product-card__badge--dark">DC</span>
+            <span class="product-card__badge product-card__badge--light">0 кВт</span>
+        </div>
+
+        <div class="product-card__badges-bottom">
+            <span class="product-card__badge product-card__badge--outline">МОНЕТИЗАЦИЯ</span>
+        </div>
+    </div>
+
+    <div class="product-card__info">
+        <h3 class="product-card__title">Зарядная станция Name</h3>
+        <p class="product-card__excerpt">цитата</p>
+
+        <div class="product-card__price-box">
+            <span class="product-card__price-current">275 000 ₽</span>
+            <span class="product-card__price-old">179 000 ₽</span>
+        </div>
+
+        <button class="product-card__btn">ПОДРОБНЕЕ</button>
+    </div>
+</article>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="section-slider">
+            <div class="container">
+
+                <div class="section-slider__header">
+                    <h2 class="section-slider__title"><span>Наши работы</span></h2>
+
+                    <div class="section-slider__controls">
+                        <div class="section-slider__link-wrapper">
+                            <img src="" alt="">
+                            <a href="#" class="section-slider__link">Посмотреть все</a>
+                        </div>
+                        <div class="section-slider__nav">
+                            <button class="section-slider__btn section-slider__btn--prev"></button>
+                            <button class="section-slider__btn section-slider__btn--next"></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper section-slider__swiper">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <article class="work-card">
+    <div class="work-card__image">
+    </div>
+
+    <div class="work-card__info">
+        <h3 class="work-card__title">Установка станции Name</h3>
+
+        <div class="work-card__meta">
+            <span class="work-card__icon work-card__icon--circle"></span>
+            <span class="work-card__text">Московская область</span>
+        </div>
+
+        <div class="work-card__meta">
+            <span class="work-card__icon work-card__icon--square"></span>
+            <span class="work-card__text">Зарядная станция<br>название</span>
+        </div>
+    </div>
+
+    <a href="#" class="work-card__btn">Подробнее</a>
+</article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="work-card">
+    <div class="work-card__image">
+    </div>
+
+    <div class="work-card__info">
+        <h3 class="work-card__title">Установка станции Name</h3>
+
+        <div class="work-card__meta">
+            <span class="work-card__icon work-card__icon--circle"></span>
+            <span class="work-card__text">Московская область</span>
+        </div>
+
+        <div class="work-card__meta">
+            <span class="work-card__icon work-card__icon--square"></span>
+            <span class="work-card__text">Зарядная станция<br>название</span>
+        </div>
+    </div>
+
+    <a href="#" class="work-card__btn">Подробнее</a>
+</article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="work-card">
+    <div class="work-card__image">
+    </div>
+
+    <div class="work-card__info">
+        <h3 class="work-card__title">Установка станции Name</h3>
+
+        <div class="work-card__meta">
+            <span class="work-card__icon work-card__icon--circle"></span>
+            <span class="work-card__text">Московская область</span>
+        </div>
+
+        <div class="work-card__meta">
+            <span class="work-card__icon work-card__icon--square"></span>
+            <span class="work-card__text">Зарядная станция<br>название</span>
+        </div>
+    </div>
+
+    <a href="#" class="work-card__btn">Подробнее</a>
+</article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="work-card">
+    <div class="work-card__image">
+    </div>
+
+    <div class="work-card__info">
+        <h3 class="work-card__title">Установка станции Name</h3>
+
+        <div class="work-card__meta">
+            <span class="work-card__icon work-card__icon--circle"></span>
+            <span class="work-card__text">Московская область</span>
+        </div>
+
+        <div class="work-card__meta">
+            <span class="work-card__icon work-card__icon--square"></span>
+            <span class="work-card__text">Зарядная станция<br>название</span>
+        </div>
+    </div>
+
+    <a href="#" class="work-card__btn">Подробнее</a>
+</article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="work-card">
+    <div class="work-card__image">
+    </div>
+
+    <div class="work-card__info">
+        <h3 class="work-card__title">Установка станции Name</h3>
+
+        <div class="work-card__meta">
+            <span class="work-card__icon work-card__icon--circle"></span>
+            <span class="work-card__text">Московская область</span>
+        </div>
+
+        <div class="work-card__meta">
+            <span class="work-card__icon work-card__icon--square"></span>
+            <span class="work-card__text">Зарядная станция<br>название</span>
+        </div>
+    </div>
+
+    <a href="#" class="work-card__btn">Подробнее</a>
+</article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="work-card">
+    <div class="work-card__image">
+    </div>
+
+    <div class="work-card__info">
+        <h3 class="work-card__title">Установка станции Name</h3>
+
+        <div class="work-card__meta">
+            <span class="work-card__icon work-card__icon--circle"></span>
+            <span class="work-card__text">Московская область</span>
+        </div>
+
+        <div class="work-card__meta">
+            <span class="work-card__icon work-card__icon--square"></span>
+            <span class="work-card__text">Зарядная станция<br>название</span>
+        </div>
+    </div>
+
+    <a href="#" class="work-card__btn">Подробнее</a>
+</article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="work-card">
+    <div class="work-card__image">
+    </div>
+
+    <div class="work-card__info">
+        <h3 class="work-card__title">Установка станции Name</h3>
+
+        <div class="work-card__meta">
+            <span class="work-card__icon work-card__icon--circle"></span>
+            <span class="work-card__text">Московская область</span>
+        </div>
+
+        <div class="work-card__meta">
+            <span class="work-card__icon work-card__icon--square"></span>
+            <span class="work-card__text">Зарядная станция<br>название</span>
+        </div>
+    </div>
+
+    <a href="#" class="work-card__btn">Подробнее</a>
+</article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="work-card">
+    <div class="work-card__image">
+    </div>
+
+    <div class="work-card__info">
+        <h3 class="work-card__title">Установка станции Name</h3>
+
+        <div class="work-card__meta">
+            <span class="work-card__icon work-card__icon--circle"></span>
+            <span class="work-card__text">Московская область</span>
+        </div>
+
+        <div class="work-card__meta">
+            <span class="work-card__icon work-card__icon--square"></span>
+            <span class="work-card__text">Зарядная станция<br>название</span>
+        </div>
+    </div>
+
+    <a href="#" class="work-card__btn">Подробнее</a>
+</article>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="logo-slider">
+            <div class="container">
+
+                <h2 class="logo-slider__title">Бренды станций</h2>
+
+                <div class="logo-slider__wrapper">
+                    <button class="logo-slider__btn logo-slider__btn--prev"></button>
+
+                    <div class="swiper logo-slider__swiper">
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide">
+                                <a href="#" class="logo-card">
+                                    <img src="" alt="Логотип 1" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="logo-card">
+                                    <img src="" alt="Логотип 1" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="logo-card">
+                                    <img src="" alt="Логотип 1" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="logo-card">
+                                    <img src="" alt="Логотип 1" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="logo-card">
+                                    <img src="" alt="Логотип 1" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="logo-card">
+                                    <img src="" alt="Логотип 1" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="logo-card">
+                                    <img src="" alt="Логотип 1" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="logo-card">
+                                    <img src="" alt="Логотип 1" class="logo-card__img">
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <button class="logo-slider__btn logo-slider__btn--next"></button>
+                </div>
+
+            </div>
+        </section>
+        <!-- logo-slider -->
+        <section class="logo-slider">
+            <div class="container">
+
+                <h2 class="logo-slider__title">Бренды авто</h2>
+
+                <div class="logo-slider__wrapper">
+                    <button class="logo-slider__btn logo-slider__btn--prev"></button>
+
+                    <div class="swiper logo-slider__swiper">
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide">
+                                <a href="#" class="logo-card">
+                                    <img src="" alt="Логотип 1" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="logo-card">
+                                    <img src="" alt="Логотип 1" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="logo-card">
+                                    <img src="" alt="Логотип 1" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="logo-card">
+                                    <img src="" alt="Логотип 1" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="logo-card">
+                                    <img src="" alt="Логотип 1" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="logo-card">
+                                    <img src="" alt="Логотип 1" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="logo-card">
+                                    <img src="" alt="Логотип 1" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="logo-card">
+                                    <img src="" alt="Логотип 1" class="logo-card__img">
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <button class="logo-slider__btn logo-slider__btn--next"></button>
+                </div>
+
+            </div>
+        </section>
+        <!-- section-selection -->
+        <section class="selection">
+            <div class="container">
+                <div class="selection__wrapper">
+                    <div class="selection__info">
+                        <h2 class="selection__title">Подбор зарядной станции</h2>
+                        <p class="selection__text">
+                            Заполните форму и мы поможем
+                            подобрать вам зарядную станцию!
+                        </p>
+                        <button class="selection__button js-open-modal">
+                            Подобрать
+                        </button>
+                    </div>
+                    <div class="selection__image">
+                        <img src="" alt="Подбор зарядной станции" class="selection__img">
                     </div>
                 </div>
             </div>
         </section>
+        <!-- section reviews -->
+        <section class="reviews-slider">
+            <div class="container">
+                <h2 class="reviews-slider__title text-center">Отзывы клиентов</h2>
+
+                <div class="reviews-slider__wrapper">
+                    <button class="reviews-slider__btn reviews-slider__btn--prev"></button>
+
+                    <div class="swiper reviews-slider__swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <article class="review-card">
+    <div class="review-card__header">
+        <span class="review-card__date">18 Feb, 26</span>
+        <div class="review-card__user">
+            <div class="review-card__avatar">
+                <img src="" alt="Аватар">
+            </div>
+            <h4 class="review-card__name">Икрем Б.</h4>
+        </div>
+    </div>
+
+    <div class="review-card__body">
+        <p class="review-card__text">
+            Порекомендовали друзьям, у которых тоже электромобиль. Мы то свой как месяц только купили, конечно возникла
+            необходимость в покупке наёмной станции электро зарядки. Хорошее качество зарядки. Нам всё объяснили,
+            показали, отличная работа с клиентами. Доволен выбором и покупкой соответственно. Теперь упакованы на все
+            сто, всем большое спасибо за внимательную работу с покупателями. Магазин смело рекомендую.
+        </p>
+    </div>
+
+    <div class="review-card__footer">
+        <a href="#" target="_blank" class="review-card__link">
+            <strong>Отзыв в 2gis</strong>
+            <span class="review-card__icon-wrapper">
+                <span class="review-card__icon-fake"></span>
+            </span>
+        </a>
+    </div>
+</article>
+                            </div>
+                            <div class="swiper-slide">
+                                <article class="review-card">
+    <div class="review-card__header">
+        <span class="review-card__date">18 Feb, 26</span>
+        <div class="review-card__user">
+            <div class="review-card__avatar">
+                <img src="" alt="Аватар">
+            </div>
+            <h4 class="review-card__name">Икрем Б.</h4>
+        </div>
+    </div>
+
+    <div class="review-card__body">
+        <p class="review-card__text">
+            Порекомендовали друзьям, у которых тоже электромобиль. Мы то свой как месяц только купили, конечно возникла
+            необходимость в покупке наёмной станции электро зарядки. Хорошее качество зарядки. Нам всё объяснили,
+            показали, отличная работа с клиентами. Доволен выбором и покупкой соответственно. Теперь упакованы на все
+            сто, всем большое спасибо за внимательную работу с покупателями. Магазин смело рекомендую.
+        </p>
+    </div>
+
+    <div class="review-card__footer">
+        <a href="#" target="_blank" class="review-card__link">
+            <strong>Отзыв в 2gis</strong>
+            <span class="review-card__icon-wrapper">
+                <span class="review-card__icon-fake"></span>
+            </span>
+        </a>
+    </div>
+</article>
+                            </div>
+                            <div class="swiper-slide">
+                                <article class="review-card">
+    <div class="review-card__header">
+        <span class="review-card__date">18 Feb, 26</span>
+        <div class="review-card__user">
+            <div class="review-card__avatar">
+                <img src="" alt="Аватар">
+            </div>
+            <h4 class="review-card__name">Икрем Б.</h4>
+        </div>
+    </div>
+
+    <div class="review-card__body">
+        <p class="review-card__text">
+            Порекомендовали друзьям, у которых тоже электромобиль. Мы то свой как месяц только купили, конечно возникла
+            необходимость в покупке наёмной станции электро зарядки. Хорошее качество зарядки. Нам всё объяснили,
+            показали, отличная работа с клиентами. Доволен выбором и покупкой соответственно. Теперь упакованы на все
+            сто, всем большое спасибо за внимательную работу с покупателями. Магазин смело рекомендую.
+        </p>
+    </div>
+
+    <div class="review-card__footer">
+        <a href="#" target="_blank" class="review-card__link">
+            <strong>Отзыв в 2gis</strong>
+            <span class="review-card__icon-wrapper">
+                <span class="review-card__icon-fake"></span>
+            </span>
+        </a>
+    </div>
+</article>
+                            </div>
+                            <div class="swiper-slide">
+                                <article class="review-card">
+    <div class="review-card__header">
+        <span class="review-card__date">18 Feb, 26</span>
+        <div class="review-card__user">
+            <div class="review-card__avatar">
+                <img src="" alt="Аватар">
+            </div>
+            <h4 class="review-card__name">Икрем Б.</h4>
+        </div>
+    </div>
+
+    <div class="review-card__body">
+        <p class="review-card__text">
+            Порекомендовали друзьям, у которых тоже электромобиль. Мы то свой как месяц только купили, конечно возникла
+            необходимость в покупке наёмной станции электро зарядки. Хорошее качество зарядки. Нам всё объяснили,
+            показали, отличная работа с клиентами. Доволен выбором и покупкой соответственно. Теперь упакованы на все
+            сто, всем большое спасибо за внимательную работу с покупателями. Магазин смело рекомендую.
+        </p>
+    </div>
+
+    <div class="review-card__footer">
+        <a href="#" target="_blank" class="review-card__link">
+            <strong>Отзыв в 2gis</strong>
+            <span class="review-card__icon-wrapper">
+                <span class="review-card__icon-fake"></span>
+            </span>
+        </a>
+    </div>
+</article>
+                            </div>
+                            <div class="swiper-slide">
+                                <article class="review-card">
+    <div class="review-card__header">
+        <span class="review-card__date">18 Feb, 26</span>
+        <div class="review-card__user">
+            <div class="review-card__avatar">
+                <img src="" alt="Аватар">
+            </div>
+            <h4 class="review-card__name">Икрем Б.</h4>
+        </div>
+    </div>
+
+    <div class="review-card__body">
+        <p class="review-card__text">
+            Порекомендовали друзьям, у которых тоже электромобиль. Мы то свой как месяц только купили, конечно возникла
+            необходимость в покупке наёмной станции электро зарядки. Хорошее качество зарядки. Нам всё объяснили,
+            показали, отличная работа с клиентами. Доволен выбором и покупкой соответственно. Теперь упакованы на все
+            сто, всем большое спасибо за внимательную работу с покупателями. Магазин смело рекомендую.
+        </p>
+    </div>
+
+    <div class="review-card__footer">
+        <a href="#" target="_blank" class="review-card__link">
+            <strong>Отзыв в 2gis</strong>
+            <span class="review-card__icon-wrapper">
+                <span class="review-card__icon-fake"></span>
+            </span>
+        </a>
+    </div>
+</article>
+                            </div>
+                            <div class="swiper-slide">
+                                <article class="review-card">
+    <div class="review-card__header">
+        <span class="review-card__date">18 Feb, 26</span>
+        <div class="review-card__user">
+            <div class="review-card__avatar">
+                <img src="" alt="Аватар">
+            </div>
+            <h4 class="review-card__name">Икрем Б.</h4>
+        </div>
+    </div>
+
+    <div class="review-card__body">
+        <p class="review-card__text">
+            Порекомендовали друзьям, у которых тоже электромобиль. Мы то свой как месяц только купили, конечно возникла
+            необходимость в покупке наёмной станции электро зарядки. Хорошее качество зарядки. Нам всё объяснили,
+            показали, отличная работа с клиентами. Доволен выбором и покупкой соответственно. Теперь упакованы на все
+            сто, всем большое спасибо за внимательную работу с покупателями. Магазин смело рекомендую.
+        </p>
+    </div>
+
+    <div class="review-card__footer">
+        <a href="#" target="_blank" class="review-card__link">
+            <strong>Отзыв в 2gis</strong>
+            <span class="review-card__icon-wrapper">
+                <span class="review-card__icon-fake"></span>
+            </span>
+        </a>
+    </div>
+</article>
+                            </div>
+                            <div class="swiper-slide">
+                                <article class="review-card">
+    <div class="review-card__header">
+        <span class="review-card__date">18 Feb, 26</span>
+        <div class="review-card__user">
+            <div class="review-card__avatar">
+                <img src="" alt="Аватар">
+            </div>
+            <h4 class="review-card__name">Икрем Б.</h4>
+        </div>
+    </div>
+
+    <div class="review-card__body">
+        <p class="review-card__text">
+            Порекомендовали друзьям, у которых тоже электромобиль. Мы то свой как месяц только купили, конечно возникла
+            необходимость в покупке наёмной станции электро зарядки. Хорошее качество зарядки. Нам всё объяснили,
+            показали, отличная работа с клиентами. Доволен выбором и покупкой соответственно. Теперь упакованы на все
+            сто, всем большое спасибо за внимательную работу с покупателями. Магазин смело рекомендую.
+        </p>
+    </div>
+
+    <div class="review-card__footer">
+        <a href="#" target="_blank" class="review-card__link">
+            <strong>Отзыв в 2gis</strong>
+            <span class="review-card__icon-wrapper">
+                <span class="review-card__icon-fake"></span>
+            </span>
+        </a>
+    </div>
+</article>
+                            </div>
+                            <div class="swiper-slide">
+                                <article class="review-card">
+    <div class="review-card__header">
+        <span class="review-card__date">18 Feb, 26</span>
+        <div class="review-card__user">
+            <div class="review-card__avatar">
+                <img src="" alt="Аватар">
+            </div>
+            <h4 class="review-card__name">Икрем Б.</h4>
+        </div>
+    </div>
+
+    <div class="review-card__body">
+        <p class="review-card__text">
+            Порекомендовали друзьям, у которых тоже электромобиль. Мы то свой как месяц только купили, конечно возникла
+            необходимость в покупке наёмной станции электро зарядки. Хорошее качество зарядки. Нам всё объяснили,
+            показали, отличная работа с клиентами. Доволен выбором и покупкой соответственно. Теперь упакованы на все
+            сто, всем большое спасибо за внимательную работу с покупателями. Магазин смело рекомендую.
+        </p>
+    </div>
+
+    <div class="review-card__footer">
+        <a href="#" target="_blank" class="review-card__link">
+            <strong>Отзыв в 2gis</strong>
+            <span class="review-card__icon-wrapper">
+                <span class="review-card__icon-fake"></span>
+            </span>
+        </a>
+    </div>
+</article>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="reviews-slider__btn reviews-slider__btn--next"></button>
+                </div>
+            </div>
+        </section>
+        <!-- section capabilities -->
+        <section class="capabilities section">
+            <div class="container">
+                <div class="capabilities__inner">
+
+                    <div class="capabilities__steps">
+                        <ol class="steps-list">
+    <li class="steps-list__item">
+        <div class="steps-list__number">1</div>
+        <div class="steps-list__content">
+            <h3 class="steps-list__title">Подберем зарядную станцию</h3>
+            <p class="steps-list__desc">Для домашнего и коммерческого использования</p>
+        </div>
+    </li>
+    <li class="steps-list__item">
+        <div class="steps-list__number">2</div>
+        <div class="steps-list__content">
+            <h3 class="steps-list__title">Бизнес на ЭЗС под ключ</h3>
+            <p class="steps-list__desc">Подберем локацию, ЭЗС, согласуем, смонтируеми подключим к оператору</p>
+        </div>
+    </li>
+    <li class="steps-list__item">
+        <div class="steps-list__number">3</div>
+        <div class="steps-list__content">
+            <h3 class="steps-list__title">Безопасность</h3>
+            <p class="steps-list__desc">Работаем официально</p>
+        </div>
+    </li>
+</ol>
+                    </div>
+
+                    <div class="capabilities__info">
+                        <h2 class="capabilities__title">Наши<br>возможности</h2>
+                        <a href="#" class="btn btn--dark">Узнать подробнее</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- section news -->
+        <section class="news section">
+            <div class="container">
+                <h2 class="news__title">Новости и обзоры</h2>
+
+                <div class="news__grid">
+                    <article class="news-card">
+    <div class="news-card__image-wrapper">
+    </div>
+    <div class="news-card__content">
+        <h3 class="news-card__title">Новость</h3>
+        <p class="news-card__desc">Описание</p>
+        <a href="#" class="news-card__btn btn-outline">Узнать больше</a>
+    </div>
+</article>
+                    <article class="news-card">
+    <div class="news-card__image-wrapper">
+    </div>
+    <div class="news-card__content">
+        <h3 class="news-card__title">Новость</h3>
+        <p class="news-card__desc">Описание</p>
+        <a href="#" class="news-card__btn btn-outline">Узнать больше</a>
+    </div>
+</article>
+                    <article class="news-card">
+    <div class="news-card__image-wrapper">
+    </div>
+    <div class="news-card__content">
+        <h3 class="news-card__title">Новость</h3>
+        <p class="news-card__desc">Описание</p>
+        <a href="#" class="news-card__btn btn-outline">Узнать больше</a>
+    </div>
+</article>
+                    <article class="news-card">
+    <div class="news-card__image-wrapper">
+    </div>
+    <div class="news-card__content">
+        <h3 class="news-card__title">Новость</h3>
+        <p class="news-card__desc">Описание</p>
+        <a href="#" class="news-card__btn btn-outline">Узнать больше</a>
+    </div>
+</article>
+                </div>
+            </div>
+        </section>
+        <!-- section clients -->
+        <section class="logo-slider">
+            <div class="container">
+
+                <h2 class="logo-slider__title">Наши клиенты</h2>
+
+                <div class="logo-slider__wrapper">
+                    <button class="logo-slider__btn logo-slider__btn--prev"></button>
+
+                    <div class="swiper logo-slider__swiper">
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide">
+                                <a href="#" class="logo-card">
+                                    <img src="" alt="Логотип 1" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="logo-card">
+                                    <img src="" alt="Логотип 1" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="logo-card">
+                                    <img src="" alt="Логотип 1" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="logo-card">
+                                    <img src="" alt="Логотип 1" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="logo-card">
+                                    <img src="" alt="Логотип 1" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="logo-card">
+                                    <img src="" alt="Логотип 1" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="logo-card">
+                                    <img src="" alt="Логотип 1" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="logo-card">
+                                    <img src="" alt="Логотип 1" class="logo-card__img">
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <button class="logo-slider__btn logo-slider__btn--next"></button>
+                </div>
+
+            </div>
+        </section>
     </main>
     <!-- <script type="module" src="assets/js/main.js"></script> -->
+    <div class="modal" id="modal-selection">
+    <div class="modal__overlay" data-close></div>
+
+    <div class="modal__content">
+        <button class="modal__close" data-close aria-label="Закрыть">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 6L6 18M6 6L18 18" stroke="#A8A8A8" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </button>
+
+        <h3 class="modal__title">Оставьте заявку<br>и мы с вами свяжемся!</h3>
+
+        <form action="#" class="modal__form">
+            <input type="text" class="modal__input" placeholder="Имя" required>
+            <input type="tel" class="modal__input" placeholder="Ваш телефон" required>
+            <input type="text" class="modal__input" placeholder="Ваш вопрос">
+
+            <button type="submit" class="modal__submit">ОТПРАВИТЬ</button>
+
+            <label class="modal__agreement">
+                <input type="checkbox" class="modal__checkbox-real" required>
+                <span class="modal__checkbox-fake"></span>
+                <span class="modal__agreement-text">
+                    Нажимая кнопку вы соглашаетесь<br>
+                    с <a href="#">Политикой конфиденциальности</a><br>
+                    и <a href="#">Обработки персональных данных</a>
+                </span>
+            </label>
+        </form>
+    </div>
+</div>
     <script src="assets/js/main.min.js"></script>
     <footer class="footer">
     <div class="footer__container container">

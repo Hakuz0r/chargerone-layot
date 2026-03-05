@@ -164,20 +164,505 @@
         </section>
         <section class="power">
             <div class="container">
-                <div class="power__wrapper">
-                    <h2 class="power__title">Эффективная мощность</h2>
+                <div class="power__inner">
+                    <h2 class="power__title">Подберите станцию <br>по мощности</h2>
                     <div class="power__range">
-                        <div id="power-slider" class="power__range-slider"></div>
-                        <div class="power__range-inputs">
-                            <input type="number" id="power-input-min" class="power__range-input">
-                            <input type="number" id="power-input-max" class="power__range-input"> // спросит у гптшки, почему сделали не формой
+                        <h4 class="power__range-title">Диапазон мощности (кВт)</h4>
+                        <div class="power__range-bg">
+                            <div id="power-slider" class="power__range-slider"></div>
                         </div>
+                        <div class="power__range-inputs">
+                            <div class="power__input-wrapper">
+                                <span class="power__input-label">от</span>
+                                <input type="number" id="power-input-min" class="power__range-input">
+                            </div>
+                            <div class="power__input-wrapper">
+                                <span class="power__input-label">до</span>
+                                <input type="number" id="power-input-max" class="power__range-input">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- section-slider -->
+        <section class="section-slider">
+            <div class="container">
+
+                <div class="section-slider__header">
+                    <h2 class="section-slider__title">Популярные <span>зарядные станции</span></h2>
+
+                    <div class="section-slider__controls">
+                        <div class="section-slider__link-wrapper">
+                            <img src="" alt="">
+                            <a href="#" class="section-slider__link">Посмотреть все</a>
+                        </div>
+                        <div class="section-slider__nav">
+                            <button class="section-slider__btn section-slider__btn--prev"></button>
+                            <button class="section-slider__btn section-slider__btn--next"></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper section-slider__swiper">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            @@include('../components/_product-card.html')
+                        </div>
+                        <div class="swiper-slide">
+                            @@include('../components/_product-card.html')
+                        </div>
+                        <div class="swiper-slide">
+                            @@include('../components/_product-card.html')
+                        </div>
+                        <div class="swiper-slide">
+                            @@include('../components/_product-card.html')
+                        </div>
+                        <div class="swiper-slide">
+                            @@include('../components/_product-card.html')
+                        </div>
+                        <div class="swiper-slide">
+                            @@include('../components/_product-card.html')
+                        </div>
+                        <div class="swiper-slide">
+                            @@include('../components/_product-card.html')
+                        </div>
+                        <div class="swiper-slide">
+                            @@include('../components/_product-card.html')
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="section-slider">
+            <div class="container">
+
+                <div class="section-slider__header">
+                    <h2 class="section-slider__title">Быстрые <span>зарядные станции</span></h2>
+
+                    <div class="section-slider__controls">
+                        <div class="section-slider__link-wrapper">
+                            <img src="" alt="">
+                            <a href="#" class="section-slider__link">Посмотреть все</a>
+                        </div>
+                        <div class="section-slider__nav">
+                            <button class="section-slider__btn section-slider__btn--prev"></button>
+                            <button class="section-slider__btn section-slider__btn--next"></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper section-slider__swiper">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            @@include('../components/_product-card.html')
+                        </div>
+                        <div class="swiper-slide">
+                            @@include('../components/_product-card.html')
+                        </div>
+                        <div class="swiper-slide">
+                            @@include('../components/_product-card.html')
+                        </div>
+                        <div class="swiper-slide">
+                            @@include('../components/_product-card.html')
+                        </div>
+                        <div class="swiper-slide">
+                            @@include('../components/_product-card.html')
+                        </div>
+                        <div class="swiper-slide">
+                            @@include('../components/_product-card.html')
+                        </div>
+                        <div class="swiper-slide">
+                            @@include('../components/_product-card.html')
+                        </div>
+                        <div class="swiper-slide">
+                            @@include('../components/_product-card.html')
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="section-slider">
+            <div class="container">
+
+                <div class="section-slider__header">
+                    <h2 class="section-slider__title">Медленные <span>зарядные станции</span></h2>
+
+                    <div class="section-slider__controls">
+                        <div class="section-slider__link-wrapper">
+                            <img src="" alt="">
+                            <a href="#" class="section-slider__link">Посмотреть все</a>
+                        </div>
+                        <div class="section-slider__nav">
+                            <button class="section-slider__btn section-slider__btn--prev"></button>
+                            <button class="section-slider__btn section-slider__btn--next"></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper section-slider__swiper">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            @@include('../components/_product-card.html')
+                        </div>
+                        <div class="swiper-slide">
+                            @@include('../components/_product-card.html')
+                        </div>
+                        <div class="swiper-slide">
+                            @@include('../components/_product-card.html')
+                        </div>
+                        <div class="swiper-slide">
+                            @@include('../components/_product-card.html')
+                        </div>
+                        <div class="swiper-slide">
+                            @@include('../components/_product-card.html')
+                        </div>
+                        <div class="swiper-slide">
+                            @@include('../components/_product-card.html')
+                        </div>
+                        <div class="swiper-slide">
+                            @@include('../components/_product-card.html')
+                        </div>
+                        <div class="swiper-slide">
+                            @@include('../components/_product-card.html')
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="section-slider">
+            <div class="container">
+
+                <div class="section-slider__header">
+                    <h2 class="section-slider__title"><span>Наши работы</span></h2>
+
+                    <div class="section-slider__controls">
+                        <div class="section-slider__link-wrapper">
+                            <img src="" alt="">
+                            <a href="#" class="section-slider__link">Посмотреть все</a>
+                        </div>
+                        <div class="section-slider__nav">
+                            <button class="section-slider__btn section-slider__btn--prev"></button>
+                            <button class="section-slider__btn section-slider__btn--next"></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper section-slider__swiper">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            @@include('../components/_work-card.html')
+                        </div>
+                        <div class="swiper-slide">
+                            @@include('../components/_work-card.html')
+                        </div>
+                        <div class="swiper-slide">
+                            @@include('../components/_work-card.html')
+                        </div>
+                        <div class="swiper-slide">
+                            @@include('../components/_work-card.html')
+                        </div>
+                        <div class="swiper-slide">
+                            @@include('../components/_work-card.html')
+                        </div>
+                        <div class="swiper-slide">
+                            @@include('../components/_work-card.html')
+                        </div>
+                        <div class="swiper-slide">
+                            @@include('../components/_work-card.html')
+                        </div>
+                        <div class="swiper-slide">
+                            @@include('../components/_work-card.html')
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="logo-slider">
+            <div class="container">
+
+                <h2 class="logo-slider__title">Бренды станций</h2>
+
+                <div class="logo-slider__wrapper">
+                    <button class="logo-slider__btn logo-slider__btn--prev"></button>
+
+                    <div class="swiper logo-slider__swiper">
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide">
+                                <a href="#" class="logo-card">
+                                    <img src="" alt="Логотип 1" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="logo-card">
+                                    <img src="" alt="Логотип 1" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="logo-card">
+                                    <img src="" alt="Логотип 1" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="logo-card">
+                                    <img src="" alt="Логотип 1" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="logo-card">
+                                    <img src="" alt="Логотип 1" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="logo-card">
+                                    <img src="" alt="Логотип 1" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="logo-card">
+                                    <img src="" alt="Логотип 1" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="logo-card">
+                                    <img src="" alt="Логотип 1" class="logo-card__img">
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <button class="logo-slider__btn logo-slider__btn--next"></button>
+                </div>
+
+            </div>
+        </section>
+        <!-- logo-slider -->
+        <section class="logo-slider">
+            <div class="container">
+
+                <h2 class="logo-slider__title">Бренды авто</h2>
+
+                <div class="logo-slider__wrapper">
+                    <button class="logo-slider__btn logo-slider__btn--prev"></button>
+
+                    <div class="swiper logo-slider__swiper">
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide">
+                                <a href="#" class="logo-card">
+                                    <img src="" alt="Логотип 1" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="logo-card">
+                                    <img src="" alt="Логотип 1" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="logo-card">
+                                    <img src="" alt="Логотип 1" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="logo-card">
+                                    <img src="" alt="Логотип 1" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="logo-card">
+                                    <img src="" alt="Логотип 1" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="logo-card">
+                                    <img src="" alt="Логотип 1" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="logo-card">
+                                    <img src="" alt="Логотип 1" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="logo-card">
+                                    <img src="" alt="Логотип 1" class="logo-card__img">
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <button class="logo-slider__btn logo-slider__btn--next"></button>
+                </div>
+
+            </div>
+        </section>
+        <!-- section-selection -->
+        <section class="selection">
+            <div class="container">
+                <div class="selection__wrapper">
+                    <div class="selection__info">
+                        <h2 class="selection__title">Подбор зарядной станции</h2>
+                        <p class="selection__text">
+                            Заполните форму и мы поможем
+                            подобрать вам зарядную станцию!
+                        </p>
+                        <button class="selection__button js-open-modal">
+                            Подобрать
+                        </button>
+                    </div>
+                    <div class="selection__image">
+                        <img src="" alt="Подбор зарядной станции" class="selection__img">
                     </div>
                 </div>
             </div>
         </section>
+        <!-- section reviews -->
+        <section class="reviews-slider">
+            <div class="container">
+                <h2 class="reviews-slider__title text-center">Отзывы клиентов</h2>
+
+                <div class="reviews-slider__wrapper">
+                    <button class="reviews-slider__btn reviews-slider__btn--prev"></button>
+
+                    <div class="swiper reviews-slider__swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                @@include('../components/_review-card.html')
+                            </div>
+                            <div class="swiper-slide">
+                                @@include('../components/_review-card.html')
+                            </div>
+                            <div class="swiper-slide">
+                                @@include('../components/_review-card.html')
+                            </div>
+                            <div class="swiper-slide">
+                                @@include('../components/_review-card.html')
+                            </div>
+                            <div class="swiper-slide">
+                                @@include('../components/_review-card.html')
+                            </div>
+                            <div class="swiper-slide">
+                                @@include('../components/_review-card.html')
+                            </div>
+                            <div class="swiper-slide">
+                                @@include('../components/_review-card.html')
+                            </div>
+                            <div class="swiper-slide">
+                                @@include('../components/_review-card.html')
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="reviews-slider__btn reviews-slider__btn--next"></button>
+                </div>
+            </div>
+        </section>
+        <!-- section capabilities -->
+        <section class="capabilities section">
+            <div class="container">
+                <div class="capabilities__inner">
+
+                    <div class="capabilities__steps">
+                        @@include('../components/_capabilities.html')
+                    </div>
+
+                    <div class="capabilities__info">
+                        <h2 class="capabilities__title">Наши<br>возможности</h2>
+                        <a href="#" class="btn btn--dark">Узнать подробнее</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- section news -->
+        <section class="news section">
+            <div class="container">
+                <h2 class="news__title">Новости и обзоры</h2>
+
+                <div class="news__grid">
+                    @@include('../components/_news-card.html')
+                    @@include('../components/_news-card.html')
+                    @@include('../components/_news-card.html')
+                    @@include('../components/_news-card.html')
+                </div>
+            </div>
+        </section>
+        <!-- section clients -->
+        <section class="logo-slider">
+            <div class="container">
+
+                <h2 class="logo-slider__title">Наши клиенты</h2>
+
+                <div class="logo-slider__wrapper">
+                    <button class="logo-slider__btn logo-slider__btn--prev"></button>
+
+                    <div class="swiper logo-slider__swiper">
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide">
+                                <a href="#" class="logo-card">
+                                    <img src="" alt="Логотип 1" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="logo-card">
+                                    <img src="" alt="Логотип 1" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="logo-card">
+                                    <img src="" alt="Логотип 1" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="logo-card">
+                                    <img src="" alt="Логотип 1" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="logo-card">
+                                    <img src="" alt="Логотип 1" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="logo-card">
+                                    <img src="" alt="Логотип 1" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="logo-card">
+                                    <img src="" alt="Логотип 1" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="logo-card">
+                                    <img src="" alt="Логотип 1" class="logo-card__img">
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <button class="logo-slider__btn logo-slider__btn--next"></button>
+                </div>
+
+            </div>
+        </section>
     </main>
     <!-- <script type="module" src="assets/js/main.js"></script> -->
+    @@include('../components/_form-selection.html')
     <script src="assets/js/main.min.js"></script>
     @@include('../components/_footer.html')
 </body>
