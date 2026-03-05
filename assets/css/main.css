@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -1049,8 +1050,58 @@ ol {
   padding-left: 15px;
 }
 
-.main {
-  height: 1000px;
+.catalog {
+  padding: 80px 0;
+  background-color: #f9f9f9;
+}
+.catalog__title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 32px;
+  font-weight: 700;
+}
+.catalog__list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.catalog__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 280px;
+  padding: 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%), #c4c4c4;
+  transition: transform 0.3s ease;
+}
+.catalog__card:hover {
+  transform: translateY(-5px);
+}
+.catalog__card:hover::after {
+  opacity: 1;
+}
+.catalog__card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.catalog__card-title {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  margin: 0;
+  z-index: 1;
 }
 
 .hero-slider {
@@ -1095,40 +1146,27 @@ ol {
   padding: 0;
 }
 .hero-slide__list li {
-  margin-bottom: 10px;
+  position: relative;
+  padding-left: 32px;
+  margin-bottom: 12px;
+  font-size: 18px;
+  line-height: 1.4;
+}
+.hero-slide__list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 20px;
+  height: 20px;
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.6666 5L7.49992 14.1667L3.33325 10' stroke='%230055FF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 .hero-slide__buttons {
   display: flex;
   gap: 15px;
   margin-top: 30px;
-}
-
-.btn {
-  display: inline-block;
-  font-weight: 400;
-  color: #000;
-  text-align: center;
-  vertical-align: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-  background-color: transparent;
-  border: 1px solid transparent;
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  border-radius: 0.25rem;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  cursor: pointer;
-}
-.btn-primary {
-  color: #fff;
-  background-color: #252525;
-  border-color: #252525;
-}
-.btn-primary:hover {
-  background-color: rgb(11.5, 11.5, 11.5);
-  border-color: rgb(11.5, 11.5, 11.5);
 }
 
 .card {
@@ -1141,4 +1179,117 @@ ol {
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
+}
+
+.catalog {
+  padding: 80px 0;
+  background-color: #f9f9f9;
+}
+.catalog__title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 32px;
+  font-weight: 700;
+}
+.catalog__list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.catalog__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 280px;
+  padding: 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%), #c4c4c4;
+  transition: transform 0.3s ease;
+}
+.catalog__card:hover {
+  transform: translateY(-5px);
+}
+.catalog__card:hover::after {
+  opacity: 1;
+}
+.catalog__card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.catalog__card-title {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  margin: 0;
+  z-index: 1;
+}
+
+/* Стилизация noUiSlider под макет
+   Мы используем специфичные классы библиотеки для переопределения
+*/
+.power__range {
+  padding: 0 10px;
+  margin-top: 30px;
+}
+.power__range-slider.noUi-target {
+  height: 4px;
+  background: #E4E4E4;
+  border: none;
+  box-shadow: none;
+}
+.power__range-slider .noUi-connect {
+  background: #000;
+}
+.power__range-slider .noUi-handle {
+  width: 18px;
+  height: 18px;
+  right: -9px;
+  top: -8px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 2px solid #000;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.power__range-slider .noUi-handle::before, .power__range-slider .noUi-handle::after {
+  display: none;
+}
+.power__range-slider .noUi-handle:hover {
+  transform: scale(1.1);
+}
+.power__range-inputs {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  gap: 15px;
+}
+.power__range-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #D1D1D1;
+  border-radius: 6px;
+  padding: 0 12px;
+  font-size: 16px;
+  color: #333;
+  text-align: center;
+  outline: none;
+}
+.power__range-input:focus {
+  border-color: #000;
+}
+.power__range-input::-webkit-outer-spin-button, .power__range-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

@@ -49,7 +49,29 @@
     list-style: none;
     padding: 0;
     li {
-      margin-bottom: 10px;
+      position: relative; // Важно: для позиционирования иконки
+      padding-left: 32px; // Отступ текста, чтобы освободить место под иконку
+      margin-bottom: 12px;
+      font-size: 18px;
+      line-height: 1.4;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 2px; // Подровняй по высоте первой строки текста
+        width: 20px;
+        height: 20px;
+        
+        // Вставляем иконку через фон
+        // Вариант А: если есть файл
+        // background-image: url('../images/icons/check.svg'); 
+        
+        // Вариант Б: временная иконка (галочка) через код (Data URI)
+        background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.6666 5L7.49992 14.1667L3.33325 10' stroke='%230055FF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
     }
   }
 
