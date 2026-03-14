@@ -2,31 +2,29 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  // Глобальный ::before отсюда мы полностью удалили
 
   &__item {
     display: flex;
     align-items: flex-start;
     gap: 20px;
-    position: relative; // Теперь линия позиционируется относительно самого пункта
+    position: relative;
 
     &:not(:last-child) {
       margin-bottom: 40px;
     }
 
-    // Рисуем линию для каждого отдельного шага
     &::before {
       content: "";
       position: absolute;
       top: 0;
-      bottom: -40px; // Тянем линию вниз ровно до следующего шага
-      left: 24px; // Половина ширины кружка (центр)
+      bottom: -50px;
+      // Изменили отступ, так как кружок стал 51px. Половина — 25.5px
+      left: 25.5px;
       width: 1px;
-      background-color: #8c8c8c;
+      background-color: #1d242d; // Сделал линию потемнее, чтобы гармонировала с кружками (можешь вернуть #8c8c8c, если по макету так)
       z-index: 1;
     }
 
-    // У последнего шага линия не нужна — прячем её!
     &:last-child::before {
       display: none;
     }
@@ -34,10 +32,19 @@
 
   &__number {
     flex-shrink: 0;
-    width: 48px;
-    height: 48px;
+    // Берем точные размеры из макета Figma
+    width: 51px;
+    height: 51px;
     border-radius: 50%;
-    background-color: #4a4a4a;
+
+    // Переводим SVG fill в CSS background
+    background: linear-gradient(180deg, #1d242d 0%, #53924b 100%);
+
+    // Переводим SVG stroke в CSS border.
+    // Примечание: в твоем коде альфа-канал равен 0, то есть она прозрачная.
+    // Оставляю на случай, если при ховере или активе она должна появляться.
+    border: 1.5px solid rgba(255, 255, 255, 0);
+
     color: #ffffff;
     display: flex;
     align-items: center;
@@ -45,26 +52,27 @@
     font-weight: 600;
     font-size: 18px;
 
-    // Поднимаем кружок над линией
     position: relative;
     z-index: 2;
   }
 
   &__content {
-    padding-top: 10px;
+    padding-top: 10px; // Возможно, придется чуть увеличить, например до 12px, чтобы текст выровнялся по центру увеличившегося кружка
   }
 
   &__title {
     margin: 0 0 8px;
-    font-size: 18px;
-    font-weight: 600;
-    color: #333;
+    font-weight: 600 !important;
+    font-size: 25px !important;
+    line-height: 0.96 !important;
+    color: $text-color !important;
   }
 
   &__desc {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.33;
+    color: #195712;
     margin: 0;
-    font-size: 14px;
-    line-height: 1.4;
-    color: #666;
   }
 }

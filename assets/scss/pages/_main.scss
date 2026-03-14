@@ -1,0 +1,524 @@
+// section-catalog
+
+.catalog {
+  padding: 80px 0;
+  background-color: $background-main;
+
+  @include tablet {
+    padding: 60px 0;
+  }
+  @include mobile {
+    padding: 40px 0;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 31px;
+    line-height: 65%;
+    color: $text-color;
+
+    @include tablet {
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+    @include mobile {
+      font-size: 24px;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    @include custom-tablet {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include small-tablet {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+    @include small-mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 220px;
+    padding: 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(180deg, #6ed562 0%, #8dee81 54.81%, #fff 100%);
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      &::after {
+        opacity: 1;
+      }
+    }
+
+    // Эффект при наведении
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 12px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    @include tablet {
+      height: 200px;
+    }
+    @include small-tablet {
+      height: 180px;
+      padding: 16px;
+    }
+    @include small-mobile {
+      height: 150px;
+      padding: 16px;
+    }
+  }
+
+  &__card-title {
+    color: $text-color;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.1;
+    text-align: center;
+    margin: 0;
+    z-index: 1;
+
+    @include small-tablet {
+      font-size: 16px;
+    }
+    @include small-mobile {
+      font-size: 15px;
+    }
+  }
+}
+
+// section-power
+
+.power {
+  padding: 70px 0;
+  background-color: $background-main;
+
+  @include tablet {
+    padding: 50px 0;
+  }
+  @include mobile {
+    padding: 40px 0;
+  }
+
+  &__inner {
+    @include flex(space-between, center);
+    gap: 40px;
+
+    @include custom-tablet {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 30px;
+    }
+  }
+
+  &__title {
+    max-width: 32%;
+    font-weight: 400;
+    font-size: 54px;
+    line-height: 107%;
+    color: $text-color;
+
+    @include custom-tablet {
+      max-width: 100%;
+      font-size: 42px;
+    }
+    @include tablet {
+      font-size: 36px;
+    }
+    @include small-tablet {
+      font-size: 32px;
+    }
+    @include mobile {
+      font-size: 28px;
+    }
+  }
+
+  &__range {
+    width: 100%;
+    max-width: 650px;
+
+    @include custom-tablet {
+      max-width: 100%;
+    }
+  }
+}
+
+// section-slider
+
+.section-slider {
+  padding: 70px 0; // Отступы секции
+  background-color: $background-main;
+
+  @include tablet {
+    padding: 50px 0;
+  }
+  @include mobile {
+    padding: 40px 0;
+  }
+
+  &__header {
+    @include flex(space-between, center);
+    margin-bottom: 40px;
+    gap: 20px;
+
+    @include small-tablet {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 24px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__title {
+    font-size: 29px;
+    font-weight: 600;
+    color: $main-color;
+
+    span {
+      font-weight: 600;
+      color: $text-color;
+    }
+
+    @include tablet {
+      font-size: 26px;
+    }
+    @include mobile {
+      font-size: 22px;
+    }
+  }
+
+  &__controls {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    @include small-tablet {
+      width: 100%;
+      justify-content: space-between;
+    }
+    @include small-mobile {
+      gap: 15px;
+    }
+  }
+}
+
+// section-logo
+.logo-slider {
+  padding: 70px 0;
+  text-align: center;
+
+  &__title {
+    font-size: 54px;
+    font-weight: 400;
+    margin-bottom: 40px;
+    line-height: 1.2;
+    color: $text-color;
+  }
+}
+
+// section-selection
+
+.selection {
+  padding: 60px 0;
+
+  &__wrapper {
+    @include flex(space-between, center);
+    background-color: $bg-elements;
+    border-radius: 20px;
+    padding: 50px 60px;
+    gap: 40px;
+
+    // Простой адаптив: на планшетах и телефонах колонки встанут друг под друга
+    @media (max-width: 768px) {
+      flex-direction: column;
+      padding: 30px;
+      text-align: center; // Центрируем текст на мобилках
+    }
+  }
+
+  &__info {
+    max-width: 45%; // Текст занимает чуть меньше половины
+    @include flex(start, flex-start, column);
+
+    @media (max-width: 768px) {
+      max-width: 100%;
+      align-items: center;
+    }
+  }
+
+  &__title {
+    font-size: 50px;
+    font-weight: 500;
+    color: $main-color;
+    margin: 0 0 15px 0;
+    line-height: 1.1;
+  }
+
+  &__text {
+    font-size: 23px;
+    color: $text-color-rough-secondary;
+    line-height: 1.2;
+    font-weight: 400;
+    max-width: 380px;
+    margin: 0 0 30px 0;
+  }
+
+  &__image {
+    width: 45%;
+    aspect-ratio: 1 / 1; // Делает блок ровным квадратом
+    background-color: #e2e2e2; // Светло-серая заглушка
+    border-radius: 12px;
+    overflow: hidden;
+
+    // Временные стили для пустого alt-текста (как мы делали в логотипах)
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888;
+    font-size: 14px;
+
+    @media (max-width: 768px) {
+      width: 100%; // На мобилках картинка на всю ширину
+      max-width: 400px;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; // Когда появится реальное фото, оно заполнит весь блок без искажений
+  }
+}
+
+// reviews slider
+
+.reviews-slider {
+  padding: 80px 0; // Отступы сверху и снизу
+  background-color: $background-main; // Светло-серый фон секции
+
+  &__title {
+    font-weight: 400;
+    font-size: 54px;
+    line-height: 1.11;
+    text-align: center;
+    color: $text-color;
+    margin-bottom: 50px;
+  }
+
+  // Обертка для позиционирования стрелок
+  &__wrapper {
+    position: relative;
+    padding: 0 60px; // Создаем "коридоры" слева и справа для стрелок
+  }
+
+  // Контейнер Swiper
+  &__swiper {
+    width: 100%;
+    overflow: hidden; // ВАЖНО: без этого ломается свайпер
+  }
+
+  // Стили кнопок (стрелок)
+  &__btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); // Центрируем по вертикали
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+
+    &--prev {
+      left: 0; // Прижимаем влево
+      background-image: url("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 13L1 7L7 1' stroke='%23333333' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: $main-color;
+    }
+
+    &--next {
+      right: 0; // Прижимаем вправо
+      background-image: url("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 13L7 7L1 1' stroke='%23333333' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: $main-color; // Правая кнопка залита серым
+    }
+
+    // Состояние, когда некуда крутить
+    &.swiper-button-disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      background-color: transparent;
+      border-color: #ccc;
+    }
+  }
+}
+
+// capabilities
+
+.capabilities {
+  // Отступы секции
+  padding: 80px 0;
+  background-color: $background-steps;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 40px;
+
+    // Простейший адаптив для мобилок
+    @media (max-width: 768px) {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+    }
+  }
+
+  &__steps {
+    flex: 0 1 50%; // Занимает половину ширины
+  }
+
+  &__info {
+    flex: 0 1 40%;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 1.13;
+    color: $text-color;
+    margin: 0;
+    margin-bottom: 40px;
+  }
+}
+
+// news
+
+.news {
+  padding: 80px 0;
+  background-color: #f4f5f6; // Прототипный светло-серый фон всей секции
+
+  &__title {
+    margin: 0 0 40px;
+    font-size: 32px;
+    font-weight: 500;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); // 4 одинаковые колонки
+    gap: 20px; // Отступ между карточками
+
+    // Адаптив
+    @media (max-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr); // По 2 в ряд на планшетах
+    }
+
+    @media (max-width: 576px) {
+      grid-template-columns: 1fr; // По 1 в ряд на телефонах
+    }
+  }
+}
+
+// questions-answers
+
+.questions {
+  padding: 70px 0;
+  background-color: $white;
+
+  @include tablet {
+    padding: 50px 0;
+  }
+  @include mobile {
+    padding: 40px 0;
+  }
+
+  &__inner {
+    @include flex(space-between);
+    // gap: 200px;
+    gap: 40px;
+
+    @include custom-tablet {
+      @include flex(center, center, column);
+      gap: 30px;
+    }
+  }
+
+  &__info {
+    max-width: 250px;
+
+    @include custom-tablet {
+      @include flex(center, center, column);
+      max-width: 100%;
+    }
+
+    &-title {
+      font-size: 42px;
+      font-weight: 500;
+      color: $text-color;
+      margin: 0 0 15px 0;
+      line-height: 1.17;
+
+      @include mobile {
+        font-size: 26px;
+        margin-bottom: 12px;
+      }
+    }
+
+    &-text {
+      font-size: 18px;
+      line-height: 1.41;
+      font-weight: 400;
+      color: $text-color-sec;
+      margin: 0 0 30px 0;
+
+      @include custom-tablet {
+        max-width: 500px;
+        text-align: center;
+      }
+      @include mobile {
+        font-size: 14px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__answers {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 100px;
+
+    @include small-tablet {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  }
+}

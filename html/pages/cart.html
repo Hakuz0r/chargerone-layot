@@ -1,0 +1,56 @@
+@@include('../components/_head.html')
+
+<body>
+    @@include('../components/_header.html')
+
+    <main class="cart-page section">
+        <div class="container">
+            @@include('../components/_breadcrumbs.html', {
+                "parentLink": "index.html",
+                "currentName": "Корзина"
+            })
+            <h1 class="page-title">Корзина</h1>
+            <div class="cart">
+                <div class="cart__list">
+                    <div class="cart-item">
+                        <div class="cart-item__image"></div>
+                        <div class="cart-item__content">
+                            <div class="cart-item__specs">
+                                <div class="cart-item__col">
+                                    <span class="cart-item__label">Название</span>
+                                    <span class="cart-item__value">Далеко-далеко, за словесными горами в стране гласных и согласных живут рыбные тексты.</span>
+                                    <span class="cart-item__label">Вид тока</span>
+                                    <span class="cart-item__value">ответ</span>
+                                </div>
+                                <div class="cart-item__col">
+                                    <span class="cart-item__label">Максимальная мощность на выходе</span>
+                                    <span class="cart-item__value">ответ</span>
+                                    <span class="cart-item__label">Тип разъема</span>
+                                    <span class="cart-item__value">ответ</span>
+                                </div>
+                            </div>
+                            <div class="cart-item__price-container">
+                                <span class="cart-item__label">Стоимость:</span>
+                                <span class="cart-item__price">766 000 руб</span>
+                            </div>
+                        </div>
+                        <div class="cart-item__actions">
+                            @@include('../components/_quantity.html')
+                            <button class="cart-item__delete btn-outline white-btn" type="button">Удалить</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cart__sidebar">
+                <div class="cart-summary">
+                    <span class="cart-summary__label">Сумма заказа</span>
+                    <span class="cart-summary__total">1 210 000 руб</span>
+                </div>
+                <button class="cart-summary__submit btn green-btn" type="button">ОФОРМИТЬ</button>
+            </div>
+        </div>
+    </main>
+
+    @@include('../components/_footer.html')
+    <script src="assets/js/main.min.js"></script>
+</body>

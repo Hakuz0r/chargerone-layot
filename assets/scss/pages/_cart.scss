@@ -1,0 +1,197 @@
+// Каркас страницы
+.cart-page {
+  background-color: #f9f9f9;
+  padding: 40px 0 80px;
+
+  @include tablet {
+    padding: 30px 0 60px;
+  }
+
+  @include mobile {
+    padding: 20px 0 40px;
+  }
+}
+
+.page-title {
+  margin-bottom: 50px;
+  font-weight: 500;
+  font-size: 58px;
+  line-height: 1.03;
+  color: $text-color;
+
+  @include tablet {
+    font-size: 42px;
+    margin-bottom: 30px;
+  }
+
+  @include mobile {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+}
+
+.cart {
+  background-color: $bg-elements;
+
+  &__sidebar {
+    // Чтобы было как на макете (сумма слева, кнопка справа), ставим их в ряд
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; 
+    gap: 100px;
+    max-width: 560px;
+    border-radius: 12px;
+    margin-left: auto;
+    margin-right: 0;
+    margin-top: 30px;
+
+    @include tablet { // Заменяет твой @media (max-width: 992px)
+      flex-direction: column;
+      align-items: flex-end;
+      width: 100%;
+      max-width: 100%;
+      flex: none;
+      gap: 30px;
+    }
+
+    @include small-tablet {
+      align-items: center; // Центрируем на мобилках
+    }
+  }
+}
+
+// Карточка товара
+.cart-item {
+  display: flex;
+  gap: 24px;
+  padding: 29px;
+  background-color: $bg-elements;
+  border-radius: 12px;
+
+  @include small-tablet { // Заменяет твой @media (max-width: 768px)
+    flex-direction: column;
+  }
+
+  &__image {
+    flex: 0 0 250px;
+    height: 250px;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+
+    @include small-tablet {
+      flex: none;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1; // Сохраняем пропорции при ресайзе
+    }
+  }
+
+  &__content {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__specs {
+    display: flex;
+    gap: 40px;
+
+    @include small-tablet {
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__label {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.28;
+    color: $text-color-sec;
+    margin-right: 10px;
+
+    @include mobile {
+      font-size: 16px;
+    }
+  }
+
+  &__value {
+    font-size: 18px;
+    font-weight: 500;
+    color: $text-color;
+    margin-bottom: 8px;
+
+    @include mobile {
+      font-size: 16px;
+    }
+  }
+
+  &__price {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.15;
+    margin-top: 20px;
+    color: $text-color;
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 16px;
+
+    @include small-tablet {
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+
+  &__delete {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background-color 0.4s;
+    background-color: transparent;
+
+    &:hover {
+      background-color: #e0e0e0;
+    }
+  }
+}
+
+// Блок суммы
+.cart-summary {
+  max-width: 221px;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+
+  &__label {
+    font-size: 14px;
+    color: #8c8c8c;
+    margin-bottom: 8px;
+  }
+
+  &__total {
+    font-size: 32px;
+    font-weight: 600;
+    color: #1a1a1a;
+  }
+
+  &__submit {
+    text-align: center;
+    border-radius: 50px;
+    width: 252px;
+    height: 51px;
+  }
+}

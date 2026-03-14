@@ -1,0 +1,70 @@
+@@include('../components/_head.html')
+
+<body>
+    @@include('../components/_header.html')
+
+    <main class="single-product-page section">
+        <div class="container">
+            @@include('../components/_breadcrumbs.html')
+            <section class="product-info">
+                <h1 class="product-info__title">Наименование зарядной станции</h1>
+                <div class="product-info__grid">
+                    <div class="product-info__gallery">
+                        <div class="product-info__image-wrap">
+                            <span class="badge badge--dark product-info__badge-type">DC</span>
+                            <span class="badge badge--light product-info__badge-power">0 кВт</span>
+                            <span class="badge badge--outline product-info__badge-monetization">МОНЕТИЗАЦИЯ</span>
+
+                            <div class="product-info__placeholder"></div>
+                        </div>
+                    </div>
+
+                    <div class="product-info__details">
+                        <div class="product-info__desc">
+                            <p>Описание зарядной станции (что она делает, для чего, преимущества использования)</p>
+                        </div>
+
+                        <ul class="product-specs">
+                            <li class="product-specs__item">
+                                <span class="product-specs__name">Скорость</span>
+                                <span class="product-specs__value">ответ</span>
+                            </li>
+                            <li class="product-specs__item">
+                                <span class="product-specs__name">Мощность (кВт)</span>
+                                <span class="product-specs__value">ответ</span>
+                            </li>
+                            <li class="product-specs__item">
+                                <span class="product-specs__name">Разъемы</span>
+                                <span class="product-specs__value">ответ</span>
+                            </li>
+                            <li class="product-specs__item">
+                                <span class="product-specs__name">Конструкция</span>
+                                <span class="product-specs__value">ответ</span>
+                            </li>
+                        </ul>
+
+                        <form class="product-form cart" action="" method="post" enctype="multipart/form-data">
+                            <input type="hidden" name="add-to-cart" value="ID_ТОВАРА">
+
+                            <button type="submit" class="btn btn--dark product-form__submit">В КОРЗИНУ</button>
+                        </form>
+
+                        <ul class="product-features">
+                            <li class="product-features__item">
+                                <span class="product-features__icon"></span>
+                                Гарантия 1 год
+                            </li>
+                            <li class="product-features__item">
+                                <span class="product-features__icon"></span>
+                                Бесплатный монтаж
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            @@include('../components/_cta.html')
+        </div>
+    </main>
+    @@include('../components/_footer.html')
+    <script src="assets/js/main.min.js"></script>
+</body>

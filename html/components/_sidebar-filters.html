@@ -1,0 +1,228 @@
+<aside class="sidebar-filter">
+    <h3 class="sidebar-filter__title">Фильтры</h3>
+
+    <form class="sidebar-filter__form" action="#" method="GET">
+
+        <div class="filter-group">
+            <h4 class="filter-group__title">Цена (₽)</h4>
+            <div class="filter-range">
+                <div class="filter-range__slider" id="filter-price-slider"></div>
+                <div class="filter-range__inputs">
+                    <label class="filter-range__field">
+                        <span class="filter-range__label">от</span>
+                        <input type="number" name="min_price" id="filter-price-min" class="filter-range__input">
+                    </label>
+                    <label class="filter-range__field">
+                        <span class="filter-range__label">до</span>
+                        <input type="number" name="max_price" id="filter-price-max" class="filter-range__input">
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="filter-group">
+            <h4 class="filter-group__title">Установка</h4>
+            <div class="filter-pills">
+                <label class="filter-pill">
+                    <input type="checkbox" name="install" value="any" class="filter-pill__input visually-hidden"
+                        checked>
+                    <span class="filter-pill__text">Любая</span>
+                </label>
+                <label class="filter-pill">
+                    <input type="checkbox" name="install" value="wall" class="filter-pill__input visually-hidden">
+                    <span class="filter-pill__text">На стену</span>
+                </label>
+                <label class="filter-pill">
+                    <input type="checkbox" name="install" value="stand" class="filter-pill__input visually-hidden">
+                    <span class="filter-pill__text">На специальную стойку</span>
+                </label>
+                <label class="filter-pill">
+                    <input type="checkbox" name="install" value="stand" class="filter-pill__input visually-hidden">
+                    <span class="filter-pill__text">Напольная установка</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="filter-group filter-group--accordion">
+            <button type="button" class="filter-group__toggle">
+                <h4 class="filter-group__title">Марка авто</h4>
+                <span class="filter-group__icon"></span>
+            </button>
+            <div class="filter-group__content">
+                <div class="filter-pills">
+                    <label class="filter-pill">
+                        <input type="checkbox" name="brand" value="any" class="filter-pill__input visually-hidden"
+                            checked>
+                        <span class="filter-pill__text">Любая</span>
+                    </label>
+                    <label class="filter-pill">
+                        <input type="checkbox" name="brand" value="audi" class="filter-pill__input visually-hidden">
+                        <span class="filter-pill__text">Audi</span>
+                    </label>
+                    <label class="filter-pill">
+                        <input type="checkbox" name="brand" value="bmw" class="filter-pill__input visually-hidden">
+                        <span class="filter-pill__text">BMW</span>
+                    </label>
+                    <label class="filter-pill">
+                        <input type="checkbox" name="brand" value="mercedes" class="filter-pill__input visually-hidden">
+                        <span class="filter-pill__text">Mercedes-Benz</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <!-- аккордеон производителей -->
+        <div class="filter-group filter-group--accordion">
+            <button type="button" class="filter-group__toggle">
+                <h4 class="filter-group__title">Производитель</h4>
+                <span class="filter-group__icon"></span>
+            </button>
+            <div class="filter-group__content">
+                <div class="filter-pills">
+                    <label class="filter-pill">
+                        <input type="checkbox" name="manufacturer" value="any"
+                            class="filter-pill__input visually-hidden" checked>
+                        <span class="filter-pill__text">Любой</span>
+                    </label>
+                    <label class="filter-pill">
+                        <input type="checkbox" name="manufacturer" value="chargerone"
+                            class="filter-pill__input visually-hidden">
+                        <span class="filter-pill__text">ChargerOne</span>
+                    </label>
+                    <label class="filter-pill">
+                        <input type="checkbox" name="manufacturer" value="orbis"
+                            class="filter-pill__input visually-hidden">
+                        <span class="filter-pill__text">Orbis</span>
+                    </label>
+                    <label class="filter-pill">
+                        <input type="checkbox" name="manufacturer" value="pandora"
+                            class="filter-pill__input visually-hidden">
+                        <span class="filter-pill__text">Pandora</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="filter-group">
+            <h4 class="filter-group__title">Максимальная выходная мощность (кВт)</h4>
+            <div class="filter-range">
+                <div class="filter-range__slider" id="filter-power-slider"></div>
+                <div class="filter-range__inputs">
+                    <label class="filter-range__field">
+                        <span class="filter-range__label">от</span>
+                        <input type="number" name="min_power" id="filter-power-min" class="filter-range__input">
+                    </label>
+                    <label class="filter-range__field">
+                        <span class="filter-range__label">до</span>
+                        <input type="number" name="max_power" id="filter-power-max" class="filter-range__input">
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="filter-group">
+            <h4 class="filter-group__title">Разъемы</h4>
+            <div class="filter-pills">
+                <label class="filter-pill">
+                    <input type="checkbox" name="connector" value="all" class="filter-pill__input visually-hidden"
+                        checked>
+                    <span class="filter-pill__text">Все</span>
+                </label>
+                <label class="filter-pill">
+                    <input type="checkbox" name="connector" value="chademo" class="filter-pill__input visually-hidden">
+                    <span class="filter-pill__text">
+                        <span class="filter-pill__dot"></span> CHAdeMO </span>
+                </label>
+                <label class="filter-pill">
+                    <input type="checkbox" name="connector" value="chademo" class="filter-pill__input visually-hidden">
+                    <span class="filter-pill__text">
+                        <span class="filter-pill__dot"></span> CHAdeMO </span>
+                </label>
+                <label class="filter-pill">
+                    <input type="checkbox" name="connector" value="chademo" class="filter-pill__input visually-hidden">
+                    <span class="filter-pill__text">
+                        <span class="filter-pill__dot"></span> CHAdeMO </span>
+                </label>
+            </div>
+        </div>
+
+        <div class="filter-group filter-group--accordion">
+            <button type="button" class="filter-group__toggle">
+                <h4 class="filter-group__title">Дополнительно</h4>
+                <span class="filter-group__icon"></span>
+            </button>
+            <div class="filter-group__content">
+                <div class="filter-pills">
+                    <label class="filter-pill">
+                        <input type="checkbox" name="brand" value="any" class="filter-pill__input visually-hidden"
+                            checked>
+                        <span class="filter-pill__text">Любой</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="filter-group">
+            <h4 class="filter-group__title">Количество разъемов</h4>
+            <div class="filter-group">
+                <label class="filter-pill">
+                    <input type="radio" name="connector_count" value="1" class="filter-pill__input visually-hidden">
+                    <span class="filter-pill__text">1</span>
+                </label>
+                <label class="filter-pill">
+                    <input type="radio" name="connector_count" value="2" class="filter-pill__input visually-hidden">
+                    <span class="filter-pill__text">2</span>
+                </label>
+                <label class="filter-pill">
+                    <input type="radio" name="connector_count" value="3" class="filter-pill__input visually-hidden">
+                    <span class="filter-pill__text">3</span>
+                </label>
+                <label class="filter-pill">
+                    <input type="radio" name="connector_count" value="4" class="filter-pill__input visually-hidden">
+                    <span class="filter-pill__text">4</span>
+                </label>
+                <label class="filter-pill">
+                    <input type="radio" name="connector_count" value="5" class="filter-pill__input visually-hidden">
+                    <span class="filter-pill__text">5 и более</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="filter-group">
+            <h4 class="filter-group__title">Регулируемая мощность</h4>
+            <div class="filter-pills">
+                <label class="filter-pill">
+                    <input type="radio" name="power_reg" value="yes" class="filter-pill__input visually-hidden" checked>
+                    <span class="filter-pill__text">Да, с регулировкой</span>
+                </label>
+                <label class="filter-pill">
+                    <input type="radio" name="power_reg" value="no" class="filter-pill__input visually-hidden">
+                    <span class="filter-pill__text">Нет, фиксированная мощность</span>
+                </label>
+            </div>
+            <p class="filter-group__hint">Регулируемые станции позволяют изменять скорость зарядки</p>
+        </div>
+
+        <div class="filter-group">
+            <h4 class="filter-group__title">Умная балансировка</h4>
+            <div class="filter-pills">
+                <label class="filter-pill">
+                    <input type="radio" name="smart_balancing" value="yes" class="filter-pill__input visually-hidden"
+                        checked>
+                    <span class="filter-pill__text">Да, с интеллектуальной системой</span>
+                </label>
+                <label class="filter-pill">
+                    <input type="radio" name="smart_balancing" value="no" class="filter-pill__input visually-hidden">
+                    <span class="filter-pill__text">Нет, без балансировки</span>
+                </label>
+            </div>
+            <p class="filter-group__hint">Smart-система автоматически распределяет нагрузку между фазами сети</p>
+        </div>
+
+        <div class="sidebar-filter__actions">
+            <button type="submit" class="btn btn--dark sidebar-filter__btn">ПРИМЕНИТЬ</button>
+            <button type="reset" class="btn btn--outline sidebar-filter__btn">ОЧИСТИТЬ</button>
+        </div>
+
+    </form>
+</aside>

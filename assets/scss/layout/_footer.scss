@@ -1,6 +1,6 @@
 .footer {
-  background-color: $background-footer;
-  color: $text-color;
+  background-color: $text-color;
+  color: $footer-color;
 
   @include small-desk-more {
     padding: 40px 0;
@@ -14,12 +14,13 @@
     @include flex(space-between, start);
 
     @include mobile {
-        @include flex(start, center, column);
-        gap: 20px;
+      @include flex(start, center, column);
+      gap: 20px;
     }
   }
 
   &__info {
+    @include flex(start, start, column);
     &-logo {
       display: block;
       height: 100%;
@@ -43,13 +44,13 @@
     gap: 23px;
 
     @include small-tablet {
-        display: none;
+      display: none;
     }
   }
 
   &__button {
     @include tablet {
-        display: none;
+      display: none;
     }
   }
 
@@ -88,7 +89,7 @@
 
   &__social {
     @include small-tablet {
-        display: none;
+      display: none;
     }
   }
 }

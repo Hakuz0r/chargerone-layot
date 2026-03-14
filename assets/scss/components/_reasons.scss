@@ -1,0 +1,136 @@
+.reasons {
+  // Отступы секции задашь свои
+  padding: 60px 0;
+
+  &__main-title {
+    font-weight: 400;
+    font-size: 52px;
+    line-height: 115%;
+    color: #22272f;
+    margin-bottom: 40px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px; // Расстояние между колонками
+
+    // Инициализируем счетчик для нумерации
+    counter-reset: reason-counter;
+    position: relative;
+
+    // Горизонтальная соединительная линия
+    &::before {
+      content: "";
+      position: absolute;
+      top: 25px; // Половина высоты кружка (50px / 2), чтобы линия шла ровно по центру
+      left: 5%; // Отступ слева, чтобы линия начиналась чуть позже центра первого кружка
+      right: 5%; // Отступ справа
+      height: 3px; // Взял из твоей SVG
+      // Градиент линии (повернут на 90deg для горизонтали)
+      background: linear-gradient(
+        90deg,
+        #6ed562 0%,
+        #8dee81 54.81%,
+        #f2fef1 100%
+      );
+      z-index: 1;
+
+      // Убираем линию на мобилках и планшетах
+      @media (max-width: 991px) {
+        display: none;
+      }
+    }
+  }
+
+  &__item {
+    position: relative;
+    z-index: 2; // Поднимаем контент над линией
+  }
+
+  &__icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    // Градиент кружка (повернут на 180deg)
+    background: linear-gradient(
+      180deg,
+      #6ed562 0%,
+      #8dee81 54.81%,
+      #f2fef1 100%
+    );
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px; // Отступ до заголовка
+
+    // Настройки цифры
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 22px; // Подобрал визуально, поправь если в фигме другой
+
+    // Вывод счетчика
+    &::before {
+      counter-increment: reason-counter;
+      content: counter(reason-counter);
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.23; // 123%
+    color: #6ed562;
+    margin: 0 0 30px;
+
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 1.47; // 147%
+    color: #7e7e7e;
+    margin: 0 0 15px;
+
+    strong {
+      font-weight: 600;
+      color: #7e7e7e; // На всякий случай фиксируем цвет для жирного шрифта
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  // --- АДАПТИВ ---
+
+  // Планшет
+  @media (max-width: 991px) {
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px 30px; // Увеличиваем вертикальный отступ между рядами
+    }
+  }
+
+  // Мобилка
+  @media (max-width: 575px) {
+    &__grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    // Центрируем контент на мобилке, если по дизайну так логичнее
+    // (если нет — просто удали этот блок)
+    &__item {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__title br {
+      display: none; // Убираем жесткие переносы на узких экранах
+    }
+  }
+}

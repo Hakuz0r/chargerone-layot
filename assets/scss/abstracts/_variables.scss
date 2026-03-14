@@ -2,22 +2,54 @@
 $black: #000;
 $white: #fff;
 $bg-header-rough: #9c9c9c;
-$bg-main-rough: #f9f9f9;
 $bg-footer-rough: #201f1f;
 $bg-button-rough: #252525;
 $text-color-rough: #fdffff;
 $text-color-rough-secondary: #bfbfbf;
 $bg-color-steps-rough: #c3c3c3;
+$bg-color-checkbox-rough: #d9d9d9;
 
 // Colors
-$background-header: $bg-header-rough;
-$background-main: $bg-main-rough;
+$background-main: #fff;
+$main-color: #6ed562;
+$background-header: #94e58a;
+$bg-elements: #f4f4f6;
+$bg-elements-sec: #f9f9f9;
+
+$background-main-slider: linear-gradient(
+  180deg,
+  #94e58a 0%,
+  #8dee81 54.81%,
+  #fff 100%
+);
+$bg-prod: linear-gradient(90deg, #6ed562 0%, #89ed7e 100%);
+
+$bg-btn: radial-gradient(
+  50% 50% at 50% 50%,
+  rgba(24, 24, 24, 0.9) 41.83%,
+  rgba(64, 64, 64, 0.8) 100%
+);
+$hover-btn: radial-gradient(
+  50% 50% at 50% 50%,
+  rgba(30, 30, 30, 0.95) 41.83%,
+  rgba(70, 70, 70, 0.9) 100%
+);
+
+$text-color: #22272f;
+$text-color-sec: #7e7e7e;
+$footer-color: #f8fff7;
+
+
 $background-footer: $bg-footer-rough;
 $background-button: $bg-button-rough;
-$background-steps: $bg-color-steps-rough;
-$text-color: $text-color-rough;
+$background-steps: $main-color;
+
+$background-checkbox: $bg-color-checkbox-rough;
 
 // Typography
+$font-first: "Gilroy", sans-serif;
+$font-second: "Vela Sans", sans-serif;
+
 $font-family-base:
   -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
   Arial, sans-serif;

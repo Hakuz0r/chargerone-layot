@@ -1,0 +1,31 @@
+// _page-hero.scss
+.page-hero {
+  padding: 50px 0 80px;
+  background-color: $background-header;
+
+  &__title {
+    font-weight: 500;
+    font-size: 58px;
+    line-height: 1.03; // В CSS лучше писать 1.03 вместо 103%
+    color: #fdffff;
+  }
+
+  // Опциональный текст (появится на странице "О нас")
+  &__text {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #e0e0e0; // Подставь свой цвет
+    max-width: 800px;
+  }
+
+  // Контейнер для кнопок внизу (неважно, сколько их там будет)
+  &__actions {
+    @include flex(
+      flex-start,
+      center
+    ); // Выравниваем по левому краю (или center, как по макету)
+    flex-wrap: wrap; // Чтобы на мобилках кнопки адекватно переносились
+    gap: 20px;
+    margin-top: 60px;
+  }
+}

@@ -1,36 +1,46 @@
-
 .section-slider {
-  
-  // Кнопка "Посмотреть все" 
+  // Кнопка "Посмотреть все"
   &__link-wrapper {
     display: flex;
     align-items: center;
     gap: 10px;
-    background-color: #E6E6E6;
-    padding: 6px 20px 6px 6px; // Слева отступ меньше из-за круглой иконки
+    background-color: $main-color;
+    padding: 6px 20px 6px 6px;
     border-radius: 40px;
     transition: background-color 0.3s ease;
 
     &:hover {
-      background-color: #D1D1D1;
+      background-color: #8dee81;
+      color: $white;
     }
 
-    // Временная заглушка под картинку (серый кружок)
+    @include mobile {
+      padding: 4px 16px 4px 4px;
+    }
+
     img {
-      width: 28px;
-      height: 28px;
-      background-color: #999;
-      border-radius: 50%;
+      width: 17px;
+      height: 17px;
       display: block;
       object-fit: cover;
+      margin-left: 10px;
+
+      @include mobile {
+        margin-left: 5px;
+      }
     }
   }
 
   &__link {
-    font-size: 16px;
     font-weight: 500;
-    color: #333;
+    font-size: 18px;
+    line-height: 111%;
+    color: $white;
     text-decoration: none;
+
+    @include mobile {
+      font-size: 15px; // Уменьшаем шрифт на мобилках
+    }
   }
 
   // Навигация (стрелки)
@@ -43,13 +53,20 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    border: 1px solid #CCC;
+    border: 1px solid #ccc;
     background-color: transparent;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
+    background-color: $main-color;
+    border: 1px solid $main-color;
+
+    @include mobile {
+      width: 36px; // Делаем стрелки чуть меньше на телефонах
+      height: 36px;
+    }
 
     // Встроенные SVG-стрелочки, чтобы не возиться с картинками
     &--prev {
@@ -62,10 +79,19 @@
       background-image: url("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 13L7 7L1 1' stroke='%23333333' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
       background-repeat: no-repeat;
       background-position: center;
+      background-color: $main-color;
     }
 
-    &:hover {
-      border-color: #333;
+    &:hover:not(.swiper-button-disabled) {
+      opacity: 0.8; // Или любой другой эффект, который тебе нужен при наведении на зеленую кнопку
+    }
+
+    &.swiper-button-disabled {
+      background-color: transparent; // Становится белой/прозрачной
+      border: 1px solid #ccc; // Появляется серая обводка
+      cursor: default; // Убираем курсор "палец"
+      opacity: 1; // Убираем стандартную прозрачность неактивных кнопок свайпера
+      pointer-events: none; // Отключаем любые клики и ховеры по неактивной кнопке
     }
   }
 

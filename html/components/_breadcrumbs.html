@@ -1,0 +1,27 @@
+<!-- <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <ul class="breadcrumbs__list">
+        <li class="breadcrumbs__item"><a href="index.html" class="breadcrumbs__link">Главная</a></li>
+        <li class="breadcrumbs__item"><a href="catalog.html" class="breadcrumbs__link">Каталог</a></li>
+        <li class="breadcrumbs__item">
+            <span class="breadcrumbs__current" aria-current="page">Зарядная станция Наименование</span>
+        </li>
+    </ul>
+</nav> -->
+
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+    <ul class="breadcrumbs__list">
+        <li class="breadcrumbs__item">
+            <a href="index.html" class="breadcrumbs__link">Главная</a>
+        </li>
+
+        @@if (context.parentName) {
+        <li class="breadcrumbs__item">
+            <a href="@@parentLink" class="breadcrumbs__link">@@parentName</a>
+        </li>
+        }
+
+        <li class="breadcrumbs__item">
+            <span class="breadcrumbs__current" aria-current="page">@@currentName</span>
+        </li>
+    </ul>
+</nav>

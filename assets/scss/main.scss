@@ -6,37 +6,46 @@
 @import "vendors/normalize";
 
 // 3. Base stuff
-@import "base/typography";
 @import "base/reset";
+@import "base/fonts";
 
 // 4. Layout-related sections
 @import "layout/header";
 @import "layout/footer";
-@import "layout/sidebar";
 @import "layout/grid";
-@import "layout/main";
 @import "layout/hero-slider";
 
 // 5. Components
-@import "components/buttons";
-@import "components/cards";
+// @import "components/buttons";
 @import "components/catalog";
-@import "components/range-slider";
+@import "components/ui/range-slider";
 @import "components/section-slider";
-@import "components/product-card";
-@import "components/work-card";
+@import "components/cards/product-card";
+@import "components/cards/work-card";
 @import "components/logo-slider";
-@import "components/form-selection";
-@import "components/review-card";
+@import "components/ui/form-selection";
+@import "components/cards/review-card";
 @import "components/steps-list";
-@import "components/news-card";
+@import "components/cards/news-card";
+@import "components/cards/question-card";
+@import "components/sidebar";
+@import "components/ui/quantity";
+@import "components/sidebar-filters";
+@import "components/single-product";
+@import "components/breadcrumbs";
+@import "components/cta";
+@import "components/ui/buttons";
+@import "components/page-hero";
+@import "components/team-slider";
+@import "components/reasons";
 
 
 
 // 6. Page-specific styles
-@import "pages/home";
-@import "pages/product";
-@import "pages/checkout";
+@import "pages/main";
+@import "pages/cart";
+@import "pages/catalog";
+@import "pages/about";
 
 // 7. Themes
 // @import 'themes/default';

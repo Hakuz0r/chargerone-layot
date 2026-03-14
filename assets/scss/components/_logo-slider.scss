@@ -32,6 +32,7 @@
       background-image: url("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 13L1 7L7 1' stroke='%23333333' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
       background-repeat: no-repeat;
       background-position: center;
+      background-color: $main-color; // Левая кнопка по макету имеет фон
     }
 
     &--next {
@@ -39,8 +40,7 @@
       background-image: url("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 13L7 7L1 1' stroke='%23333333' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
       background-repeat: no-repeat;
       background-position: center;
-      background-color: #e6e6e6; // Правая кнопка по макету имеет фон
-      border-color: #e6e6e6;
+      background-color: $main-color; // Правая кнопка по макету имеет фон
     }
 
     &.swiper-button-disabled {
@@ -62,7 +62,7 @@
   align-items: center;
   justify-content: center;
   height: 80px; // Высота серой плашки
-  background-color: #e6e6e6; // Серый цвет подложки (placeholder)
+  background: $bg-prod;
   border-radius: 8px;
   text-decoration: none;
   transition: background-color 0.3s;

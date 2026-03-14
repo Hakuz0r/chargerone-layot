@@ -1,0 +1,16 @@
+// Main Gilroy
+@include font-face('Gilroy', '../fonts/Gilroy-Light', 300);
+@include font-face("Gilroy", "../fonts/Gilroy-ExtraBold", 800);
+
+// Vela Sans
+@include font-face("Vela Sans", "../fonts/VelaSans-ExtraLight", 200);
+@include font-face("Vela Sans", "../fonts/VelaSans-Light", 300);
+@include font-face("Vela Sans", "../fonts/VelaSans-Regular", 400);
+@include font-face("Vela Sans", "../fonts/VelaSans-Medium", 500);
+@include font-face("Vela Sans", "../fonts/VelaSans-SemiBold", 600);
+@include font-face("Vela Sans", "../fonts/VelaSans-Bold", 700);
+@include font-face("Vela Sans", "../fonts/VelaSans-ExtraBold", 800);
+
+// WebDings
+
+@include font-face('Webdings', '../fonts/Webdings', 400);

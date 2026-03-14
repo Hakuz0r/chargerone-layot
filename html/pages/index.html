@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChargerOne</title>
-    <!-- <link rel="stylesheet" href="./assets/scss/main.scss"> -->
-    <link rel="stylesheet" href="assets/css/vendors/swiper-bundle.min.css">
-    <link rel="stylesheet" href="assets/css/vendors/nouislider.min.css">
-    <link rel="stylesheet" href="assets/css/main.min.css">
-</head>
+@@include('../components/_head.html')
 
 <body>
     @@include('../components/_header.html')
@@ -23,7 +12,7 @@
                                 <h1>Скидка 40% на быстрые зарядные станции</h1>
                                 <ul class="hero-slide__list list-check">
                                     <li>действует на пакет от 5 станций</li>
-                                    <li>включены доставка, установка и</li>
+                                    <li>включены доставка, установка и тестирование</li>
                                 </ul>
                                 <div class="hero-slide__buttons">
                                     <button class="btn btn--primary">Узнать подробнее</button>
@@ -31,7 +20,7 @@
                                 </div>
                             </div>
                             <div class="hero-slide__image">
-                                <img src="assets/images/hero-slider/img-slider-hero.png" alt="Зарядная станция">
+                                <img src="assets/images/hero-slider/hero-slide1.png" alt="Зарядная станция">
                             </div>
                         </div>
                     </div>
@@ -110,7 +99,7 @@
                 </div>
 
                 <div class="swiper-button-prev">
-                    <svg width="12" height="17" viewBox="0 0 12 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="12" height="12" viewBox="0 0 12 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M10.4421 0.768219L1.56205 8.16822L10.4421 15.5682" stroke="#DFDFDF" stroke-width="2" />
                     </svg>
                 </div>
@@ -143,19 +132,19 @@
                         <li class="catalog__item">
                             <a href="#" class="catalog__card">
                                 <div class="catalog__card-image"></div>
-                                <h3 class="catalog__card-title">Для бизнеса</h3>
+                                <h3 class="catalog__card-title">Для общественных мест</h3>
                             </a>
                         </li>
                         <li class="catalog__item">
                             <a href="#" class="catalog__card">
                                 <div class="catalog__card-image"></div>
-                                <h3 class="catalog__card-title">Для бизнеса</h3>
+                                <h3 class="catalog__card-title">Аксессуары и комплектующие</h3>
                             </a>
                         </li>
                         <li class="catalog__item">
                             <a href="#" class="catalog__card">
                                 <div class="catalog__card-image"></div>
-                                <h3 class="catalog__card-title">Для бизнеса</h3>
+                                <h3 class="catalog__card-title">Станции с монетизацией</h3>
                             </a>
                         </li>
                     </ul>
@@ -175,10 +164,12 @@
                             <div class="power__input-wrapper">
                                 <span class="power__input-label">от</span>
                                 <input type="number" id="power-input-min" class="power__range-input">
+                                <span class="power__input-unit">кВт</span>
                             </div>
                             <div class="power__input-wrapper">
                                 <span class="power__input-label">до</span>
                                 <input type="number" id="power-input-max" class="power__range-input">
+                                <span class="power__input-unit">кВт</span>
                             </div>
                         </div>
                     </div>
@@ -192,11 +183,10 @@
 
                 <div class="section-slider__header">
                     <h2 class="section-slider__title">Популярные <span>зарядные станции</span></h2>
-
                     <div class="section-slider__controls">
                         <div class="section-slider__link-wrapper">
-                            <img src="" alt="">
-                            <a href="#" class="section-slider__link">Посмотреть все</a>
+                            <img src="assets/images/button-icon/burger.svg" alt="">
+                            <a href="catalog.html" class="section-slider__link">Посмотреть все</a>
                         </div>
                         <div class="section-slider__nav">
                             <button class="section-slider__btn section-slider__btn--prev"></button>
@@ -245,7 +235,7 @@
 
                     <div class="section-slider__controls">
                         <div class="section-slider__link-wrapper">
-                            <img src="" alt="">
+                            <img src="assets/images/button-icon/burger.svg" alt="">
                             <a href="#" class="section-slider__link">Посмотреть все</a>
                         </div>
                         <div class="section-slider__nav">
@@ -295,7 +285,7 @@
 
                     <div class="section-slider__controls">
                         <div class="section-slider__link-wrapper">
-                            <img src="" alt="">
+                            <img src="assets/images/button-icon/burger.svg" alt="">
                             <a href="#" class="section-slider__link">Посмотреть все</a>
                         </div>
                         <div class="section-slider__nav">
@@ -345,7 +335,7 @@
 
                     <div class="section-slider__controls">
                         <div class="section-slider__link-wrapper">
-                            <img src="" alt="">
+                            <img src="assets/images/button-icon/burger.svg" alt="">
                             <a href="#" class="section-slider__link">Посмотреть все</a>
                         </div>
                         <div class="section-slider__nav">
@@ -389,62 +379,125 @@
         </section>
         <section class="logo-slider">
             <div class="container">
-
                 <h2 class="logo-slider__title">Бренды станций</h2>
-
                 <div class="logo-slider__wrapper">
                     <button class="logo-slider__btn logo-slider__btn--prev"></button>
-
                     <div class="swiper logo-slider__swiper">
                         <div class="swiper-wrapper">
-
                             <div class="swiper-slide">
-                                <a href="#" class="logo-card">
-                                    <img src="" alt="Логотип 1" class="logo-card__img">
+                                <a href="https://chargerone.ru/proizvoditel/gorod-ezs/" class="logo-card">
+                                    <img src="assets/images/prod/gorodezs.jpg" alt="Логотип Город ЗЗС" class="logo-card__img">
                                 </a>
                             </div>
                             <div class="swiper-slide">
-                                <a href="#" class="logo-card">
-                                    <img src="" alt="Логотип 1" class="logo-card__img">
+                                <a href="https://chargerone.ru/proizvoditel/zeekr/" class="logo-card">
+                                    <img src="assets/images/prod/zeekr.png" alt="Логотип Zeekr" class="logo-card__img">
                                 </a>
                             </div>
                             <div class="swiper-slide">
-                                <a href="#" class="logo-card">
-                                    <img src="" alt="Логотип 1" class="logo-card__img">
+                                <a href="https://chargerone.ru/proizvoditel/zaptec/" class="logo-card">
+                                    <img src="assets/images/prod/zaptec.png" alt="Логотип Zaptec" class="logo-card__img">
                                 </a>
                             </div>
                             <div class="swiper-slide">
-                                <a href="#" class="logo-card">
-                                    <img src="" alt="Логотип 1" class="logo-card__img">
+                                <a href="https://chargerone.ru/proizvoditel/webasto/" class="logo-card">
+                                    <img src="assets/images/prod/webasto.jpg" alt="Логотип Webasto" class="logo-card__img">
                                 </a>
                             </div>
                             <div class="swiper-slide">
-                                <a href="#" class="logo-card">
-                                    <img src="" alt="Логотип 1" class="logo-card__img">
+                                <a href="https://chargerone.ru/proizvoditel/voyah/" class="logo-card">
+                                    <img src="assets/images/prod/voyah.png" alt="Логотип Voyah" class="logo-card__img">
                                 </a>
                             </div>
                             <div class="swiper-slide">
-                                <a href="#" class="logo-card">
-                                    <img src="" alt="Логотип 1" class="logo-card__img">
+                                <a href="https://chargerone.ru/proizvoditel/vestel/" class="logo-card">
+                                    <img src="assets/images/prod/vestel.png" alt="Логотип Vestel" class="logo-card__img">
                                 </a>
                             </div>
                             <div class="swiper-slide">
-                                <a href="#" class="logo-card">
-                                    <img src="" alt="Логотип 1" class="logo-card__img">
+                                <a href="https://chargerone.ru/proizvoditel/schneider-electrics/" class="logo-card">
+                                    <img src="assets/images/prod/schneider.jpg" alt="Логотип Schneider Electric" class="logo-card__img">
                                 </a>
                             </div>
                             <div class="swiper-slide">
-                                <a href="#" class="logo-card">
-                                    <img src="" alt="Логотип 1" class="logo-card__img">
+                                <a href="https://chargerone.ru/proizvoditel/pandora/" class="logo-card">
+                                    <img src="assets/images/prod/pandora.png" alt="Логотип Pandora" class="logo-card__img">
                                 </a>
                             </div>
-
+                            <div class="swiper-slide">
+                                <a href="https://chargerone.ru/proizvoditel/orbis/" class="logo-card">
+                                    <img src="assets/images/prod/orbis.jpg" alt="Логотип Orbis" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="https://chargerone.ru/proizvoditel/nio/" class="logo-card">
+                                    <img src="assets/images/prod/nio.png" alt="Логотип Nio" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="https://chargerone.ru/proizvoditel/mercedes/" class="logo-card">
+                                    <img src="assets/images/prod/mercedes.jpg" alt="Логотип Mercedes" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="https://chargerone.ru/proizvoditel/mennekes/" class="logo-card">
+                                    <img src="assets/images/prod/mennekes.png" alt="Логотип Mennekes" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="https://chargerone.ru/proizvoditel/lixiang/" class="logo-card">
+                                    <img src="assets/images/prod/lixiang.png" alt="Логотип Lixiang" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="https://chargerone.ru/proizvoditel/keba/" class="logo-card">
+                                    <img src="assets/images/prod/keba.jpg" alt="Логотип Keba" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="https://chargerone.ru/proizvoditel/heidelberg/" class="logo-card">
+                                    <img src="assets/images/prod/heidelberg.png" alt="Логотип Heidelberg" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="https://chargerone.ru/proizvoditel/easee/" class="logo-card">
+                                    <img src="assets/images/prod/easee.png" alt="Логотип Easee" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="https://chargerone.ru/proizvoditel/delta/" class="logo-card">
+                                    <img src="assets/images/prod/delta.jpg" alt="Логотип Delta" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="https://chargerone.ru/proizvoditel/chargerone/" class="logo-card">
+                                    <img src="assets/images/prod/chargerone.png" alt="Логотип Chargerone" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="https://chargerone.ru/proizvoditel/bosch/" class="logo-card">
+                                    <img src="assets/images/prod/bosch.png" alt="Логотип Bosch" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="https://chargerone.ru/proizvoditel/avatr/" class="logo-card">
+                                    <img src="assets/images/prod/avatr.png" alt="Логотип Avatr" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="https://chargerone.ru/proizvoditel/abl/" class="logo-card">
+                                    <img src="assets/images/prod/abl.png" alt="Логотип Abl" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="https://chargerone.ru/proizvoditel/abb/" class="logo-card">
+                                    <img src="assets/images/prod/abb.png" alt="Логотип Abb" class="logo-card__img">
+                                </a>
+                            </div>
                         </div>
                     </div>
-
                     <button class="logo-slider__btn logo-slider__btn--next"></button>
                 </div>
-
             </div>
         </section>
         <!-- logo-slider -->
@@ -460,43 +513,148 @@
                         <div class="swiper-wrapper">
 
                             <div class="swiper-slide">
-                                <a href="#" class="logo-card">
-                                    <img src="" alt="Логотип 1" class="logo-card__img">
+                                <a href="https://chargerone.ru/product-category/zaryadnye-stanczii/dlya-audi/" class="logo-card">
+                                    <img src="assets/images/prod-auto/audi.png" alt="Логотип Audi" class="logo-card__img">
                                 </a>
                             </div>
                             <div class="swiper-slide">
-                                <a href="#" class="logo-card">
-                                    <img src="" alt="Логотип 1" class="logo-card__img">
+                                <a href="https://chargerone.ru/product-category/zaryadnye-stanczii/dlya-bmw/" class="logo-card">
+                                    <img src="assets/images/prod-auto/bmw.png" alt="Логотип Bmw" class="logo-card__img">
                                 </a>
                             </div>
                             <div class="swiper-slide">
-                                <a href="#" class="logo-card">
-                                    <img src="" alt="Логотип 1" class="logo-card__img">
+                                <a href="https://chargerone.ru/product-category/zaryadnye-stanczii/zaryadnye-stanczii-dlya-bentley/" class="logo-card">
+                                    <img src="assets/images/prod-auto/bentley.png" alt="Логотип Bentley" class="logo-card__img">
                                 </a>
                             </div>
                             <div class="swiper-slide">
-                                <a href="#" class="logo-card">
-                                    <img src="" alt="Логотип 1" class="logo-card__img">
+                                <a href="https://chargerone.ru/product-category/zaryadnye-stanczii/dlya-byd/" class="logo-card">
+                                    <img src="assets/images/prod-auto/byd.png" alt="Логотип Byd" class="logo-card__img">
                                 </a>
                             </div>
                             <div class="swiper-slide">
-                                <a href="#" class="logo-card">
-                                    <img src="" alt="Логотип 1" class="logo-card__img">
+                                <a href="https://chargerone.ru/product-category/zaryadnye-stanczii/zaryadnye-stanczii-dlya-chery/" class="logo-card">
+                                    <img src="assets/images/prod-auto/cherry.png" alt="Логотип Cherry" class="logo-card__img">
                                 </a>
                             </div>
                             <div class="swiper-slide">
-                                <a href="#" class="logo-card">
-                                    <img src="" alt="Логотип 1" class="logo-card__img">
+                                <a href="https://chargerone.ru/product-category/zaryadnye-stanczii/zaryadnye-stanczii-dlya-evolute/" class="logo-card">
+                                    <img src="assets/images/prod-auto/evolute.png" alt="Логотип Evolute" class="logo-card__img">
                                 </a>
                             </div>
                             <div class="swiper-slide">
-                                <a href="#" class="logo-card">
-                                    <img src="" alt="Логотип 1" class="logo-card__img">
+                                <a href="https://chargerone.ru/product-category/zaryadnye-stanczii/dlya-ford/" class="logo-card">
+                                    <img src="assets/images/prod-auto/ford.png" alt="Логотип Ford" class="logo-card__img">
                                 </a>
                             </div>
                             <div class="swiper-slide">
-                                <a href="#" class="logo-card">
-                                    <img src="" alt="Логотип 1" class="logo-card__img">
+                                <a href="https://chargerone.ru/product-category/zaryadnye-stanczii/zaryadnye-stanczii-dlya-haval/" class="logo-card">
+                                    <img src="assets/images/prod-auto/haval.jpeg" alt="Логотип Haval" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="https://chargerone.ru/product-category/zaryadnye-stanczii/dlya-hiphi/" class="logo-card">
+                                    <img src="assets/images/prod-auto/hiphi.png" alt="Логотип Hiphi" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="https://chargerone.ru/product-category/zaryadnye-stanczii/zaryadnye-stanczii-dlya-honqqi/" class="logo-card">
+                                    <img src="assets/images/prod-auto/hongqi.jpg" alt="Логотип Honqqi" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="https://chargerone.ru/product-category/zaryadnye-stanczii/zaryadnye-stanczii-dlya-honda/" class="logo-card">
+                                    <img src="assets/images/prod-auto/honda.png" alt="Логотип Honda" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="https://chargerone.ru/product-category/zaryadnye-stanczii/zaryadnye-stanczii-dlya-hummer/" class="logo-card">
+                                    <img src="assets/images/prod-auto/hummer.webp" alt="Логотип Hummer" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="https://chargerone.ru/product-category/zaryadnye-stanczii/dlya-hyundai/" class="logo-card">
+                                    <img src="assets/images/prod-auto/hyundai.png" alt="Логотип Hyundai" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="https://chargerone.ru/product-category/zaryadnye-stanczii/zaryadnye-stanczii-dlya-jac/" class="logo-card">
+                                    <img src="assets/images/prod-auto/jac.png" alt="Логотип Jac" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="https://chargerone.ru/product-category/zaryadnye-stanczii/dlya-jaguar/" class="logo-card">
+                                    <img src="assets/images/prod-auto/jaguar.png" alt="Логотип Jaguar" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="https://chargerone.ru/product-category/zaryadnye-stanczii/dlya-kia-soul-ev/" class="logo-card">
+                                    <img src="assets/images/prod-auto/kia.svg" alt="Логотип Kia" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="https://chargerone.ru/product-category/zaryadnye-stanczii/dlya-leapmotor/" class="logo-card">
+                                    <img src="assets/images/prod-auto/leapmotor.png" alt="Логотип Leapmotor" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="https://chargerone.ru/product-category/zaryadnye-stanczii/zaryadnye-stanczii-dlya-lexus/" class="logo-card">
+                                    <img src="assets/images/prod-auto/lexus.png" alt="Логотип Lexus" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="https://chargerone.ru/product-category/zaryadnye-stanczii/dlya-peugeot/" class="logo-card">
+                                    <img src="assets/images/prod-auto/pezho.png" alt="Логотип Peugeot" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="https://chargerone.ru/product-category/zaryadnye-stanczii/zaryadnye-stanczii-dlya-polestar/" class="logo-card">
+                                    <img src="assets/images/prod-auto/polestarr.jpg" alt="Логотип Polestar" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="https://chargerone.ru/product-category/zaryadnye-stanczii/dlya-porsche/" class="logo-card">
+                                    <img src="assets/images/prod-auto/porsche.png" alt="Логотип Porsche" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="https://chargerone.ru/product-category/zaryadnye-stanczii/zaryadnye-stanczii-dlya-renault/" class="logo-card">
+                                    <img src="assets/images/prod-auto/renault.png" alt="Логотип Renault" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="https://chargerone.ru/product-category/zaryadnye-stanczii/dlya-tesla/" class="logo-card">
+                                    <img src="assets/images/prod-auto/tesla.png" alt="Логотип Tesla" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="https://chargerone.ru/product-category/zaryadnye-stanczii/zaryadnye-stanczii-dlya-toyota/" class="logo-card">
+                                    <img src="assets/images/prod-auto/toyota.png" alt="Логотип Toyota" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="https://chargerone.ru/product-category/zaryadnye-stanczii/dlya-volkswagen/" class="logo-card">
+                                    <img src="assets/images/prod-auto/volkswagen.png" alt="Логотип Volkswagen" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="https://chargerone.ru/product-category/zaryadnye-stanczii/zaryadnye-stanczii-dlya-volvo/" class="logo-card">
+                                    <img src="assets/images/prod-auto/volvo.png" alt="Логотип Volvo" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="https://chargerone.ru/product-category/zaryadnye-stanczii/dlya-voyah/" class="logo-card">
+                                    <img src="assets/images/prod-auto/voyah.jpg" alt="Логотип Voyah" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="https://chargerone.ru/product-category/zaryadnye-stanczii/zaryadnye-stanczii-dlya-xpeng/" class="logo-card">
+                                    <img src="assets/images/prod-auto/xpeng.png" alt="Логотип Xpeng" class="logo-card__img">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="https://chargerone.ru/product-category/zaryadnye-stanczii/zaryadnye-stanczii-dlya-zeekr/" class="logo-card">
+                                    <img src="assets/images/prod-auto/zeekr.png" alt="Логотип Zeekr" class="logo-card__img">
                                 </a>
                             </div>
 
@@ -518,7 +676,7 @@
                             Заполните форму и мы поможем
                             подобрать вам зарядную станцию!
                         </p>
-                        <button class="selection__button js-open-modal">
+                        <button class="selection__button black-btn js-open-modal">
                             Подобрать
                         </button>
                     </div>
@@ -580,7 +738,7 @@
 
                     <div class="capabilities__info">
                         <h2 class="capabilities__title">Наши<br>возможности</h2>
-                        <a href="#" class="btn btn--dark">Узнать подробнее</a>
+                        <a href="#" class="capabilities__btn black-btn">Узнать подробнее</a>
                     </div>
 
                 </div>
@@ -660,6 +818,28 @@
 
             </div>
         </section>
+        <!-- section questions -->
+        <section class="questions">
+            <div class="container">
+                <div class="questions__inner">
+                    <div class="questions__info">
+                        <h2 class="questions__info-title">Нам часто задают эти вопросы</h2>
+                        <p class="questions__info-text">
+                            Если у вас возникли вопросы, не стесняйтесь обращаться к нам. Наша команда всегда готова
+                            помочь вам!
+                        </p>
+                        <a href="#" class="questions__info-link black-btn">Задать вопрос</a>
+                    </div>
+                    <div class="questions__answers">
+                        @@include('../components/_question-card.html')
+                        @@include('../components/_question-card.html')
+                        @@include('../components/_question-card.html')
+                        @@include('../components/_question-card.html')
+                    </div>
+                </div>
+            </div>
+        </section>
+        @@include('../components/_reasons.html')
     </main>
     <!-- <script type="module" src="assets/js/main.js"></script> -->
     @@include('../components/_form-selection.html')

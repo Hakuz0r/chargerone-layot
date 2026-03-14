@@ -1,0 +1,194 @@
+.single-product-page {
+    padding: 100px 0;
+}
+
+/* =========================================
+   Компоненты (вынеси в папку components)
+   ========================================= */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+
+  &--dark {
+    background-color: #2b2b2b;
+    color: #fff;
+  }
+
+  &--light {
+    background-color: #fff;
+    color: #2b2b2b;
+  }
+
+  &--outline {
+    border: 1px solid #2b2b2b;
+    background-color: transparent;
+    color: #2b2b2b;
+    border-radius: 100px; /* Овальная пилюля как на макете */
+  }
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 32px;
+  border-radius: 100px; /* Пилюля */
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+
+  &--dark {
+    background-color: #2b2b2b;
+    color: #fff;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+/* =========================================
+   Страница товара (pages/_single-product.scss)
+   ========================================= */
+
+.product-info {
+  margin-bottom: 120px;
+
+  &__title {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #000;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* Галерея и бейджи */
+  &__gallery {
+    width: 100%;
+  }
+
+  &__image-wrap {
+    position: relative;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #e5e5e5; /* Цвет как на макете */
+    aspect-ratio: 4 / 4.2; /* Задай нужную пропорцию или min-height */
+    padding: 24px;
+  }
+
+  /* Позиционирование бейджей внутри картинки */
+  &__badge-type {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+  }
+
+  &__badge-power {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+  }
+
+  &__badge-monetization {
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+  }
+
+  /* Заглушка (удалишь, когда будет тег img) */
+  &__placeholder {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Правая часть: описание и характеристики */
+  &__desc {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #888;
+    margin-bottom: 40px;
+  }
+}
+
+.product-specs {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px;
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__name {
+    color: #888;
+    font-size: 16px;
+  }
+
+  &__value {
+    font-weight: 600;
+    color: #000;
+    font-size: 16px;
+  }
+}
+
+.product-form {
+  margin-bottom: 30px;
+
+  &__submit {
+    min-width: 220px;
+  }
+}
+
+.product-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: #666;
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    background-color: #999;
+    border-radius: 50%;
+    display: block;
+    flex-shrink: 0;
+  }
+}

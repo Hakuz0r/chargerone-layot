@@ -1,0 +1,133 @@
+// _buttons.scss
+.pill-btn {
+  display: inline-block;
+  background-color: #636363;
+  padding: 20px 59px;
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 23px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fdffff;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+
+  // Состояние активного фильтра или при наведении
+  &.active,
+  &:hover {
+    background-color: #252525;
+  }
+
+  // Модификатор для темной кнопки (как "Связаться с нами" на странице "Проекты")
+  &--dark {
+    background-color: #252525;
+
+    &:hover {
+      background-color: #444; // Чуть светлее при наведении
+    }
+  }
+}
+
+// black btn
+
+.black-btn {
+  @include flex(center, center);
+  max-width: 322px;
+  width: 100%;
+  height: 59px;
+  border-radius: 50px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.3);
+
+  border: 1.5px solid transparent;
+
+  background:
+    radial-gradient(
+        50% 50% at 50% 50%,
+        rgba(24, 24, 24, 0.9) 41.83%,
+        rgba(64, 64, 64, 0.8) 100%
+      )
+      padding-box,
+    // ИСПРАВЛЕНИЕ ЗДЕСЬ: Вместо 0 в конце поставил 0.4, чтобы рамка не пропадала
+    linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.9) 0%,
+        rgba(255, 255, 255, 0.4) 100%
+      )
+      border-box;
+
+  font-weight: 500;
+  font-size: 23px;
+  line-height: 222%;
+  text-transform: uppercase;
+  color: #fdffff;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background:
+      $hover-btn padding-box,
+      // И тут тоже обновил значения градиента для рамки
+      linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.9) 0%,
+          rgba(255, 255, 255, 0.4) 100%
+        )
+        border-box;
+    color: $white;
+  }
+}
+
+// green btn
+
+.green-btn {
+  transform: translateY(1px);
+  /* Уменьшаем тень */
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.4);
+  /* Затемняем центральный цвет градиента */
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #4bb53e 41.83%,
+    rgba(107, 219, 93, 0.63) 100%
+  );
+  transition: all 0.4s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    /* Меняем тень на более объемную и зеленоватую */
+    box-shadow: 0 6px 15px 0 rgba(85, 203, 71, 0.5);
+    /* Делаем градиент чуть плотнее и ярче */
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      #65da57 41.83%,
+      rgba(107, 219, 93, 0.8) 100%
+    );
+  }
+}
+
+// white btn
+
+.white-btn {
+  backdrop-filter: blur(10px);
+  box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.3);
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #f5f5f5 67.79%,
+    rgba(247, 247, 247, 0.4) 100%
+  );
+
+  &:hover {
+    /* Приподнимаем кнопку */
+    transform: translateY(-2px);
+    /* Добавляем белое/светлое свечение. 
+     Если фон сайта светлый, лучше заменить rgba(255, 255, 255, 0.6) 
+     на мягкую темную тень: rgba(0, 0, 0, 0.15) */
+    box-shadow: 0 6px 15px 0 rgba(255, 255, 255, 0.6);
+    /* Делаем белый цвет чище и плотнее */
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      #ffffff 67.79%,
+      rgba(235, 235, 235, 0.8) 100%
+    );
+  }
+}

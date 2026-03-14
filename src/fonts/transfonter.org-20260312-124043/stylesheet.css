@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Webdings';
+    src: url('Webdings.woff2') format('woff2'),
+        url('Webdings.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

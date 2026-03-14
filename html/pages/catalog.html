@@ -1,0 +1,96 @@
+@@include('../components/_head.html')
+
+<body>
+    @@include('../components/_header.html')
+
+    <main class="main-catalog">
+        <!-- Секция переиспользуется с заменой контента -->
+        <section class="page-hero">
+            <div class="container">
+                <div class="breadcrumbs">
+                    <a href="index.html" class="breadcrumbs__link">Главная</a>
+                    <span class="breadcrumbs__separator">—</span>
+                    <span class="breadcrumbs__current">Каталог</span>
+                </div>
+                <h1 class="page-hero__title">Каталог зарядных станций для электромобилей</h1>
+                <ul class="page-hero__actions">
+                    <li class="page-hero__action-item">
+                        <a href="#" class="pill-btn active js-filter-btn">
+                            <span>DC станции</span>
+                        </a>
+                    </li>
+                    <li class="page-hero__action-item">
+                        <a href="#" class="pill-btn js-filter-btn">
+                            <span>AC станции</span>
+                        </a>
+                    </li>
+                    <li class="page-hero__action-item">
+                        <a href="#" class="pill-btn js-filter-btn">
+                            <span>аксессуары</span>
+                        </a>
+                    </li>
+                    <li class="page-hero__action-item">
+                        <a href="#" class="pill-btn js-filter-btn">
+                            <span>модуль</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="catalog__products">
+            <div class="container">
+                <div class="catalog__products-content">
+                    <div class="catalog__products-filters">
+                        @@include('../components/_sidebar-filters.html')
+                    </div>
+                </div>
+                <div class="catalog__products-grid">
+                    @@include('../components/_product-card.html')
+                    @@include('../components/_product-card.html')
+                    @@include('../components/_product-card.html')
+                    @@include('../components/_product-card.html')
+                    @@include('../components/_product-card.html')
+                    @@include('../components/_product-card.html')
+                    @@include('../components/_product-card.html')
+                    @@include('../components/_product-card.html')
+                    @@include('../components/_product-card.html')
+                    @@include('../components/_product-card.html')
+                    @@include('../components/_product-card.html')
+                    @@include('../components/_product-card.html')
+                    @@include('../components/_product-card.html')
+                    @@include('../components/_product-card.html')
+                    @@include('../components/_product-card.html')
+                </div>
+                <nav class="pagination">
+                    <ul class="pagination__list">
+                        <li class="pagination__item">
+                            <a href="#" class="pagination__link">1</a>
+                        </li>
+                        <li class="pagination__item">
+                            <a href="#" class="pagination__link">2</a>
+                        </li>
+                        <li class="pagination__item">
+                            <a href="#" class="pagination__link">3</a>
+                        </li>
+                        <li class="pagination__item">
+                            <a href="#" class="pagination__link">4</a>
+                        </li>
+                        <li class="pagination__item">
+                            <a href="#" class="pagination__link pagination__link--next">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+        @@include('../components/_cta.html')
+    </main>
+    @@include('../components/_footer.html')
+    <script src="assets/js/main.min.js"></script>
+</body>

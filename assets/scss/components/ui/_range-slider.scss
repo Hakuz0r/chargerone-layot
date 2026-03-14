@@ -1,0 +1,118 @@
+.power__range {
+  &-title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 133%;
+    color: $text-color;
+    margin-bottom: 25px;
+
+    @include mobile {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &-bg {
+    background-color: $bg-elements;
+    border-radius: 40px;
+    padding: 24px 30px;
+    margin-bottom: 30px;
+
+    @include mobile {
+      padding: 20px 15px;
+      margin-bottom: 20px;
+    }
+  }
+
+  // Стилизуем библиотечный ползунок
+  &-slider.noUi-target {
+    height: 8px;
+    background: $main-color;
+    border: none;
+    box-shadow: none;
+
+    .noUi-connect {
+      background: $main-color; // Твой цвет
+    }
+
+    .noUi-handle {
+      width: 22px;
+      height: 22px;
+      right: -11px;
+      top: -9px;
+      border-radius: 50%;
+      background: $main-color;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+      cursor: pointer;
+
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  // Сетка для инпутов
+  &-inputs {
+    @include flex(space-between, center);
+    // gap: 330px;
+    gap: 20px; // Убран жесткий gap: 330px
+
+    @include small-mobile {
+      flex-direction: column; // На совсем узких экранах ставим инпуты друг под друга
+      gap: 12px;
+    }
+  }
+}
+
+// Стили самих полей ввода и подписей
+.power__input-wrapper {
+  position: relative;
+  @include flex(space-between, center);
+  max-width: 160%;
+
+  @include small-mobile {
+    width: 100%; // Инпуты растягиваются на всю ширину на малых экранах
+  }
+}
+
+.power__input-label {
+  position: absolute;
+  left: 15px;
+  font-size: 14px;
+  color: #888;
+  pointer-events: none; // Чтобы клик попадал в input, а не в текст "от"
+}
+
+.power__input-unit {
+  position: absolute;
+  right: 130px;
+  font-size: 14px;
+  color: #888;
+  pointer-events: none;
+}
+
+.power__range-input {
+  width: 100%;
+  height: 48px;
+  border: none;
+  border-radius: 30px;
+  padding: 0 15px 0 40px; // Отступ слева под слова "от/до"
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  background: $bg-elements;
+  outline: none;
+  transition: border-color 0.2s;
+
+  &:focus {
+    border-color: $black;
+  }
+
+  // Убираем стрелочки (spinners)
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
