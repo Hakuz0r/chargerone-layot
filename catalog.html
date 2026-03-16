@@ -253,22 +253,22 @@
                 <h1 class="page-hero__title">Каталог зарядных станций для электромобилей</h1>
                 <ul class="page-hero__actions">
                     <li class="page-hero__action-item">
-                        <a href="#" class="pill-btn active js-filter-btn">
+                        <a href="#" class="pill-btn active js-filter-btn white-btn">
                             <span>DC станции</span>
                         </a>
                     </li>
                     <li class="page-hero__action-item">
-                        <a href="#" class="pill-btn js-filter-btn">
+                        <a href="#" class="pill-btn js-filter-btn white-btn">
                             <span>AC станции</span>
                         </a>
                     </li>
                     <li class="page-hero__action-item">
-                        <a href="#" class="pill-btn js-filter-btn">
+                        <a href="#" class="pill-btn js-filter-btn white-btn">
                             <span>аксессуары</span>
                         </a>
                     </li>
                     <li class="page-hero__action-item">
-                        <a href="#" class="pill-btn js-filter-btn">
+                        <a href="#" class="pill-btn js-filter-btn white-btn">
                             <span>модуль</span>
                         </a>
                     </li>
@@ -288,15 +288,19 @@
         <div class="filter-group">
             <h4 class="filter-group__title">Цена (₽)</h4>
             <div class="filter-range">
-                <div class="filter-range__slider" id="filter-price-slider"></div>
+                <div class="filter-range__slider-wrapper">
+                    <div class="filter-range__slider" id="filter-price-slider"></div>
+                </div>
                 <div class="filter-range__inputs">
                     <label class="filter-range__field">
                         <span class="filter-range__label">от</span>
-                        <input type="number" name="min_price" id="filter-price-min" class="filter-range__input">
+                        <input type="text" id="filter-price-min-visible" class="filter-range__input">
+                        <input type="hidden" name="min_price" id="filter-price-min-real">
                     </label>
                     <label class="filter-range__field">
                         <span class="filter-range__label">до</span>
-                        <input type="number" name="max_price" id="filter-price-max" class="filter-range__input">
+                        <input type="text" id="filter-price-max-visible" class="filter-range__input">
+                        <input type="hidden" name="max_price" id="filter-price-max-real">
                     </label>
                 </div>
             </div>
@@ -388,15 +392,19 @@
         <div class="filter-group">
             <h4 class="filter-group__title">Максимальная выходная мощность (кВт)</h4>
             <div class="filter-range">
-                <div class="filter-range__slider" id="filter-power-slider"></div>
+                <div class="filter-range__slider-wrapper">
+                    <div class="filter-range__slider" id="filter-power-slider"></div>
+                </div>
                 <div class="filter-range__inputs">
                     <label class="filter-range__field">
                         <span class="filter-range__label">от</span>
-                        <input type="number" name="min_power" id="filter-power-min" class="filter-range__input">
+                        <input type="text" id="filter-power-min-visible" class="filter-range__input">
+                        <input type="hidden" name="min_power" id="filter-power-min-real">
                     </label>
                     <label class="filter-range__field">
                         <span class="filter-range__label">до</span>
-                        <input type="number" name="max_power" id="filter-power-max" class="filter-range__input">
+                        <input type="text" id="filter-power-max-visible" class="filter-range__input">
+                        <input type="hidden" name="max_power" id="filter-power-max-real">
                     </label>
                 </div>
             </div>
@@ -502,8 +510,8 @@
         </div>
 
         <div class="sidebar-filter__actions">
-            <button type="submit" class="btn btn--dark sidebar-filter__btn">ПРИМЕНИТЬ</button>
-            <button type="reset" class="btn btn--outline sidebar-filter__btn">ОЧИСТИТЬ</button>
+            <button type="submit" class="btn sidebar-filter__btn black-btn">ПРИМЕНИТЬ</button>
+            <button type="reset" class="btn sidebar-filter__btn white-btn">ОЧИСТИТЬ</button>
         </div>
 
     </form>
@@ -538,7 +546,7 @@
             <span class="product-card__price-old">179 000 ₽</span>
         </div>
 
-        <a href="single-product.html" class="product-card__btn btn">ПОДРОБНЕЕ</a>
+        <a href="single-product.html" class="product-card__btn btn black-btn">ПОДРОБНЕЕ</a>
     </div>
 </article>
                     <article class="product-card">
@@ -568,7 +576,7 @@
             <span class="product-card__price-old">179 000 ₽</span>
         </div>
 
-        <a href="single-product.html" class="product-card__btn btn">ПОДРОБНЕЕ</a>
+        <a href="single-product.html" class="product-card__btn btn black-btn">ПОДРОБНЕЕ</a>
     </div>
 </article>
                     <article class="product-card">
@@ -598,7 +606,7 @@
             <span class="product-card__price-old">179 000 ₽</span>
         </div>
 
-        <a href="single-product.html" class="product-card__btn btn">ПОДРОБНЕЕ</a>
+        <a href="single-product.html" class="product-card__btn btn black-btn">ПОДРОБНЕЕ</a>
     </div>
 </article>
                     <article class="product-card">
@@ -628,7 +636,7 @@
             <span class="product-card__price-old">179 000 ₽</span>
         </div>
 
-        <a href="single-product.html" class="product-card__btn btn">ПОДРОБНЕЕ</a>
+        <a href="single-product.html" class="product-card__btn btn black-btn">ПОДРОБНЕЕ</a>
     </div>
 </article>
                     <article class="product-card">
@@ -658,7 +666,7 @@
             <span class="product-card__price-old">179 000 ₽</span>
         </div>
 
-        <a href="single-product.html" class="product-card__btn btn">ПОДРОБНЕЕ</a>
+        <a href="single-product.html" class="product-card__btn btn black-btn">ПОДРОБНЕЕ</a>
     </div>
 </article>
                     <article class="product-card">
@@ -688,7 +696,7 @@
             <span class="product-card__price-old">179 000 ₽</span>
         </div>
 
-        <a href="single-product.html" class="product-card__btn btn">ПОДРОБНЕЕ</a>
+        <a href="single-product.html" class="product-card__btn btn black-btn">ПОДРОБНЕЕ</a>
     </div>
 </article>
                     <article class="product-card">
@@ -718,7 +726,7 @@
             <span class="product-card__price-old">179 000 ₽</span>
         </div>
 
-        <a href="single-product.html" class="product-card__btn btn">ПОДРОБНЕЕ</a>
+        <a href="single-product.html" class="product-card__btn btn black-btn">ПОДРОБНЕЕ</a>
     </div>
 </article>
                     <article class="product-card">
@@ -748,7 +756,7 @@
             <span class="product-card__price-old">179 000 ₽</span>
         </div>
 
-        <a href="single-product.html" class="product-card__btn btn">ПОДРОБНЕЕ</a>
+        <a href="single-product.html" class="product-card__btn btn black-btn">ПОДРОБНЕЕ</a>
     </div>
 </article>
                     <article class="product-card">
@@ -778,7 +786,7 @@
             <span class="product-card__price-old">179 000 ₽</span>
         </div>
 
-        <a href="single-product.html" class="product-card__btn btn">ПОДРОБНЕЕ</a>
+        <a href="single-product.html" class="product-card__btn btn black-btn">ПОДРОБНЕЕ</a>
     </div>
 </article>
                     <article class="product-card">
@@ -808,7 +816,7 @@
             <span class="product-card__price-old">179 000 ₽</span>
         </div>
 
-        <a href="single-product.html" class="product-card__btn btn">ПОДРОБНЕЕ</a>
+        <a href="single-product.html" class="product-card__btn btn black-btn">ПОДРОБНЕЕ</a>
     </div>
 </article>
                     <article class="product-card">
@@ -838,7 +846,7 @@
             <span class="product-card__price-old">179 000 ₽</span>
         </div>
 
-        <a href="single-product.html" class="product-card__btn btn">ПОДРОБНЕЕ</a>
+        <a href="single-product.html" class="product-card__btn btn black-btn">ПОДРОБНЕЕ</a>
     </div>
 </article>
                     <article class="product-card">
@@ -868,7 +876,7 @@
             <span class="product-card__price-old">179 000 ₽</span>
         </div>
 
-        <a href="single-product.html" class="product-card__btn btn">ПОДРОБНЕЕ</a>
+        <a href="single-product.html" class="product-card__btn btn black-btn">ПОДРОБНЕЕ</a>
     </div>
 </article>
                     <article class="product-card">
@@ -898,7 +906,7 @@
             <span class="product-card__price-old">179 000 ₽</span>
         </div>
 
-        <a href="single-product.html" class="product-card__btn btn">ПОДРОБНЕЕ</a>
+        <a href="single-product.html" class="product-card__btn btn black-btn">ПОДРОБНЕЕ</a>
     </div>
 </article>
                     <article class="product-card">
@@ -928,7 +936,7 @@
             <span class="product-card__price-old">179 000 ₽</span>
         </div>
 
-        <a href="single-product.html" class="product-card__btn btn">ПОДРОБНЕЕ</a>
+        <a href="single-product.html" class="product-card__btn btn black-btn">ПОДРОБНЕЕ</a>
     </div>
 </article>
                     <article class="product-card">
@@ -958,7 +966,7 @@
             <span class="product-card__price-old">179 000 ₽</span>
         </div>
 
-        <a href="single-product.html" class="product-card__btn btn">ПОДРОБНЕЕ</a>
+        <a href="single-product.html" class="product-card__btn btn black-btn">ПОДРОБНЕЕ</a>
     </div>
 </article>
                 </div>
@@ -989,6 +997,70 @@
                 </nav>
             </div>
         </section>
+        <section class="reasons">
+    <div class="container">
+        <h2 class="reasons__main-title">Почему стоит выбрать Charger One?</h2>
+
+        <div class="reasons__grid">
+
+            <div class="reasons__item">
+                <div class="reasons__icon"></div>
+                <h3 class="reasons__title">Бесплатная пусконаладка<br>— настройка<br>и запуск за 0₽</h3>
+                <p class="reasons__text">Широкий ассортимент зарядных станций.</p>
+                <p class="reasons__text"><strong>Мы предлагаем медленные (AC) и быстрые (DC)</strong> зарядные станции
+                    для электромобилей всех популярных марок, подходящие для частного и коммерческого использования.</p>
+                <p class="reasons__text">В каталоге — надежные устройства с мощностью от 3,5 до 360 кВт.</p>
+            </div>
+
+            <div class="reasons__item">
+                <div class="reasons__icon"></div>
+                <h3 class="reasons__title">Оперативный <br> замер и монтаж<br>— прибудем на объект <br> в течение часа
+                </h3>
+                <p class="reasons__text">Гарантированное качество и надежность.</p>
+                <p class="reasons__text"><strong>Каждая станция проходит тестирование и сертификацию,</strong> а также
+                    обеспечивается гарантией 1 год.</p>
+                <p class="reasons__text">При поломке — подменная станция в течение часа и оперативный ремонт.</p>
+            </div>
+
+            <div class="reasons__item">
+                <div class="reasons__icon"></div>
+                <h3 class="reasons__title">
+                    Проектная <br>
+                    документация <br>
+                    за 2-5 дней <br>
+                    без лишних согласований
+                </h3>
+                <p class="reasons__text">Профессиональный монтаж «под ключ». </p>
+                <p class="reasons__text">
+                    Мы не просто продаем станции – <strong> мы устанавливаем
+                        их под ключ.
+                    </strong>
+                </p>
+            </div>
+
+            <div class="reasons__item">
+                <div class="reasons__icon"></div>
+                <h3 class="reasons__title">
+                    Монтаж инженерами <br>
+                    с сертификацией
+                    – работаем с ORBIS
+                    и обучаемся
+                    у топ-брендов
+                </h3>
+                <p class="reasons__text">
+                    Бизнес на зарядных станциях
+                    с монетизацией.
+                </p>
+                <p class="reasons__text"><strong>Хотите зарабатывать на зарядке электромобилей?</strong></p>
+                <p class="reasons__text">
+                    Установим доходную станцию под ключ – от подбора оборудования до настройки
+                    платежных систем.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
         <section class="cta">
     <div class="container">
         <div class="cta__content">
@@ -1002,7 +1074,7 @@
                 <br>
                 для своих электромобилей с Charger one!
             </p>
-            <button class="btn cta__button js-open-modal">Оставить заявку</button>
+            <button class="black-btn cta__button js-open-modal">Оставить заявку</button>
         </div>
     </div>
 </section>

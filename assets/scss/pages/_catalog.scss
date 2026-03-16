@@ -2,68 +2,92 @@
   background-color: #f9f9f9;
 }
 
-// .catalog__categories {
-//   padding: 50px 0 80px;
-//   background-color: $background-header;
+.active {
+  @include flex(center, center);
+  border-radius: 50px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.3);
+  height: 52px;
+  border: 1.5px solid transparent;
 
-//   &-title {
-//     font-weight: 500;
-//     font-size: 58px;
-//     line-height: 103%;
-//     color: #fdffff;
-//   }
+  background:
+    radial-gradient(
+        50% 50% at 50% 50%,
+        rgba(24, 24, 24, 0.9) 41.83%,
+        rgba(64, 64, 64, 0.8) 100%
+      )
+      padding-box,
+    linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.9) 0%,
+        rgba(255, 255, 255, 0.4) 100%
+      )
+      border-box;
 
-//   &-list {
-//     @include flex(center, center);
-//     gap: 20px;
-//     margin-top: 60px;
-//   }
+  font-weight: 500;
+  font-size: 23px;
+  line-height: 222%;
+  text-transform: uppercase;
+  color: #fdffff;
+  transition: all 0.3s ease;
 
-//   &-link {
-//     background-color: #636363;
-//     padding: 20px 59px;
-//     border-radius: 50px;
-//   }
-
-//   &-name {
-//     font-weight: 500;
-//     font-size: 23px;
-//     // line-height: 222%;
-//     text-transform: uppercase;
-//     text-align: center;
-//     color: #fdffff;
-//   }
-// }
-
-// .breadcrumbs {
-//   margin-bottom: 37px;
-// }
-
-// .active {
-//   background-color: #252525;
-// }
+  &:hover {
+    background:
+      $hover-btn padding-box,
+      linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.9) 0%,
+          rgba(255, 255, 255, 0.4) 100%
+        )
+        border-box;
+    color: $white;
+  }
+}
 
 // section catalog products
 
 .catalog__products {
   padding: 80px 0 120px;
 
+  @include tablet {
+    padding: 60px 0 80px;
+  }
+  @include mobile {
+    padding: 40px 0 60px;
+  }
+
   &-filters {
     max-width: 300px;
+
+    @include tablet {
+      max-width: 100%; // Фильтры занимают всю ширину, когда переходят наверх
+    }
   }
 
   .container {
     display: grid;
-    // Левая колонка жестко 320px, правая занимает всё остальное место
     grid-template-columns: 320px 1fr;
-    gap: 30px; // Расстояние между сайдбаром и товарами
-    align-items: start; // Чтобы сайдбар не растягивался по высоте сетки товаров
+    gap: 30px;
+    align-items: start;
+
+    @include custom-tablet {
+      grid-template-columns: 280px 1fr;
+      gap: 20px;
+    }
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
   }
 
   // 1. Сайдбар с фильтрами
   &-content {
     grid-column: 1 / 2;
     grid-row: 1 / 3;
+
+    @include tablet {
+      grid-column: 1 / -1;
+      grid-row: auto;
+    }
   }
 
   // 2. Сетка товаров
@@ -73,6 +97,19 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+
+    @include custom-tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include tablet {
+      grid-column: 1 / -1;
+      grid-row: auto;
+    }
+    @include mobile {
+      grid-template-columns: 1fr; // На мобилках 1 карточка в ряд
+      gap: 16px;
+      justify-items: center;
+    }
   }
 
   // 3. Пагинация
@@ -81,6 +118,11 @@
     grid-row: 2 / 3; // Встает во вторую строку
     margin-top: 40px;
     @include flex(center, center);
+
+    @include tablet {
+      grid-column: 1 / -1;
+      grid-row: auto;
+    }
 
     &__list {
       display: flex;
@@ -130,69 +172,18 @@
       color: #ffffff;
       pointer-events: none; // Отключаем клик
     }
-    // justify-self: center; // Центрируем саму пагинацию по горизонтали
   }
 
-  // --- АДАПТИВ ---
-
-  // Планшеты (Схлопываем сетку карточек до 2 штук, сайдбар оставляем слева)
-  @media (max-width: 1200px) {
-    .container {
-      grid-template-columns: 280px 1fr; // Чуть сужаем сайдбар
-      gap: 20px;
-    }
-    &-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
-  // Планшеты вертикально и телефоны (Убираем сайдбар наверх, всё в одну колонку)
-  @media (max-width: 992px) {
-    .container {
-      grid-template-columns: 1fr; // Одна общая колонка
-    }
-
-    &-content,
-    &-grid,
-    .pagination {
-      grid-column: 1 / -1; // Все элементы занимают всю ширину
-      grid-row: auto; // Отменяем жесткую привязку к строкам, пусть идут по порядку HTML
-    }
-  }
-
-  // Мелкие телефоны (Оставляем 1 карточку в ряд)
-  @media (max-width: 768px) {
-    &-grid {
-      grid-template-columns: 1fr;
-      gap: 16px;
-    }
-  }
 }
 
 // section catalog grid
 
 .catalog__products-grid {
-  // Если эта секция лежит внутри правой колонки каталога (рядом с сайдбаром),
-  // то 100% ширины заставят её занять всё свободное место
-  // width: 100%;
+
 
   &-content {
     display: grid;
-    // Делаем 3 одинаковые колонки
     grid-template-columns: repeat(3, 1fr);
-    // Отступ между карточками (сверь с Figma, обычно это 20px, 24px или 30px)
     gap: 24px;
-
-    // Адаптив для планшетов (если экран меньше 1200px, переходим на 2 карточки в ряд)
-    @media (max-width: 1200px) {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    // Адаптив для мобилок (если экран меньше 768px, делаем 1 карточку в ряд)
-    @media (max-width: 768px) {
-      grid-template-columns: 1fr;
-      gap: 16px; // На мобилках отступы между карточками лучше сделать поменьше
-    }
   }
 }
-

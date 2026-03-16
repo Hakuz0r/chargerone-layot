@@ -11,13 +11,15 @@
 }
 
 .sidebar-filter {
-  background-color: #e6e6e6; // Подбери точный серый цвет из Figma
+  background-color: $bg-elements;
   padding: 32px 24px;
   border-radius: 16px;
 
   &__title {
-    font-size: 28px;
     font-weight: 600;
+    font-size: 31px;
+    line-height: 65%;
+    color: $text-color;
     margin-bottom: 32px;
   }
 
@@ -29,9 +31,9 @@
   }
 
   &__btn {
-    width: 100%;
-    padding: 16px;
-    border-radius: 40px;
+    border-radius: 50px;
+    width: 254px;
+    height: 51px;
   }
 }
 
@@ -39,9 +41,12 @@
   margin-bottom: 32px;
 
   &__title {
-    font-size: 16px;
     font-weight: 600;
+    font-size: 17px;
+    line-height: 1.18;
     margin-bottom: 16px;
+    color: $text-color;
+    margin-top: 0;
   }
 
   &__hint {
@@ -77,7 +82,6 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background-color: #d1d1d1; // Серый цвет подложки с макета
       padding: 12px 16px;
       border-radius: 40px;
       border: none;
@@ -92,22 +96,22 @@
     .filter-group__icon {
       width: 20px;
       height: 20px;
-      background-color: #a3a3a3; // Темно-серый кружок
+      background-color: $main-color; // Темно-серый кружок
       border-radius: 50%;
       position: relative;
       transition: transform 0.3s ease; // Анимация поворота
-      
+
       // Стрелочка вниз
       &::after {
-        content: '';
+        content: "";
         position: absolute;
         top: 40%;
         left: 50%;
         transform: translate(-50%, -50%) rotate(45deg);
-        width: 6px;
-        height: 6px;
-        border-bottom: 2px solid #fff;
-        border-right: 2px solid #fff;
+        width: 8px;
+        height: 8px;
+        border-bottom: 2px solid $text-color;
+        border-right: 2px solid $text-color;
       }
     }
 
@@ -122,7 +126,7 @@
       .filter-group__content {
         display: block; // Показываем чекбосы
       }
-      
+
       .filter-group__icon {
         transform: rotate(180deg); // Крутим стрелку вверх
       }
@@ -154,10 +158,13 @@
     padding: 8px 16px;
     background-color: #ffffff;
     border-radius: 40px;
-    font-size: 13px;
-    color: #1a1a1a;
+    color: $text-color;
     transition: 0.3s;
     text-align: center;
+
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.35;
   }
 
   &__dot {
@@ -169,22 +176,104 @@
 
   // Магия: когда скрытый инпут :checked, красим соседний span
   &__input:checked + &__text {
-    background-color: #a3a3a3; // Темно-серый цвет активной кнопки
+    background-color: $main-color; // Темно-серый цвет активной кнопки
     color: #1a1a1a;
   }
 }
 
-// Кастомизация Range-слайдера
+// // Кастомизация Range-слайдера
+// .filter-range {
+//   &__slider {
+//     margin-bottom: 24px;
+//     margin-top: 10px;
+//   }
+
+//   &__inputs {
+//     display: flex;
+//     justify-content: space-between;
+//     gap: 16px;
+//   }
+
+//   &__field {
+//     flex: 1;
+//     display: flex;
+//     align-items: center;
+//     background-color: #ffffff;
+//     border-radius: 40px;
+//     padding: 8px 16px;
+//   }
+
+//   &__label {
+//     font-size: 13px;
+//     color: #8c8c8c;
+//     margin-right: 8px;
+//   }
+
+//   &__input {
+//     width: 100%;
+//     border: none;
+//     background: transparent;
+//     font-size: 14px;
+//     font-weight: 600;
+//     outline: none;
+
+//     &::-webkit-outer-spin-button,
+//     &::-webkit-inner-spin-button {
+//       -webkit-appearance: none;
+//     }
+//   }
+
+//   // Переопределяем стили самого noUiSlider под макет
+//   .noUi-target {
+//     background: #c4c4c4; // Светло-серая линия
+//     border: none;
+//     border-radius: 4px;
+//     height: 6px; // Толстая линия
+//     box-shadow: none;
+//   }
+
+//   .noUi-connect {
+//     background: #333333; // Темно-серая активная линия
+//   }
+
+//   .noUi-handle {
+//     width: 20px;
+//     height: 20px;
+//     border-radius: 50%;
+//     background: #333333;
+//     border: none;
+//     box-shadow: none;
+//     top: -7px; // Центрируем по линии
+//     right: -10px;
+//     cursor: grab;
+
+//     // Убираем дефолтные полосочки на ручке noUiSlider
+//     &::before,
+//     &::after {
+//       display: none;
+//     }
+//   }
+// }
+
 .filter-range {
-  &__slider {
+  // Стили для новой обертки слайдера
+  &__slider-wrapper {
+    background: #ffffff;
+    border-radius: 40px;
+    padding: 14px 20px; // Подгони отступы под макет
     margin-bottom: 24px;
     margin-top: 10px;
+  }
+
+  &__slider {
+    // Сам контейнер noUiSlider оставляем чистым от отступов
+    width: 100%;
   }
 
   &__inputs {
     display: flex;
     justify-content: space-between;
-    gap: 16px;
+    gap: 10px;
   }
 
   &__field {
@@ -193,11 +282,11 @@
     align-items: center;
     background-color: #ffffff;
     border-radius: 40px;
-    padding: 8px 16px;
+    padding: 10px 10px;
   }
 
   &__label {
-    font-size: 13px;
+    font-size: 14px;
     color: #8c8c8c;
     margin-right: 8px;
   }
@@ -206,45 +295,42 @@
     width: 100%;
     border: none;
     background: transparent;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 600;
+    color: #1a1a1a;
     outline: none;
-
-    &::-webkit-outer-spin-button,
-    &::-webkit-inner-spin-button {
-      -webkit-appearance: none;
-    }
   }
 
-  // Переопределяем стили самого noUiSlider под макет
+  // --- Стили самого noUiSlider ---
+
   .noUi-target {
-    background: #c4c4c4; // Светло-серая линия
+    // Светло-зеленая неактивная линия
+    background: rgba(110, 213, 98, 0.4);
     border: none;
     border-radius: 4px;
-    height: 6px; // Толстая линия
+    height: 6px;
     box-shadow: none;
   }
 
   .noUi-connect {
-    background: #333333; // Темно-серая активная линия
+    background: #6ed562; // Зеленая активная линия
   }
 
   .noUi-handle {
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
     border-radius: 50%;
-    background: #333333;
+    background: #6ed562; // Зеленый ползунок
     border: none;
-    box-shadow: none;
-    top: -7px; // Центрируем по линии
-    right: -10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); // Легкая тень для объема
+    top: -9px; // Центрируем по линии: (24px - 6px) / 2 = 9px
+    right: -12px; // Центрируем по ширине (половина от 24px)
     cursor: grab;
 
-    // Убираем дефолтные полосочки на ручке noUiSlider
+    // Убираем дефолтные полосочки на ручке
     &::before,
     &::after {
       display: none;
     }
   }
 }
-

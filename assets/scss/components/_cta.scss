@@ -1,19 +1,48 @@
 .cta {
   padding-bottom: 100px;
+
+  @include tablet {
+    padding-bottom: 70px;
+  }
+  @include mobile {
+    padding-bottom: 50px;
+  }
+
   &__content {
     @include flex(center, center, column);
-    background-color: $background-header;
+    background-color: $bg-elements;
     border-radius: 15px;
     padding: 50px;
     gap: 20px;
+
+    @include tablet {
+      padding: 40px 30px;
+    }
+    @include mobile {
+      padding: 30px 20px;
+      gap: 16px;
+    }
   }
 
   &__title {
     font-weight: 500;
     font-size: 43px;
-    line-height: 114%;
+    line-height: 1.14;
     text-align: center;
-    color: $bg-button-rough;
+    color: $main-color;
+
+    @include tablet {
+      font-size: 32px;
+    }
+    @include mobile {
+      font-size: 26px;
+    }
+
+    br {
+      @include small-tablet {
+        display: none;
+      } 
+    }
   }
 
   &__text {
@@ -21,17 +50,39 @@
     font-size: 23px;
     line-height: 113%;
     text-align: center;
-    color: $black;
+    color: $text-color-sec;
+
+    @include tablet {
+      font-size: 18px;
+    }
+    @include mobile {
+      font-size: 16px;
+    }
+
+    br {
+      @include small-tablet {
+        display: none;
+      } 
+    }
   }
 
   &__button {
     font-weight: 500;
     font-size: 24px;
-    line-height: 213%;
+    line-height: 2.13;
     text-transform: uppercase;
     color: #fdffff;
-    background-color: $black;
-    border-radius: 50px;
     padding: 10px 25px;
+
+    border-radius: 50px;
+    max-width: 322px;
+    width: 100%;
+    height: 50px;
+
+    @include mobile {
+      font-size: 18px;
+      height: auto;
+      padding: 12px 20px;
+    }
   }
 }

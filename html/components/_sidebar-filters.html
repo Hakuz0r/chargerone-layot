@@ -6,15 +6,19 @@
         <div class="filter-group">
             <h4 class="filter-group__title">Цена (₽)</h4>
             <div class="filter-range">
-                <div class="filter-range__slider" id="filter-price-slider"></div>
+                <div class="filter-range__slider-wrapper">
+                    <div class="filter-range__slider" id="filter-price-slider"></div>
+                </div>
                 <div class="filter-range__inputs">
                     <label class="filter-range__field">
                         <span class="filter-range__label">от</span>
-                        <input type="number" name="min_price" id="filter-price-min" class="filter-range__input">
+                        <input type="text" id="filter-price-min-visible" class="filter-range__input">
+                        <input type="hidden" name="min_price" id="filter-price-min-real">
                     </label>
                     <label class="filter-range__field">
                         <span class="filter-range__label">до</span>
-                        <input type="number" name="max_price" id="filter-price-max" class="filter-range__input">
+                        <input type="text" id="filter-price-max-visible" class="filter-range__input">
+                        <input type="hidden" name="max_price" id="filter-price-max-real">
                     </label>
                 </div>
             </div>
@@ -106,15 +110,19 @@
         <div class="filter-group">
             <h4 class="filter-group__title">Максимальная выходная мощность (кВт)</h4>
             <div class="filter-range">
-                <div class="filter-range__slider" id="filter-power-slider"></div>
+                <div class="filter-range__slider-wrapper">
+                    <div class="filter-range__slider" id="filter-power-slider"></div>
+                </div>
                 <div class="filter-range__inputs">
                     <label class="filter-range__field">
                         <span class="filter-range__label">от</span>
-                        <input type="number" name="min_power" id="filter-power-min" class="filter-range__input">
+                        <input type="text" id="filter-power-min-visible" class="filter-range__input">
+                        <input type="hidden" name="min_power" id="filter-power-min-real">
                     </label>
                     <label class="filter-range__field">
                         <span class="filter-range__label">до</span>
-                        <input type="number" name="max_power" id="filter-power-max" class="filter-range__input">
+                        <input type="text" id="filter-power-max-visible" class="filter-range__input">
+                        <input type="hidden" name="max_power" id="filter-power-max-real">
                     </label>
                 </div>
             </div>
@@ -220,8 +228,8 @@
         </div>
 
         <div class="sidebar-filter__actions">
-            <button type="submit" class="btn btn--dark sidebar-filter__btn">ПРИМЕНИТЬ</button>
-            <button type="reset" class="btn btn--outline sidebar-filter__btn">ОЧИСТИТЬ</button>
+            <button type="submit" class="btn sidebar-filter__btn black-btn">ПРИМЕНИТЬ</button>
+            <button type="reset" class="btn sidebar-filter__btn white-btn">ОЧИСТИТЬ</button>
         </div>
 
     </form>

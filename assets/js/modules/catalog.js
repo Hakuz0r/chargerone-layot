@@ -6,8 +6,15 @@ export const initCatalog = () => {
   filterBtns.forEach(btn => {
     btn.addEventListener("click", e => {
       e.preventDefault();
-      filterBtns.forEach(b => b.classList.remove("active"));
-      btn.classList.add("active");
+
+      filterBtns.forEach(b => {
+        b.classList.remove('active')
+        b.classList.add("white-btn");
+      });
+
+      btn.classList.add('active');
+      btn.classList.remove('white-btn')
     });
   });
+
 };
