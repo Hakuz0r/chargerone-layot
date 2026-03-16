@@ -1,0 +1,58 @@
+// Независимый блок пагинации
+.pagination {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center; // Центрируем по умолчанию
+  align-items: center;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 8px; // Отступ между кружочками
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    color: #1a1a1a;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition:
+      background-color 0.3s,
+      color 0.3s;
+
+    &:hover {
+      background-color: #e0e0e0;
+    }
+
+    // ИСПРАВЛЕНИЕ ЗДЕСЬ: класс .current должен быть вложен в &__link
+    &.current {
+      background-color: #8bd275; // Заменил на зеленый, как должно быть для активной
+      color: #ffffff;
+      pointer-events: none; // Отключаем клик
+    }
+
+    &--next {
+      background-color: transparent; // Убрал белый фон, чтобы стрелка смотрелась чище
+      color: #1a1a1a;
+
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+
+      &:hover {
+        background-color: #e0e0e0;
+      }
+    }
+  }
+}

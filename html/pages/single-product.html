@@ -43,19 +43,42 @@
                             </li>
                         </ul>
 
-                        <form class="product-form cart" action="" method="post" enctype="multipart/form-data">
-                            <input type="hidden" name="add-to-cart" value="ID_ТОВАРА">
-
-                            <button type="submit" class="btn btn--dark product-form__submit">В КОРЗИНУ</button>
-                        </form>
+                        <div class="product-form__wrapper">
+                            <form class="product-form" action="" method="post" enctype="multipart/form-data">
+                                <input type="hidden" name="add-to-cart" value="ID_ТОВАРА">
+                                <button type="submit" class="btn black-btn product-form__submit">В КОРЗИНУ</button>
+                            </form>
+    
+                            <form class="product-form favorites" action="" method="post" enctype="multipart/form-data">
+                                <input type="hidden" name="add-to-favorite" value="ID_ТОВАРА">
+                                <button type="submit" class="btn white-btn product-form__submit">В ИЗБРАННОЕ</button>
+                            </form>
+                        </div>
 
                         <ul class="product-features">
                             <li class="product-features__item">
-                                <span class="product-features__icon"></span>
+                                <span class="product-features__icon">
+                                    <svg width="17" height="20" viewBox="0 0 17 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M17 10.1422C17 17.4016 10.542 19.3962 8.88403 19.7888C8.63114 19.8487 8.36836 19.8487 8.11547 19.7888C6.45772 19.3962 0 17.4016 0 10.1422V4.05211C0 3.50457 0.417281 3.04738 0.961872 2.99812C4.15625 2.7095 6.72866 1.06241 7.86654 0.210898C8.24229 -0.0702994 8.75722 -0.0702994 9.13272 0.210898C10.2706 1.06241 12.843 2.7095 16.0374 2.99812C16.582 3.04738 16.9993 3.50432 16.9993 4.05187V10.1419L17 10.1422Z"
+                                            fill="#F4F4F6" />
+                                        <path
+                                            d="M7.60152 13.8224L3.68457 9.90026L5.1893 8.39352L7.60152 10.809L11.6928 6.71228L13.1975 8.21901L7.60152 13.8224Z"
+                                            fill="#6ED562" />
+                                    </svg>
+                                </span>
                                 Гарантия 1 год
                             </li>
                             <li class="product-features__item">
-                                <span class="product-features__icon"></span>
+                                <span class="product-features__icon">
+                                    <svg width="19" height="19" viewBox="0 0 19 19" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M18.9651 10.3227C18.9951 9.94886 19.008 9.57064 18.9951 9.18808C18.9844 8.81856 18.9501 8.45121 18.8966 8.09255L17.0161 7.77737L16.3778 5.97106L17.6308 4.51253C17.2517 3.8713 16.7976 3.28006 16.2879 2.74969L14.583 3.61915L13.0195 2.54101L13.1887 0.6108C12.5397 0.332571 11.8543 0.123899 11.1432 0L10.2565 1.71719L8.36531 1.76284L7.39721 0.0912939C7.24942 0.126073 7.10378 0.163025 6.96028 0.204324C6.68398 0.265187 6.38627 0.37387 6.1314 0.48038C5.85724 0.586889 5.58738 0.704267 5.32608 0.834687L5.60451 2.75186L4.10096 3.91912L2.3511 3.15181C1.87134 3.71044 1.45154 4.32559 1.10671 4.98856L2.43891 6.37101L1.90132 8.20993L0.0400871 8.63379C0.00581817 9.01419 -0.0070327 9.40327 0.00367635 9.79888C0.0165272 10.1597 0.0486544 10.514 0.097916 10.8618L1.97843 11.1835L2.61026 12.992L1.34873 14.4462C1.72998 15.0874 2.17976 15.6852 2.69165 16.2177L4.40081 15.3548L5.96005 16.4372L5.78228 18.3675C6.45053 18.6544 7.15732 18.8718 7.88982 18.9978L8.77011 17.2763L10.6613 17.2241L11.6358 18.8913C12.3619 18.7196 13.0559 18.4653 13.707 18.1392L13.4221 16.2242L14.9192 15.0505L16.6712 15.8134C17.151 15.2504 17.5708 14.6353 17.9114 13.9723L16.5706 12.5964L17.0996 10.7531L18.9608 10.3249L18.9651 10.3227ZM12.696 6.63837C14.2553 8.43382 14.0775 11.1683 12.3084 12.7398C10.5435 14.3114 7.85341 14.144 6.29846 12.3464C4.74993 10.5488 4.92127 7.82302 6.69255 6.25146C8.45526 4.6712 11.1475 4.84727 12.6982 6.63837H12.696Z"
+                                            fill="#F4F4F6" />
+                                    </svg>
+                                </span>
                                 Бесплатный монтаж
                             </li>
                         </ul>

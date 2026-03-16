@@ -14,8 +14,6 @@
 
 // Модификатор для темной кнопки (как "Связаться с нами" на странице "Проекты")
 
-
-
 // black btn
 
 .black-btn {
@@ -114,4 +112,11 @@
       rgba(235, 235, 235, 0.8) 100%
     );
   }
+}
+
+.current {
+  border-radius: 30px;
+  width: 43px;
+  height: 43px;
+  background: $main-color !important;
 }

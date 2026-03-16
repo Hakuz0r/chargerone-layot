@@ -15,25 +15,30 @@
 
 // section about feutures
 
+// section about feutures
 .about-features__grid {
-  // Добавил пропущенную точку
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   align-items: start;
   padding: 150px 0;
 
-  @media (max-width: 992px) {
+  @include custom-tablet {
+    padding: 100px 0;
+  }
+
+  @include tablet {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @media (max-width: 576px) {
+  @include mobile {
     grid-template-columns: 1fr;
+    padding: 60px 0;
+    justify-items: center; // Центрируем карточки по сетке
   }
 }
 
 .feature-card {
-  background-color: #fff;
   border-radius: 12px;
   padding: 30px;
   display: flex;
@@ -41,18 +46,44 @@
   justify-content: center;
   min-height: 220px;
 
+  @include mobile {
+    max-width: 380px;
+    width: 100%;
+    align-items: center; // Центрируем контент внутри
+    text-align: center;
+    padding: 24px 20px;
+  }
+
+  &:not(:nth-child(3)) {
+    backdrop-filter: blur(400px);
+    box-shadow: 0 2px 7px 0 rgba(120, 148, 110, 0.3);
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(173, 255, 162, 0.4) 53.37%,
+      rgba(199, 255, 192, 0.2) 100%
+    );
+  }
+
   &--large {
     grid-row: span 2;
     justify-content: flex-start;
     min-height: 460px;
 
-    @media (max-width: 992px) {
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 7px 0 rgba(118, 118, 118, 0.3);
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(217, 217, 217, 0.74) 20.44%,
+      rgba(233, 233, 233, 0.2) 100%
+    );
+
+    @include tablet {
       grid-row: auto;
       grid-column: span 2;
       min-height: auto;
     }
 
-    @media (max-width: 576px) {
+    @include mobile {
       grid-column: span 1;
     }
   }
@@ -61,7 +92,52 @@
     justify-content: flex-start;
   }
 
-  /* ВНИМАНИЕ: Все эти элементы теперь ВНУТРИ .feature-card */
+  &__value {
+    font-weight: 500;
+    font-size: 43px;
+    line-height: 0.79; // Заменил 79% на 0.79 для надежности
+    color: $main-color;
+
+    @include mobile {
+      font-size: 34px;
+    }
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 23px;
+    line-height: 1.26;
+    color: $text-color;
+    margin-top: 18px;
+
+    @include mobile {
+      font-size: 18px;
+    }
+
+    &--large {
+      font-weight: 400;
+      font-size: 25px;
+      line-height: 1.28;
+      color: $text-color-sec;
+
+      @include tablet {
+        font-size: 20px;
+      }
+      @include mobile {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__logo {
+    margin-top: 45px;
+    max-width: 171px;
+    width: 100%;
+
+    @include mobile {
+      margin-top: 30px;
+    }
+  }
 
   &__hint {
     font-size: 12px;
@@ -78,6 +154,10 @@
     cursor: pointer;
     font-family: inherit;
     width: 100%;
+
+    @include mobile {
+      text-align: center; // Центрируем кнопку
+    }
 
     &:focus-visible {
       outline: 2px solid #000;
@@ -106,21 +186,36 @@
     margin: 20px 0 0;
     line-height: 1.5;
   }
-} /* Закрывающая скобка блока .feature-card здесь, в самом конце */
+}
 
 // section offers
-
 .offers {
   padding-bottom: 150px;
   background-color: #f9f9f9;
+
+  @include custom-tablet {
+    padding-bottom: 100px;
+  }
+  @include mobile {
+    padding-bottom: 60px;
+  }
 
   &__title {
     margin-bottom: 70px;
     font-weight: 400;
     font-size: 50px;
-    line-height: 116%;
-    // text-align: center;
+    line-height: 1.16;
     color: $black;
+
+    @include tablet {
+      font-size: 40px;
+      margin-bottom: 50px;
+      text-align: center;
+    }
+    @include mobile {
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
   }
 
   &__inner {
@@ -133,18 +228,47 @@
 }
 
 .steps-list {
+  // Базовые стили твоего списка, если их не было (для номера и флекса)
+  &__item {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+
+    @include mobile {
+      flex-direction: column; // На мобилке ставим цифру над текстом
+      align-items: center;
+      text-align: center;
+      gap: 12px;
+    }
+  }
+
+  &__number {
+    flex-shrink: 0;
+    // Твои стили зеленого кружочка, если они в другом файле, не трогаю
+  }
+
   &__title {
     font-weight: 600;
     font-size: 25px;
-    line-height: 96%;
+    line-height: 0.96;
     color: #3d3d3d;
+    margin-bottom: 10px; // Добавил небольшой отступ
+
+    @include mobile {
+      font-size: 20px;
+      line-height: 1.2;
+    }
   }
 
   &__desc {
     font-weight: 400;
     font-size: 18px;
-    line-height: 133%;
+    line-height: 1.33;
     color: #808080;
+
+    @include mobile {
+      font-size: 15px;
+    }
 
     & span {
       font-weight: 700;
@@ -154,38 +278,43 @@
 }
 
 // section advantages
-
 .advantages {
-  padding: 80px 0; /* Подгони отступы секции по макету */
-  background-color: #f9f9f9; /* Цвет фона секции (если есть) */
+  padding: 80px 0;
+
+  @include mobile {
+    padding: 50px 0;
+  }
 
   &__title {
     text-align: center;
     font-size: 36px;
-    font-weight: 400; /* На макете шрифт выглядит легким */
+    font-weight: 400;
     margin-bottom: 50px;
     color: #000;
+
+    @include mobile {
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
   }
 
   &__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px; /* Расстояние между карточками */
+    gap: 30px;
 
-    /* Планшеты: переводим в 2 колонки, последняя центрируется или растягивается */
-    @media (max-width: 992px) {
+    @include tablet {
       grid-template-columns: repeat(2, 1fr);
     }
-
-    /* Мобилки: 1 колонка */
-    @media (max-width: 768px) {
+    @include mobile {
       grid-template-columns: 1fr;
+      justify-items: center; // Центрируем по сетке
     }
   }
 }
 
 .advantage-card {
-  background-color: #e5e5e5; /* Серый цвет карточки из макета */
+  background-color: #e5e5e5;
   border-radius: 12px;
   padding: 40px 30px;
   text-align: center;
@@ -193,29 +322,268 @@
   flex-direction: column;
   align-items: center;
 
+  @include mobile {
+    max-width: 380px;
+    width: 100%;
+    padding: 30px 20px;
+  }
+
   &__icon {
-    width: 60px;
-    height: 60px;
-    background-color: #f5f5f5; /* Цвет белого кружка */
-    border-radius: 50%;
+    @include flex(center, center);
     margin-bottom: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     flex-shrink: 0;
+
+    @include mobile {
+      margin-bottom: 16px;
+    }
   }
 
   &__title {
-    font-size: 20px;
     font-weight: 500;
+    font-size: 25px;
+    line-height: 0.92;
     margin: 0 0 16px;
-    color: #000;
+    text-align: center;
+    color: $text-color;
+
+    @include mobile {
+      font-size: 20px;
+      line-height: 1.2;
+    }
   }
 
   &__text {
-    font-size: 14px;
-    line-height: 1.5;
-    color: #888; /* Серый цвет текста */
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 1.35;
     margin: 0;
+    text-align: center;
+    color: $text-color-sec;
+
+    @include mobile {
+      font-size: 15px;
+    }
   }
+}
+
+// section about-partners
+.about-partners {
+  padding: 60px 0;
+
+  @include tablet {
+    padding: 40px 0;
+  }
+
+  &__main-title {
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 50px;
+    color: $text-color;
+
+    @include tablet {
+      font-size: 38px;
+    }
+    @include mobile {
+      font-size: 28px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__table {
+    --partners-grid: 1.5fr 2fr 1fr 2.5fr;
+    --tab-width: 44px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__header {
+    display: grid;
+    grid-template-columns: var(--partners-grid);
+    gap: 20px;
+    padding: 16px 20px 16px calc(var(--tab-width) + 30px);
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 1.19;
+    border-radius: 20px;
+    max-width: 1107px;
+    width: 100%;
+    height: 77px;
+    color: #ffffff;
+    background: $main-color;
+
+    @include custom-tablet {
+      font-size: 16px;
+      padding: 16px 15px 16px calc(var(--tab-width) + 15px);
+    }
+
+    // ПРЯЧЕМ ШАПКУ НА ПЛАНШЕТАХ И МОБИЛКАХ
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__group {
+    display: flex;
+    background-color: #f7f7f9;
+    border-radius: 12px;
+    overflow: hidden;
+
+    @include tablet {
+      flex-direction: column; // Ставим таб сверху
+    }
+  }
+
+  &__tab {
+    @include flex(start, center);
+    width: var(--tab-width);
+    flex-shrink: 0;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    padding: 20px 0;
+
+    @include tablet {
+      // Возвращаем таб в горизонтальное положение на планшете
+      writing-mode: horizontal-tb;
+      transform: none;
+      width: 100%;
+      padding: 15px 20px;
+      justify-content: center; // Центрируем
+      border-radius: 12px 12px 0 0;
+    }
+
+    & span {
+      font-weight: 500;
+      font-size: 21px;
+      line-height: 2.86;
+      color: #fff;
+
+      @include tablet {
+        line-height: 1.2;
+        font-size: 18px;
+      }
+    }
+
+    &--grey {
+      border-radius: 20px;
+      background-color: $text-color-sec;
+    }
+
+    &--dark {
+      border-radius: 20px;
+      background-color: #2f2f33;
+    }
+  }
+
+  &__list {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+    background-color: $bg-elements;
+
+    @include tablet {
+      padding: 0;
+    }
+  }
+
+  &__col {
+    align-self: center;
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: var(--partners-grid);
+    gap: 20px;
+    padding: 24px 20px 24px 30px;
+    align-items: start;
+
+    @include custom-tablet {
+      gap: 15px;
+      padding: 20px 15px 20px 20px;
+    }
+
+    // ПРЕВРАЩАЕМ СТРОКУ В КАРТОЧКУ
+    @include tablet {
+      grid-template-columns: 1fr;
+      padding: 20px;
+      border-bottom: 1px solid #e0e0e0;
+      gap: 12px;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+
+  &__cell {
+    font-size: 16px;
+    color: #000;
+    line-height: 1.4;
+
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+
+      // Выводим заголовки столбцов через атрибут data-label
+      &::before {
+        content: attr(data-label);
+        font-size: 12px;
+        color: #888;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+    }
+
+    @include mobile {
+      text-align: center;
+      align-items: center; // Центрируем содержимое в мобильной "карточке"
+    }
+
+    strong {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 1.5;
+      color: $black;
+
+      @include mobile {
+        font-size: 18px;
+      }
+    }
+
+    a {
+      color: #000;
+      text-decoration: none;
+      word-break: break-word;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #8bd275;
+      }
+    }
+
+    &--small {
+      font-size: 14px;
+    }
+  }
+}
+
+.about-page__cta {
+  padding-top: 90px;
+
+  @include mobile {
+    padding-top: 50px;
+  }
+}
+
+.about-page__cta {
+  padding-top: 90px;
 }

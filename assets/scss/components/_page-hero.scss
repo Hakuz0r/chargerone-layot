@@ -30,13 +30,15 @@
 
   // Опциональный текст (появится на странице "О нас")
   &__text {
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 112%;
+    color: #44a339;
+    max-width: 600px;
     margin-top: 20px;
-    font-size: 20px;
-    color: #e0e0e0; // Подставь свой цвет
-    max-width: 800px;
 
     @include small-tablet {
-      font-size: 18px;
+      font-size: 20px;
     }
     @include mobile {
       font-size: 16px;
@@ -70,6 +72,6 @@
     flex: 1 1 calc(50% - 10px);
   }
   @include mobile {
-    flex: 1 1 100%; 
+    flex: 1 1 100%;
   }
 }

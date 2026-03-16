@@ -123,55 +123,6 @@
       grid-column: 1 / -1;
       grid-row: auto;
     }
-
-    &__list {
-      display: flex;
-      align-items: center;
-      gap: 8px; // Отступ между кружочками
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    &__link {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 40px; // Проверь размер в Фигме
-      height: 40px;
-      border-radius: 50%;
-      background-color: #ffffff; // По макету кружочки белые
-      color: #1a1a1a;
-      font-size: 14px;
-      font-weight: 500;
-      text-decoration: none;
-      transition:
-        background-color 0.3s,
-        color 0.3s;
-
-      &:hover {
-        background-color: #e0e0e0; // Легкий ховер для неактивных страниц
-      }
-
-      &--next {
-        background-color: #ffffff;
-        color: #1a1a1a;
-
-        svg {
-          width: 16px;
-          height: 16px;
-        }
-
-        &:hover {
-          background-color: #e0e0e0;
-        }
-      }
-    }
-    &--current {
-      background-color: #a3a3a3; // Серый цвет заливки с макета
-      color: #ffffff;
-      pointer-events: none; // Отключаем клик
-    }
   }
 
 }

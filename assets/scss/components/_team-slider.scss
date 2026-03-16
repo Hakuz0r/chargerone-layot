@@ -1,24 +1,50 @@
 .team {
   padding: 80px 0;
-  background-color: #f5f5f5;
+
+  @include tablet {
+    padding: 60px 0;
+  }
+  @include mobile {
+    padding: 40px 0;
+  }
 
   &__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 40px;
+
+    @include mobile {
+      flex-direction: column; // Ставим заголовок и стрелки друг под другом
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
   }
 
   &__title {
-    font-size: 36px;
     font-weight: 400;
+    font-size: 50px;
+    line-height: 1.2; // ИСПРАВЛЕНО: было 0.46
     margin: 0;
-    color: #000;
+    text-align: center;
+    color: $text-color;
+
+    @include tablet {
+      font-size: 40px;
+    }
+    @include mobile {
+      font-size: 28px;
+    }
   }
 
   &__nav {
     display: flex;
     gap: 12px;
+
+    @include mobile {
+      justify-content: center; // Центрируем стрелки
+    }
   }
 
   &__btn {
@@ -40,7 +66,6 @@
       border-color: #000;
     }
 
-    /* Класс, который Swiper вешает на неактивную стрелку (когда долистали до конца) */
     &.swiper-button-disabled {
       opacity: 0.4;
       pointer-events: none;
@@ -48,33 +73,43 @@
   }
 
   &__slider {
-    /* Чтобы карточки не обрезались, если у них есть тень (box-shadow) */
     padding-bottom: 10px;
   }
 }
 
 .team-card {
-  background-color: #fff;
-  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 3px 20px 0 rgba(150, 150, 150, 0.25);
+  background: rgba(255, 255, 255, 0.25);
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  height: 400px; /* Задай точную высоту по макету */
+  border-radius: 10px;
+
+  // ИСПРАВЛЕНО: задаем 100% ширины, чтобы Swiper мог ей управлять, но ограничиваем максимумом
+  width: 100%;
+  max-width: 249px;
+  margin: 0 auto; // Карточка будет по центру своего слайда
+  height: 336px;
+
+  @include mobile {
+    max-width: 280px; // На мобилке можно сделать карточку чуть шире, так как она одна в ряду
+    height: 320px;
+  }
 
   &__image-wrap {
     width: 100%;
-    flex-grow: 1; /* Занимает всё свободное пространство до текста */
-    /* Когда будут реальные фото:
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    } */
+    flex-grow: 1;
   }
 
   &__info {
     padding: 24px;
-    margin-top: auto; /* Жестко прижимаем текст к низу карточки */
+    margin-top: auto;
+
+    @include mobile {
+      padding: 16px;
+      text-align: center; // Центрируем текст имени и должности
+    }
   }
 
   &__name {
@@ -82,6 +117,10 @@
     font-weight: 500;
     margin: 0 0 6px;
     color: #000;
+
+    @include mobile {
+      font-size: 16px;
+    }
   }
 
   &__role {

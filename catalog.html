@@ -64,7 +64,7 @@
             </div>
         </div>
         <div class="header__bottom-wrapper">
-            <div class="header__nav">
+            <nav class="header__nav">
                 <div class="header__nav-control">
                     <a class="header__nav-logo" href="/">
                         <svg width="172" height="46" viewBox="0 0 172 46" fill="none"
@@ -153,12 +153,12 @@
                         </a>
                     </li>
                     <li class="header__nav-item">
-                        <a href="#" class="header__nav-link">
+                        <a href="projects.html" class="header__nav-link">
                             <span class="header__nav-text">Проекты</span>
                         </a>
                     </li>
                     <li class="header__nav-item">
-                        <a href="#" class="header__nav-link">
+                        <a href="blog.html" class="header__nav-link">
                             <span class="header__nav-text">Блог</span>
                         </a>
                     </li>
@@ -168,7 +168,7 @@
                         </a>
                     </li>
                 </ul>
-            </div>
+            </nav>
             <div class="header-search dgwt-wcas-search-wrapp">
 
                 <form role="search" method="get" class="woocommerce-product-search dgwt-wcas-search-form" action="/">
@@ -1111,6 +1111,39 @@
     </div>
 </div>
     </main>
+    <div class="modal" id="modal-selection">
+    <div class="modal__overlay" data-close></div>
+
+    <div class="modal__content">
+        <button class="modal__close" data-close aria-label="Закрыть">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 6L6 18M6 6L18 18" stroke="#A8A8A8" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </button>
+
+        <h3 class="modal__title">Оставьте заявку<br>и мы с вами свяжемся!</h3>
+
+        <form action="#" class="modal__form">
+            <input type="text" class="modal__input" placeholder="Имя" required>
+            <input type="tel" class="modal__input" placeholder="Ваш телефон" required>
+            <input type="text" class="modal__input" placeholder="Ваш вопрос">
+
+            <button type="submit" class="modal__submit">ОТПРАВИТЬ</button>
+
+            <label class="modal__agreement">
+                <input type="checkbox" class="modal__checkbox-real" required>
+                <span class="modal__checkbox-fake"></span>
+                <span class="modal__agreement-text">
+                    Нажимая кнопку вы соглашаетесь<br>
+                    с <a href="#">Политикой конфиденциальности</a><br>
+                    и <a href="#">Обработки персональных данных</a>
+                </span>
+            </label>
+        </form>
+    </div>
+</div>
+    <script src="assets/js/main.min.js"></script>
     <footer class="footer">
     <div class="footer__container container">
         <div class="footer__top">
@@ -1276,5 +1309,4 @@
         </div>
     </div>
 </footer>
-    <script src="assets/js/main.min.js"></script>
 </body>

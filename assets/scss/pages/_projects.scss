@@ -1,0 +1,42 @@
+// section projects
+
+.main__projects {
+    padding-bottom: 100px;
+}
+
+.projects {
+  padding: 80px 0 120px;
+
+  @include tablet {
+    padding: 60px 0 80px;
+  }
+  @include mobile {
+    padding: 40px 0 60px;
+  }
+
+  &__grid {
+    display: grid;
+    // На скрине 4 колонки, делаем их
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px; // Подгони отступ, если в фигме другой
+    margin-bottom: 50px; // Отступ до пагинации
+
+    @include custom-tablet {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include mobile {
+      grid-template-columns: 1fr; // По одной карточке на телефоне
+      gap: 16px;
+    }
+  }
+
+  // Настраиваем только позиционирование пагинации внутри этой секции
+  .pagination {
+    display: flex;
+    justify-content: center; // Центрируем по горизонтали
+  }
+}

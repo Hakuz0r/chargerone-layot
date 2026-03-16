@@ -1,10 +1,14 @@
 .single-product-page {
-    padding: 100px 0;
-}
+  padding: 100px 0;
+  background: $white;
 
-/* =========================================
-   Компоненты (вынеси в папку components)
-   ========================================= */
+  @include tablet {
+    padding: 60px 0;
+  }
+  @include mobile {
+    padding: 40px 0;
+  }
+}
 
 .badge {
   display: inline-flex;
@@ -30,45 +34,55 @@
     border: 1px solid #2b2b2b;
     background-color: transparent;
     color: #2b2b2b;
-    border-radius: 100px; /* Овальная пилюля как на макете */
+    border-radius: 100px;
   }
 }
 
 .btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 16px 32px;
-  border-radius: 100px; /* Пилюля */
-  font-size: 14px;
-  font-weight: 600;
+  border-radius: 50px;
+  width: 252px;
+  height: 51px;
+  font-weight: 500;
+  font-size: 23px;
+  line-height: 2.22; // Заменил 222% на 2.22
   text-transform: uppercase;
-  border: none;
+  text-align: center;
+  color: $text-color;
   cursor: pointer;
-  transition: opacity 0.3s ease;
+  
+  // Добавил флекс, чтобы текст внутри кнопки всегда стоял ровно по центру
+  display: inline-flex; 
+  justify-content: center;
+  align-items: center;
 
-  &--dark {
-    background-color: #2b2b2b;
-    color: #fff;
-
-    &:hover {
-      opacity: 0.8;
-    }
+  @include mobile {
+    width: 100%; // Кнопка тянется на всю ширину на мобилке
+    max-width: 320px;
+    font-size: 18px;
+    height: 48px;
   }
 }
-
-/* =========================================
-   Страница товара (pages/_single-product.scss)
-   ========================================= */
 
 .product-info {
   margin-bottom: 120px;
 
+  @include tablet { margin-bottom: 80px; }
+  @include mobile { margin-bottom: 60px; }
+
   &__title {
-    font-size: 32px;
     font-weight: 600;
+    font-size: 37px;
+    line-height: 1.2; // Исправил 0.62, чтобы строки не слипались
+    color: $text-color;
     margin-bottom: 30px;
-    color: #000;
+
+    @include small-tablet {
+      font-size: 30px;
+    }
+    @include mobile {
+      font-size: 24px;
+      text-align: center; // Центрируем на мобилках
+    }
   }
 
   &__grid {
@@ -77,14 +91,23 @@
     gap: 40px;
     align-items: start;
 
-    @media (max-width: 768px) {
+    @include small-tablet {
       grid-template-columns: 1fr;
+      gap: 30px;
+    }
+    @include mobile {
+      gap: 24px;
     }
   }
 
   /* Галерея и бейджи */
   &__gallery {
     width: 100%;
+    
+    @include mobile {
+      display: flex;
+      justify-content: center;
+    }
   }
 
   &__image-wrap {
@@ -92,9 +115,14 @@
     width: 100%;
     border-radius: 8px;
     overflow: hidden;
-    background-color: #e5e5e5; /* Цвет как на макете */
-    aspect-ratio: 4 / 4.2; /* Задай нужную пропорцию или min-height */
+    background-color: #e5e5e5;
+    aspect-ratio: 4 / 4.2;
     padding: 24px;
+
+    @include mobile {
+      max-width: 400px; // Ограничиваем размер картинки на смартфонах
+      padding: 16px;
+    }
   }
 
   /* Позиционирование бейджей внутри картинки */
@@ -102,18 +130,24 @@
     position: absolute;
     top: 24px;
     left: 24px;
+
+    @include mobile { top: 16px; left: 16px; }
   }
 
   &__badge-power {
     position: absolute;
     top: 24px;
     right: 24px;
+
+    @include mobile { top: 16px; right: 16px; }
   }
 
   &__badge-monetization {
     position: absolute;
     bottom: 24px;
     left: 24px;
+
+    @include mobile { bottom: 16px; left: 16px; }
   }
 
   /* Заглушка (удалишь, когда будет тег img) */
@@ -123,11 +157,29 @@
   }
 
   /* Правая часть: описание и характеристики */
+  &__details {
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      align-items: center; // Центрируем весь блок на мобилке
+    }
+  }
+
   &__desc {
-    font-size: 16px;
-    line-height: 1.5;
-    color: #888;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.45;
+    color: #797979;
     margin-bottom: 40px;
+
+    @include small-tablet {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+    @include mobile {
+      font-size: 16px;
+      text-align: center; // Центрируем текст
+    }
   }
 }
 
@@ -135,6 +187,7 @@
   list-style: none;
   padding: 0;
   margin: 0 0 40px;
+  width: 100%;
 
   &__item {
     display: flex;
@@ -142,28 +195,74 @@
     align-items: center;
     padding: 12px 0;
 
+    // Слегка визуально отделяем строки характеристик на мобилке (опционально)
+    @include mobile {
+      border-bottom: 1px solid #f0f0f0;
+      padding: 10px 0;
+      
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
     &:not(:last-child) {
       margin-bottom: 12px;
+      
+      @include mobile {
+        margin-bottom: 0; // На мобилке отступы регулируются паддингами
+      }
     }
   }
 
   &__name {
-    color: #888;
-    font-size: 16px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.45;
+    color: #7c7c7c;
+
+    @include mobile { font-size: 16px; }
   }
 
   &__value {
     font-weight: 600;
-    color: #000;
-    font-size: 16px;
+    font-size: 20px;
+    line-height: 1.45;
+    text-align: right;
+    color: $text-color;
+
+    @include mobile { font-size: 16px; }
   }
 }
 
 .product-form {
   margin-bottom: 30px;
+  
+  @include mobile {
+    margin-bottom: 10px; // Уменьшаем отступ для мобилок
+    width: 100%; 
+  }
+
+  &__wrapper {
+    @include flex(start, center);
+    flex-wrap: wrap;
+    gap: 15px; 
+    margin-top: 20px; 
+    width: 100%;
+
+    @include mobile {
+      flex-direction: column; // Ставим кнопки в колонку
+      align-items: center;
+      gap: 12px;
+    }
+  }
 
   &__submit {
     min-width: 220px;
+
+    @include mobile {
+      width: 100%;
+      min-width: auto;
+    }
   }
 }
 
@@ -175,20 +274,29 @@
   gap: 24px;
   flex-wrap: wrap;
 
+  @include mobile {
+    justify-content: center; // Центрируем фичи (гарантия, монтаж)
+    gap: 16px;
+  }
+
   &__item {
     display: flex;
     align-items: center;
     gap: 12px;
     font-size: 14px;
     color: #666;
+
+    @include mobile {
+      font-size: 13px;
+    }
   }
 
   &__icon {
-    width: 20px;
-    height: 20px;
-    background-color: #999;
+    @include flex(center, center);
+    width: 28px;
+    height: 28px;
+    background-color: $main-color;
     border-radius: 50%;
-    display: block;
     flex-shrink: 0;
   }
 }
