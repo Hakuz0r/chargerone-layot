@@ -193,6 +193,19 @@
     }
   }
 
+  &__catalog-wrapper {
+    position: relative;
+    // Добавляем невидимую зону снизу, чтобы при переводе мышки с кнопки на меню оно не закрывалось
+    padding-bottom: 20px;
+    margin-bottom: -20px;
+
+    &:hover .dropdown-catalog {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+  }
+
   // Mobile Menu
   &__mobile-menu {
     position: fixed;

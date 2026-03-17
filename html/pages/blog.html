@@ -1,0 +1,79 @@
+@@include('../components/_head.html')
+
+<body class="body">
+    @@include('../components/_header.html')
+    <main class="main__blog">
+        <section class="page-hero">
+            <div class="container">
+                <div class="breadcrumbs">
+                    <a href="index.html" class="breadcrumbs__link">Главная</a>
+                    <span class="breadcrumbs__separator">—</span>
+                    <span class="breadcrumbs__current">Блог</span>
+                </div>
+                <h1 class="page-hero__title">Блог</h1>
+                <ul class="page-hero__actions">
+                    <li class="page-hero__action-item">
+                        <a href="catalog.html" class="pill-btn pill-btn--primary black-btn">
+                            <span>В КАТАЛОГ</span>
+                        </a>
+                    </li>
+                    <li class="page-hero__action-item">
+                        <a href="#" class="pill-btn pill-btn--primary-secondary white-btn js-open-modal">
+                            <span>СВЯЗАТЬСЯ С НАМИ</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="blog">
+            <div class="container">
+                <div class="blog__grid">
+                    @@include('../components/_news-card.html')
+                    @@include('../components/_news-card.html')
+                    @@include('../components/_news-card.html')
+                    @@include('../components/_news-card.html')
+                    @@include('../components/_news-card.html')
+                    @@include('../components/_news-card.html')
+                    @@include('../components/_news-card.html')
+                    @@include('../components/_news-card.html')
+                    @@include('../components/_news-card.html')
+                    @@include('../components/_news-card.html')
+                    @@include('../components/_news-card.html')
+                    @@include('../components/_news-card.html')
+                </div>
+
+                <nav class="pagination">
+                    <ul class="pagination__list">
+                        <li class="pagination__item">
+                            <span aria-current="page" class="pagination__link current">1</span>
+                        </li>
+                        <li class="pagination__item">
+                            <a href="#" class="pagination__link">2</a>
+                        </li>
+                        <li class="pagination__item">
+                            <a href="#" class="pagination__link">3</a>
+                        </li>
+                        <li class="pagination__item">
+                            <a href="#" class="pagination__link">4</a>
+                        </li>
+                        <li class="pagination__item">
+                            <a href="#" class="pagination__link pagination__link--next">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+
+        @@include('../components/_reasons.html')
+    </main>
+
+    <script src="assets/js/main.min.js"></script>
+    @@include('../components/_footer.html')
+</body>

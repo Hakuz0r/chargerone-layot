@@ -39,6 +39,7 @@
 @import "components/team-slider";
 @import "components/reasons";
 @import "components/ui/pagination";
+@import "components/ui/dropdown-catalog";
 
 
 
@@ -47,7 +48,9 @@
 @import "pages/cart";
 @import "pages/catalog";
 @import "pages/about";
-@import "pages/projects"
+@import "pages/projects";
+@import "pages/blog";
+@import "pages/contacts";
 
 // 7. Themes
 // @import 'themes/default';

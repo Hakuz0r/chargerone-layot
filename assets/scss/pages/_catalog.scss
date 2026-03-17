@@ -2,7 +2,7 @@
   background-color: #f9f9f9;
 }
 
-.active {
+.active-catalog {
   @include flex(center, center);
   border-radius: 50px;
   backdrop-filter: blur(10px);

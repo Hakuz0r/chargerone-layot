@@ -1,0 +1,104 @@
+@@include('../components/_head.html')
+
+<body class="body">
+    @@include('../components/_header.html')
+    <main class="main__contacts">
+        <section class="page-hero">
+            <div class="container">
+                <div class="breadcrumbs">
+                    <a href="index.html" class="breadcrumbs__link">Главная</a>
+                    <span class="breadcrumbs__separator">—</span>
+                    <span class="breadcrumbs__current">Контакты</span>
+                </div>
+                <h1 class="page-hero__title">Контакты</h1>
+                <ul class="page-hero__actions">
+                    <li class="page-hero__action-item">
+                        <a href="tel:+74951202599" class="pill-btn pill-btn--primary black-btn">
+                            <span>+7 (495) 120 25 99</span>
+                        </a>
+                    </li>
+                    <li class="page-hero__action-item">
+                        <a href="tel:+79933488201" class="pill-btn pill-btn--primary black-btn">
+                            <span>+7 (993) 348 82 01</span>
+                        </a>
+                    </li>
+                    <li class="page-hero__action-item">
+                        <a href="#" class="pill-btn pill-btn--primary-secondary white-btn js-open-modal">
+                            <span>СВЯЗАТЬСЯ С НАМИ</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="contacts-hero">
+            <div class="contacts-hero__container">
+                <div class="contacts-hero__wrapper">
+
+                    <div class="contacts-card">
+                        <div class="contacts-card__decor">
+                            <svg width="467" height="725" viewBox="0 0 467 725" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g filter="url(#filter0_i_237_415)">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M326.453 344.026L174.137 353.364L466.535 4.13354e-06L204.103 271.35L82.5131 406.505L71.866 409.211L80.8479 408.356L75.6473 414.137L259.195 397.735L0.000783186 724.344L235.229 470.879L330.906 365.28L359.388 342.007L351.558 342.487L357.546 335.878L326.453 344.026Z"
+                                        fill="#82E477" />
+                                </g>
+                                <defs>
+                                    <filter id="filter0_i_237_415" x="0" y="0" width="466.535" height="728.344"
+                                        filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix"
+                                            result="shape" />
+                                        <feColorMatrix in="SourceAlpha" type="matrix"
+                                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                        <feOffset dy="4" />
+                                        <feGaussianBlur stdDeviation="2" />
+                                        <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+                                        <feColorMatrix type="matrix"
+                                            values="0 0 0 0 0.394622 0 0 0 0 0.467511 0 0 0 0 0.38613 0 0 0 0.6 0" />
+                                        <feBlend mode="normal" in2="shape" result="effect1_innerShadow_237_415" />
+                                    </filter>
+                                </defs>
+                            </svg>
+                        </div>
+                        <div class="contacts-card__content">
+                            <img src="assets/images/logo.svg" alt="Charger One" class="contacts-card__logo">
+                            <h1 class="contacts-card__title">Будем рады ответить на ваши вопросы!</h1>
+                            <p class="contacts-card__address">
+                                121059, г. Москва,<br>
+                                Бережковская наб., 16 к 2
+                            </p>
+                            <p class="contacts-card__hours">пн–пт 10:00 – 19:00</p>
+                            <a href="#" class="black-btn contacts-card__btn pill-btn js-open-modal">
+                                <span>СВЯЗАТЬСЯ С НАМИ</span>
+                            </a>
+                        </div>
+
+                        <div class="contacts-card__map">
+                            <img src="assets/images/map.png" alt="Карта">
+                        </div>
+                    </div>
+
+                    <div class="contacts-sidebar">
+                        <span class="contacts-sidebar__text">Заряжайся с нами!</span>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="support-info">
+            <div class="container">
+                <div class="support-info__inner">
+                    <h2 class="support-info__title">Тех. поддержка</h2>
+                    <div class="support-info__contacts">
+                        <a href="mailto:info@charger1.ru" class="support-info__email">info@charger1.ru</a>
+                        <a href="tel:+79933488201" class="support-info__phone">+7 (993) 348 82 01</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="assets/js/main.min.js"></script>
+    @@include('../components/_footer.html')
+</body>
